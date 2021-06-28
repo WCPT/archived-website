@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.absolute-navbar {
+  @apply text-white bg-transparent;
+}
+
+.sticky-navbar {
+  @apply text-black bg-white;
+}
