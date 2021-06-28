@@ -112,7 +112,7 @@ const IndexPage = () => {
           alt="Cover picture of an Island"
           placeholder="dominantColor"
         />
-        <div className="absolute z-10 flex items-center justify-start w-full h-full text-white">
+        <div className="absolute top-0 z-10 flex items-center justify-start w-full h-full text-white">
           <Icon className="h-64 m-8" />
           <div>
             <h1 className="text-4xl drop-shadow-md">
