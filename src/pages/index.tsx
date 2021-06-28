@@ -106,7 +106,7 @@ const IndexPage = () => {
           placeholder="dominantColor"
         />
         <div className="absolute top-0 z-10 flex items-center justify-start w-full h-full text-white">
-          <Icon className="h-64 m-8 sm:m-2" />
+          <Icon className="m-2 h-60 lg:h-64 lg:m-8" />
           <div>
             <h1 className="m-1 text-4xl drop-shadow-md">
               Community of Pasifika Teachers
@@ -132,22 +132,38 @@ const IndexPage = () => {
           <StaticImage
             className="absolute z-0 flex items-center justify-center h-full"
             src="../images/register-ss.jpeg"
-            alt="Cover picture of an Island"
+            alt="Registration form screenshot"
             placeholder="dominantColor"
           />
           <a
             href="https://clte.fnu.ac.fj/talanoakaro"
-            className="absolute top-0 left-0 z-10 w-full h-full opacity-50 bg-gradient-to-t from-black hover:from-gray-900"
+            className="absolute top-0 left-0 z-10 w-full h-full opacity-50 bg-gradient-to-t from-black hover:bg-gradient-to-b hover:from-blue-800"
           />
-          <div className="z-20 p-10 mx-2 my-1 mt-auto mr-auto text-2xl text-left text-white ">
-            Register Here
+          <div className="z-20 p-10 mx-2 my-1 mt-auto mr-auto text-2xl text-left text-white">
             <div className="z-20 my-1 text-lg font-normal">
-              Click here to register to Please Talanoa Karo, Pasifika!
+              <h1 className="mx-4 my-1 text-2xl ">Register Here</h1>
+              <p className="mx-4 text-xl">
+                Click here to register to Please Talanoa Karo, Pasifika!
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex">Contact Us</div>
+      <div className=" bg-light-gray">
+        <div className="py-8">
+          <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
+
+          <p className="mx-4">
+            We come from a wide range of academic and professional disciplines
+            and experiential backgrounds. If you need our support to take your
+            learning and teaching achievements to new heights, or want to know
+            about any of our services, please feel free to reach out to us via
+            our email clte@fnu.ac.fj. Please don't ever hesitate to contact us
+            and let us know how we can improve your FNU experience. We want to
+            be a part of your FNU journey, every step of the way!
+          </p>
+        </div>
+      </div>
     </main>
   );
 };
