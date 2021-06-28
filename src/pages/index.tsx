@@ -120,7 +120,7 @@ const IndexPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col h-screen my-2 lg:flex-row lg:max-h-1/2-screen ">
+      <div className="flex flex-col h-screen lg:my-2 lg:flex-row lg:max-h-1/2-screen ">
         <div className="relative flex items-center justify-center w-full mr-1 item-center h-1/2 lg:h-full">
           <iframe
             width="100%"
