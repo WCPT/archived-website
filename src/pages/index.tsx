@@ -113,12 +113,12 @@ const IndexPage = () => {
           placeholder="dominantColor"
         />
         <div className="absolute top-0 z-10 flex items-center justify-start w-full h-full text-white">
-          <Icon className="h-64 m-8" />
+          <Icon className="h-64 m-8 sm:m-2" />
           <div>
-            <h1 className="text-4xl drop-shadow-md">
+            <h1 className="m-1 text-4xl drop-shadow-md">
               Community of Pasifika Teachers
             </h1>
-            <h2 className="text-lg font-secondary">
+            <h2 className="m-1 text-lg font-secondary">
               Learning, Connecting and Moving Forward Together
             </h2>
           </div>
@@ -144,7 +144,7 @@ const IndexPage = () => {
           />
           <a
             href="https://clte.fnu.ac.fj/talanoakaro"
-            className="absolute top-0 left-0 z-10 w-full h-full opacity-50 bg-gradient-to-t from-black hover:from-blue-800"
+            className="absolute top-0 left-0 z-10 w-full h-full opacity-50 bg-gradient-to-t from-black hover:from-gray-900"
           />
           <div className="z-20 p-10 mx-2 my-1 mt-auto mr-auto text-2xl text-left text-white ">
             Register Here
