@@ -135,18 +135,18 @@ const IndexPage = () => {
             alt="Registration form screenshot"
             placeholder="dominantColor"
           />
+          <div className="absolute top-0 left-0 z-10 w-full h-full" />
           <a
             href="https://clte.fnu.ac.fj/talanoakaro"
-            className="absolute top-0 left-0 z-10 w-full h-full opacity-50 bg-gradient-to-t from-black hover:bg-gradient-to-b hover:from-blue-800"
-          />
-          <div className="z-20 p-10 mx-2 my-1 mt-auto mr-auto text-2xl text-left text-white">
-            <div className="z-20 my-1 text-lg font-normal">
-              <h1 className="mx-4 my-1 text-2xl ">Register Here</h1>
-              <p className="mx-4 text-xl">
+            className="z-20 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-400 hover:bg-gradient-to-b hover:from-blue-400 "
+          >
+            <div className="m-8 text-lg font-normal">
+              <h1 className="my-1 text-2xl ">Register Here</h1>
+              <p className="text-xl">
                 Click here to register to Please Talanoa Karo, Pasifika!
               </p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <div className=" bg-light-gray">
