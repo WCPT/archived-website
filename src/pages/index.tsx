@@ -135,10 +135,9 @@ const IndexPage = () => {
             alt="Registration form screenshot"
             placeholder="dominantColor"
           />
-          <div className="absolute top-0 left-0 z-10 w-full h-full" />
           <a
             href="https://clte.fnu.ac.fj/talanoakaro"
-            className="z-20 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-400 hover:bg-gradient-to-b hover:from-blue-400 "
+            className="z-10 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-600 hover:bg-gradient-to-b hover:from-white hover:text-black"
           >
             <div className="m-8 text-lg font-normal">
               <h1 className="my-1 text-2xl ">Register Here</h1>
