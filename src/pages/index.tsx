@@ -3,7 +3,8 @@ import { cx } from "@emotion/css";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Icon from "../images/assets/cpt-black.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 // markup
 const IndexPage = () => {
@@ -31,7 +32,7 @@ const IndexPage = () => {
       <title>Community of Pasifika</title>
       <nav
         className={cx(
-          `flex flex-col top-0 z-50 w-full fixed absolute-navbar transition-all duration-200 ease-in-out`,
+          `flex flex-col top-0 z-50 w-full fixed absolute-navbar transition-all duration-200 ease-in-out py-2`,
           {
             "sticky-navbar": hasScrolled,
           }
@@ -39,64 +40,56 @@ const IndexPage = () => {
       >
         <div
           className={cx(
-            "flex items-center justify-between w-full  px-4  xl:px-14",
+            "flex items-start justify-start w-full  px-4  xl:px-14",
             {
               "text-black": hasScrolled,
             }
           )}
         >
-          {/* <SecondaryNav navItems={secondaryNav} social={social} /> */}
-          <div className="container flex justify-between py-1 mx-auto xl:px-12">
+          <div className="flex justify-start py-1">
             <nav className="flex items-center">
               <span className="mx-2">
                 <a
-                  className="text-l"
+                  className="text-xl"
                   href="https://www.facebook.com/CLTEFNU/"
                   title="Facebook"
                   target="_blank"
                   rel="noopener"
                 >
-                  <i className="fb-icon fab fa-facebook" aria-hidden="true"></i>
-                  <FontAwesomeIcon icon={["fal", "coffee"]} />
+                  <FaFacebookSquare className="hover:text-blue-800" />
                 </a>
               </span>
               <span className="mx-2">
                 <a
-                  className="text-l"
+                  className="text-xl"
                   href="https://twitter.com/clte_fnu"
                   title="Twitter"
                   target="_blank"
                   rel="noopener"
                 >
-                  <i
-                    className="twitter-icon fab fa-twitter"
-                    aria-hidden="true"
-                  ></i>
+                  <FaTwitter className="hover:text-blue-400" />
                 </a>
               </span>
               <span className="mx-2">
                 <a
-                  className="text-l"
+                  className="text-xl"
                   href="https://www.youtube.com/channel/UCztg2OWdPFphpeQufpLQQzA"
                   title="Youtube"
                   target="_blank"
                   rel="noopener"
                 >
-                  <i className="yt-icon fab fa-youtube" aria-hidden="true"></i>
+                  <FaYoutube className="hover:text-red-600" />
                 </a>
               </span>
               <span className="mx-2">
                 <a
-                  className="text-l"
-                  href="https://www.instagram.com/"
+                  className="text-xl"
+                  href="mailto:clte@fnu.ac.fj"
                   title="Instagram"
                   target="_blank"
                   rel="noopener"
                 >
-                  <i
-                    className="instagram-icon fab fa-instagram"
-                    aria-hidden="true"
-                  ></i>
+                  <MdEmail className="hover:text-gray-600" />
                 </a>
               </span>
             </nav>
