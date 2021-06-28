@@ -3,6 +3,7 @@ module.exports = {
     title: "Community of Pasifika",
   },
   plugins: [
+    "gatsby-plugin-postcss",
     "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
