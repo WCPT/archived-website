@@ -6,6 +6,8 @@ import Icon from "../images/assets/cpt-black.svg";
 import LogoWhite from "../images/assets/logo-white.svg";
 import LogoBlack from "../images/assets/logo-black.svg";
 import TurtleWhite from "../images/assets/turtle-white.svg";
+import LogoBlackBack from "../images/assets/logo-black-back.svg";
+
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -49,6 +51,12 @@ const IndexPage = () => {
         >
           <div className="flex justify-start py-1">
             <nav className="flex items-center">
+              {hasScrolled && <LogoBlack className="h-14" />}
+              <LogoWhite
+                className={cx("h-14", {
+                  hidden: hasScrolled,
+                })}
+              />
               <span className="mx-2">
                 <a
                   className="text-xl"
@@ -96,16 +104,6 @@ const IndexPage = () => {
             </nav>
           </div>
         </div>
-        <div className="flex items-center py-2">
-          <div className="container flex items-center px-16">
-            {hasScrolled && <LogoBlack className="h-10" />}
-            <LogoWhite
-              className={cx("h-10", {
-                hidden: hasScrolled,
-              })}
-            />
-          </div>
-        </div>
       </nav>
 
       <div className="h-screen">
@@ -119,7 +117,7 @@ const IndexPage = () => {
           objectFit="cover"
         />
         <div className="absolute top-0 z-10 flex items-center justify-start w-full h-full text-white">
-          <TurtleWhite className="m-2 h-60 lg:h-64 lg:m-8" />
+          <LogoBlackBack className="m-2 h-60 lg:h-64 lg:m-8" />
           <div>
             <h1 className="m-1 text-4xl drop-shadow-md">
               Community of Pasifika Teachers
