@@ -3,6 +3,9 @@ import { cx } from "@emotion/css";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Icon from "../images/assets/cpt-black.svg";
+import IconVersionOne from "../images/assets/Version1.svg";
+import IconVersionTwo from "../images/assets/Version2.svg";
+import IconVersionThree from "../images/assets/Version3.svg";
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -118,6 +121,11 @@ const IndexPage = () => {
             </h2>
           </div>
         </div>
+        <div className="absolute top-0 z-10 flex items-end justify-start w-full h-full ">
+          <IconVersionOne className="m-2 h-60 lg:h-64 lg:m-8" />
+          <IconVersionTwo className="m-2 h-60 lg:h-64 lg:m-8" />
+          <IconVersionThree className="m-2 h-60 lg:h-64 lg:m-8" />
+        </div>
       </div>
 
       <div className="flex flex-col h-screen lg:my-2 lg:flex-row lg:max-h-1/2-screen ">
@@ -140,7 +148,7 @@ const IndexPage = () => {
           />
           <a
             href="https://clte.fnu.ac.fj/talanoakaro"
-            className="absolute z-10 flex items-end justify-start w-full h-full text-2xl text-white  bg-gradient-to-t from-gray-700 hover:bg-gradient-to-b hover:from-gray-400 hover:text-black"
+            className="absolute z-10 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-700 hover:bg-gradient-to-b hover:from-gray-400 hover:text-black"
           >
             <div className="m-8 text-lg font-normal">
               <h1 className="my-1 text-2xl ">Register Here</h1>
