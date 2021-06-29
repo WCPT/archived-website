@@ -133,7 +133,7 @@ const IndexPage = () => {
             </h2>
           </div>
           <div
-            className="z-20 p-2 mt-auto ml-auto text-white bg-gray-800 bg-opacity-60"
+            className="z-20 self-end p-2 ml-auto text-white bg-gray-800 bg-opacity-60"
             onClick={handleCreditButtonClick}
           >
             <span>
