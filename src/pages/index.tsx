@@ -164,15 +164,15 @@ const IndexPage = () => {
         <div className="container p-8 mx-auto">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
           <p className="mx-4">
-            You can contact us by sending an email to
+            If you have any queries, feel free to contact us by emailing to
             <a
               className="pl-1 text-blue-500 underline"
               href="mailto:pasifikateachers@gmail.com"
             >
               pasifikateachers@gmail.com
             </a>
-            . Please don't ever hesitate to contact us and let us know how we
-            can improve your CPT experience.
+            .We would love to hear from you and do our utmost best to make your
+            <i>CPT</i> experience worthwhile and a memorable one.
           </p>
         </div>
       </div>
