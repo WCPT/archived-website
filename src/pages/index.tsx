@@ -3,17 +3,15 @@ import { cx } from "@emotion/css";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Icon from "../images/assets/cpt-black.svg";
-import IconVersionOne from "../images/assets/Version1.svg";
-import IconVersionTwo from "../images/assets/Version2.svg";
-import IconVersionThree from "../images/assets/Version3.svg";
+import LogoWhite from "../images/assets/logo-white.svg";
+import LogoBlack from "../images/assets/logo-black.svg";
+import TurtleWhite from "../images/assets/turtle-white.svg";
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 // markup
 const IndexPage = () => {
   const [hasScrolled, setScroll] = React.useState(false);
-
-  let pageLogo = hasScrolled ? "../images/icon.png" : Icon;
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -98,6 +96,16 @@ const IndexPage = () => {
             </nav>
           </div>
         </div>
+        <div className="flex items-center py-2">
+          <div className="container flex items-center px-16">
+            {hasScrolled && <LogoBlack className="h-10" />}
+            <LogoWhite
+              className={cx("h-10", {
+                hidden: hasScrolled,
+              })}
+            />
+          </div>
+        </div>
       </nav>
 
       <div className="h-screen">
@@ -111,7 +119,7 @@ const IndexPage = () => {
           objectFit="cover"
         />
         <div className="absolute top-0 z-10 flex items-center justify-start w-full h-full text-white">
-          <Icon className="m-2 h-60 lg:h-64 lg:m-8" />
+          <TurtleWhite className="m-2 h-60 lg:h-64 lg:m-8" />
           <div>
             <h1 className="m-1 text-4xl drop-shadow-md">
               Community of Pasifika Teachers
@@ -120,11 +128,6 @@ const IndexPage = () => {
               Learning, Connecting and Moving Forward Together
             </h2>
           </div>
-        </div>
-        <div className="absolute top-0 z-10 flex items-end justify-start w-full h-full ">
-          <IconVersionOne className="m-2 h-60 lg:h-64 lg:m-8" />
-          <IconVersionTwo className="m-2 h-60 lg:h-64 lg:m-8" />
-          <IconVersionThree className="m-2 h-60 lg:h-64 lg:m-8" />
         </div>
       </div>
 
