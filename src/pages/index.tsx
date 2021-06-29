@@ -164,7 +164,11 @@ const IndexPage = () => {
         <div className="container p-8 mx-auto">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
           <p className="mx-4">
+<<<<<<< HEAD
             If you have any queries, feel free to contact us by emailing to
+=======
+            For any queries, you can contact us by emailing to
+>>>>>>> 180d18a3f92c6379a8f198d24ebe2a3b577ff51c
             <a
               className="pl-1 text-blue-500 underline"
               href="mailto:pasifikateachers@gmail.com"
