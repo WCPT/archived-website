@@ -114,7 +114,7 @@ const IndexPage = () => {
         </div>
       </nav>
 
-      <div className="h-screen">
+      <div className="relative h-screen">
         <div className="absolute z-10 w-full h-full opacity-50 bg-gradient-to-b from-black "></div>
         <StaticImage
           className="absolute z-0 flex items-center justify-center w-full h-full"
