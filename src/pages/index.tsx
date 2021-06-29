@@ -6,6 +6,8 @@ import FNULogo from "../images/assets/FNU_Logo.svg";
 import LogoWhite from "../images/assets/logo-white.svg";
 import LogoBlack from "../images/assets/logo-black.svg";
 import LogoBlackBack from "../images/assets/logo-black-back.svg";
+import LogoStyleOne from "../images/assets/LogoStyleOne.svg";
+import LogoStyleTwo from "../images/assets/LogoStyleTwo.svg";
 
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -123,7 +125,9 @@ const IndexPage = () => {
           objectFit="cover"
         />
         <div className="absolute top-0 z-10 flex items-center justify-start w-full h-full text-white">
-          <LogoBlackBack className="m-2 h-60 lg:h-64 lg:m-8" />
+          <LogoBlackBack className="h-40 m-2 lg:h-64 lg:m-8" />
+          <LogoStyleOne className="h-40 m-2 lg:h-64 lg:m-8" />
+          <LogoStyleTwo className="h-40 m-2 lg:h-64 lg:m-8" />
           <div>
             <h1 className="m-1 text-4xl drop-shadow-md">
               Community of Pasifika Teachers
@@ -132,29 +136,38 @@ const IndexPage = () => {
               Learning, Connecting and Moving Forward Together
             </h2>
           </div>
-          <div
-            className="z-20 self-end p-2 ml-auto text-white bg-gray-800 bg-opacity-60"
+        </div>
+        <div className="absolute z-20 flex items-end justify-end w-full h-full">
+          <span
+            className="p-2 text-white bg-gray-800 bg-opacity-60"
             onClick={handleCreditButtonClick}
           >
-            <span>
-              <i
-                className={cx("text-sm fa fa-plus m-1", {
-                  hidden: isCreditsClicked,
-                })}
-                aria-hidden="true"
-              ></i>
-              {isCreditsClicked
-                ? "Photo by Hoodh Ahmed on Unsplash"
-                : "Credits"}
-            </span>
-          </div>
+            <i
+              className={cx("text-sm fa fa-plus m-1", {
+                hidden: isCreditsClicked,
+              })}
+              aria-hidden="true"
+            ></i>
+            {isCreditsClicked ? "Photo by Hoodh Ahmed on Unsplash" : "Credits"}
+          </span>
+        </div>
+      </div>
+      <div className="lg:mt-2 bg-light-gray">
+        <div className="container px-8 py-2 mx-auto lg:py-8">
+          <h1 className="mx-4 my-1 text-2xl font-bold">About Us</h1>
+          <p className="mx-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+            aliquid nemo impedit, atque repudiandae animi ratione tempore odio,
+            aperiam, nisi voluptatibus reprehenderit architecto expedita et?
+            Quasi magnam necessitatibus beatae facere.
+          </p>
         </div>
       </div>
 
       <div className="flex flex-col h-screen lg:my-2 lg:flex-row lg:max-h-1/2-screen ">
         <div className="relative flex items-center justify-center w-full mr-1 video-wrapper item-center h-1/2 sm:pb-0 lg:h-full">
           <iframe
-            src="https://www.youtube.com/embed/iaNnX6jkq80"
+            src="https://www.youtube.com/embed/Uh9643c2P6k"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
