@@ -132,7 +132,7 @@ const IndexPage = () => {
       </div>
 
       <div className="flex flex-col h-screen lg:my-2 lg:flex-row lg:max-h-1/2-screen ">
-        <div className="relative flex items-center justify-center w-full mr-1 videoWrapper item-center h-1/2 lg:pb-0 lg:h-full">
+        <div className="relative flex items-center justify-center w-full mr-1 video-wrapper item-center h-1/2 sm:pb-0 lg:h-full">
           <iframe
             src="https://www.youtube.com/embed/iaNnX6jkq80"
             title="YouTube video player"
@@ -166,13 +166,13 @@ const IndexPage = () => {
           <p className="mx-4">
             If you have any queries, feel free to contact us by emailing to
             <a
-              className="pl-1 text-blue-500 underline"
+              className="pl-1 text-blue-500 underline break-words"
               href="mailto:pasifikateachers@gmail.com"
             >
               pasifikateachers@gmail.com
             </a>
-            .We would love to hear from you and do our utmost best to make your
-            <i>CPT</i> experience worthwhile and a memorable one.
+            . We would love to hear from you and do our utmost best to make your
+            CPT experience worthwhile and a memorable one.
           </p>
         </div>
       </div>
