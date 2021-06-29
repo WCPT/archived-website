@@ -2,10 +2,9 @@ import * as React from "react";
 import { cx } from "@emotion/css";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Icon from "../images/assets/cpt-black.svg";
+import FNULogo from "../images/assets/FNU_Logo.svg";
 import LogoWhite from "../images/assets/logo-white.svg";
 import LogoBlack from "../images/assets/logo-black.svg";
-import TurtleWhite from "../images/assets/turtle-white.svg";
 import LogoBlackBack from "../images/assets/logo-black-back.svg";
 
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
@@ -14,6 +13,11 @@ import { MdEmail } from "react-icons/md";
 // markup
 const IndexPage = () => {
   const [hasScrolled, setScroll] = React.useState(false);
+  const [isCreditsClicked, setisCreditsClicked] = React.useState(false);
+
+  const handleCreditButtonClick = React.useCallback(() => {
+    setisCreditsClicked((current) => !current);
+  }, [isCreditsClicked]);
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -128,6 +132,23 @@ const IndexPage = () => {
               Learning, Connecting and Moving Forward Together
             </h2>
           </div>
+
+          <div
+            className="z-20 p-2 mt-auto ml-auto text-white bg-gray-800 bg-opacity-60"
+            onClick={handleCreditButtonClick}
+          >
+            <span>
+              <i
+                className={cx("text-sm fa fa-plus m-1", {
+                  hidden: isCreditsClicked,
+                })}
+                aria-hidden="true"
+              ></i>
+              {isCreditsClicked
+                ? "Photo by Hoodh Ahmed on Unsplash"
+                : "Credits"}
+            </span>
+          </div>
         </div>
       </div>
 
@@ -142,14 +163,14 @@ const IndexPage = () => {
         <div className="relative flex items-center justify-center w-full item-center h-1/2 lg:h-full">
           <StaticImage
             className="absolute z-0 flex items-center justify-center h-full"
-            src="../images/register-ss.jpeg"
+            src="../images/register.jpg"
             alt="Registration form screenshot"
             objectFit="cover"
             placeholder="dominantColor"
           />
           <a
             href="https://clte.fnu.ac.fj/talanoakaro"
-            className="absolute z-10 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-700 hover:bg-gradient-to-b hover:from-gray-400 hover:text-black"
+            className="absolute z-10 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-900 hover:bg-gradient-to-b hover:from-gray-400 hover:text-black"
           >
             <div className="m-8 text-lg font-normal">
               <h1 className="my-1 text-2xl ">Register Here</h1>
@@ -176,6 +197,79 @@ const IndexPage = () => {
           </p>
         </div>
       </div>
+      <footer className="flex bg-primary">
+        <div className="container grid grid-cols-1 gap-4 px-12 py-12 mx-auto lg:grid-cols-3 lg:gap-12">
+          <div>
+            <FNULogo className="h-14" />
+          </div>
+
+          <section className="flex items-center justify-center text-gray-200">
+            <div className="container mx-auto">
+              <nav className="flex justify-center">
+                <div className="mr-1 lg:mr-6">
+                  <LogoWhite
+                    className={cx("h-10 lg:h-16", {
+                      hidden: hasScrolled,
+                    })}
+                  />
+                </div>
+                <span className="mx-2">
+                  <a
+                    className="text-lg lg:text-2xl"
+                    href="https://www.facebook.com/CLTEFNU/"
+                    title="Facebook"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <FaFacebookSquare className="hover:text-blue-800" />
+                  </a>
+                </span>
+                <span className="mx-2">
+                  <a
+                    className="text-lg lg:text-2xl"
+                    href="https://twitter.com/clte_fnu"
+                    title="Twitter"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <FaTwitter className="hover:text-blue-400" />
+                  </a>
+                </span>
+                <span className="mx-2">
+                  <a
+                    className="text-lg lg:text-2xl"
+                    href="https://www.youtube.com/channel/UCztg2OWdPFphpeQufpLQQzA"
+                    title="Youtube"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <FaYoutube className="hover:text-red-600" />
+                  </a>
+                </span>
+                <span className="mx-2">
+                  <a
+                    className="text-lg lg:text-2xl"
+                    href="mailto:clte@fnu.ac.fj"
+                    title="Instagram"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <MdEmail className="hover:text-gray-600" />
+                  </a>
+                </span>
+              </nav>
+              <section className="flex justify-center text-center text-gray-200">
+                Centre for Learning & Teaching Enhancement &copy;
+                {new Date().getFullYear()}
+              </section>
+            </div>
+          </section>
+
+          <section className="flex items-center justify-center text-center text-white">
+            Brought to by the Centre for Learning and Teaching Enhancement.
+          </section>
+        </div>
+      </footer>
     </main>
   );
 };
