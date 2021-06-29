@@ -51,15 +51,17 @@ const IndexPage = () => {
         >
           <div className="flex justify-start py-1">
             <nav className="flex items-center">
-              {hasScrolled && <LogoBlack className="h-10" />}
-              <LogoWhite
-                className={cx("h-10", {
-                  hidden: hasScrolled,
-                })}
-              />
+              <div className="mr-1 lg:mr-6">
+                {hasScrolled && <LogoBlack className="h-10 lg:h-16 " />}
+                <LogoWhite
+                  className={cx("h-10 lg:h-16", {
+                    hidden: hasScrolled,
+                  })}
+                />
+              </div>
               <span className="mx-2">
                 <a
-                  className="text-xl"
+                  className="text-lg lg:text-2xl"
                   href="https://www.facebook.com/CLTEFNU/"
                   title="Facebook"
                   target="_blank"
@@ -70,7 +72,7 @@ const IndexPage = () => {
               </span>
               <span className="mx-2">
                 <a
-                  className="text-xl"
+                  className="text-lg lg:text-2xl"
                   href="https://twitter.com/clte_fnu"
                   title="Twitter"
                   target="_blank"
@@ -81,7 +83,7 @@ const IndexPage = () => {
               </span>
               <span className="mx-2">
                 <a
-                  className="text-xl"
+                  className="text-lg lg:text-2xl"
                   href="https://www.youtube.com/channel/UCztg2OWdPFphpeQufpLQQzA"
                   title="Youtube"
                   target="_blank"
@@ -92,7 +94,7 @@ const IndexPage = () => {
               </span>
               <span className="mx-2">
                 <a
-                  className="text-xl"
+                  className="text-lg lg:text-2xl"
                   href="mailto:clte@fnu.ac.fj"
                   title="Instagram"
                   target="_blank"
@@ -130,10 +132,8 @@ const IndexPage = () => {
       </div>
 
       <div className="flex flex-col h-screen lg:my-2 lg:flex-row lg:max-h-1/2-screen ">
-        <div className="relative flex items-center justify-center w-full mr-1 item-center h-1/2 lg:h-full">
+        <div className="relative flex items-center justify-center w-full mr-1 videoWrapper item-center h-1/2 lg:pb-0 lg:h-full">
           <iframe
-            width="100%"
-            height="100%"
             src="https://www.youtube.com/embed/iaNnX6jkq80"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -161,17 +161,18 @@ const IndexPage = () => {
         </div>
       </div>
       <div className=" bg-light-gray">
-        <div className="py-8">
+        <div className="container p-8 mx-auto">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
-
           <p className="mx-4">
-            We come from a wide range of academic and professional disciplines
-            and experiential backgrounds. If you need our support to take your
-            learning and teaching achievements to new heights, or want to know
-            about any of our services, please feel free to reach out to us via
-            our email clte@fnu.ac.fj. Please don't ever hesitate to contact us
-            and let us know how we can improve your FNU experience. We want to
-            be a part of your FNU journey, every step of the way!
+            You can contact us by sending an email to
+            <a
+              className="pl-1 text-blue-500 underline"
+              href="mailto:pasifikateachers@gmail.com"
+            >
+              pasifikateachers@gmail.com
+            </a>
+            . Please don't ever hesitate to contact us and let us know how we
+            can improve your CPT experience.
           </p>
         </div>
       </div>

@@ -9,3 +9,10 @@
 .sticky-navbar {
   @apply text-black bg-white;
 }
+
+.videoWrapper {
+  padding-bottom: 75%; /* 16:9 */
+}
+.videoWrapper iframe {
+  @apply absolute top-0 left-0 w-full h-full;
+}
