@@ -51,9 +51,9 @@ const IndexPage = () => {
         >
           <div className="flex justify-start py-1">
             <nav className="flex items-center">
-              {hasScrolled && <LogoBlack className="h-14" />}
+              {hasScrolled && <LogoBlack className="h-10" />}
               <LogoWhite
-                className={cx("h-14", {
+                className={cx("h-10", {
                   hidden: hasScrolled,
                 })}
               />
