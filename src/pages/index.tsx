@@ -132,7 +132,6 @@ const IndexPage = () => {
               Learning, Connecting and Moving Forward Together
             </h2>
           </div>
-
           <div
             className="z-20 p-2 mt-auto ml-auto text-white bg-gray-800 bg-opacity-60"
             onClick={handleCreditButtonClick}
@@ -182,7 +181,7 @@ const IndexPage = () => {
         </div>
       </div>
       <div className=" bg-light-gray">
-        <div className="container p-8 mx-auto">
+        <div className="container px-8 py-2 mx-auto lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
           <p className="mx-4">
             If you have any queries, feel free to contact us by emailing to
@@ -200,7 +199,7 @@ const IndexPage = () => {
       <footer className="flex bg-primary">
         <div className="container grid grid-cols-1 gap-4 px-12 py-12 mx-auto lg:grid-cols-3 lg:gap-12">
           <div>
-            <FNULogo className="h-14" />
+            <FNULogo className="mx-auto h-14" />
           </div>
 
           <section className="flex items-center justify-center text-gray-200">
@@ -259,14 +258,14 @@ const IndexPage = () => {
                 </span>
               </nav>
               <section className="flex justify-center text-center text-gray-200">
-                Centre for Learning & Teaching Enhancement &copy;
+                Community of Pasifika Teachers &copy;
                 {new Date().getFullYear()}
               </section>
             </div>
           </section>
 
           <section className="flex items-center justify-center text-center text-white">
-            Brought to by the Centre for Learning and Teaching Enhancement.
+            Supported by Fiji National University.
           </section>
         </div>
       </footer>
