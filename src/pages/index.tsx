@@ -5,9 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import FNULogo from "../images/assets/FNU_Logo.svg";
 import LogoWhite from "../images/assets/logo-white.svg";
 import LogoBlack from "../images/assets/logo-black.svg";
-import LogoBlackBack from "../images/assets/logo-black-back.svg";
-import LogoStyleOne from "../images/assets/LogoStyleOne.svg";
-import LogoStyleTwo from "../images/assets/LogoStyleTwo.svg";
+import Logo from "../images/assets/LogoStyleOne.svg";
 
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -57,17 +55,17 @@ const IndexPage = () => {
         >
           <div className="flex justify-start py-1">
             <nav className="flex items-center">
-              <div className="mr-1 lg:mr-6">
-                {hasScrolled && <LogoBlack className="h-10 lg:h-16 " />}
+              <div className="mr-6">
+                {hasScrolled && <LogoBlack className="h-12 lg:h-16 " />}
                 <LogoWhite
-                  className={cx("h-10 lg:h-16", {
+                  className={cx("h-12 lg:h-16", {
                     hidden: hasScrolled,
                   })}
                 />
               </div>
               <span className="mx-2">
                 <a
-                  className="text-lg lg:text-2xl"
+                  className="text-xl lg:text-2xl"
                   href="https://www.facebook.com/CLTEFNU/"
                   title="Facebook"
                   target="_blank"
@@ -78,7 +76,7 @@ const IndexPage = () => {
               </span>
               <span className="mx-2">
                 <a
-                  className="text-lg lg:text-2xl"
+                  className="text-xl lg:text-2xl"
                   href="https://twitter.com/clte_fnu"
                   title="Twitter"
                   target="_blank"
@@ -89,7 +87,7 @@ const IndexPage = () => {
               </span>
               <span className="mx-2">
                 <a
-                  className="text-lg lg:text-2xl"
+                  className="text-xl lg:text-2xl"
                   href="https://www.youtube.com/channel/UCztg2OWdPFphpeQufpLQQzA"
                   title="Youtube"
                   target="_blank"
@@ -100,9 +98,9 @@ const IndexPage = () => {
               </span>
               <span className="mx-2">
                 <a
-                  className="text-lg lg:text-2xl"
+                  className="text-xl lg:text-2xl"
                   href="mailto:clte@fnu.ac.fj"
-                  title="Instagram"
+                  title="Email"
                   target="_blank"
                   rel="noopener"
                 >
@@ -115,7 +113,7 @@ const IndexPage = () => {
       </nav>
 
       <div className="relative h-screen">
-        <div className="absolute z-10 w-full h-full opacity-50 bg-gradient-to-b from-black "></div>
+        <div className="absolute z-10 w-full h-full opacity-80 bg-gradient-to-r from-black "></div>
         <StaticImage
           className="absolute z-0 flex items-center justify-center w-full h-full"
           imgClassName="w-full h-auto"
@@ -124,15 +122,13 @@ const IndexPage = () => {
           placeholder="dominantColor"
           objectFit="cover"
         />
-        <div className="absolute top-0 z-10 flex items-center justify-start w-full h-full text-white">
-          <LogoBlackBack className="h-40 m-2 lg:h-64 lg:m-8" />
-          <LogoStyleOne className="h-40 m-2 lg:h-64 lg:m-8" />
-          <LogoStyleTwo className="h-40 m-2 lg:h-64 lg:m-8" />
-          <div>
+        <div className="absolute top-0 z-10 flex items-center justify-start h-full text-white">
+          <Logo className="m-2 h-50 lg:h-64 lg:m-8" />
+          <div className="pr-4">
             <h1 className="m-1 text-4xl drop-shadow-md">
               Community of Pasifika Teachers
             </h1>
-            <h2 className="m-1 text-lg font-secondary">
+            <h2 className="m-1 text-xl">
               Learning, Connecting and Moving Forward Together
             </h2>
           </div>
@@ -153,9 +149,9 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="lg:mt-2 bg-light-gray">
-        <div className="container px-8 py-2 mx-auto lg:py-8">
+        <div className="container px-4 py-6 mx-auto lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">About Us</h1>
-          <p className="mx-4">
+          <p className="mx-4 text-xl">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
             aliquid nemo impedit, atque repudiandae animi ratione tempore odio,
             aperiam, nisi voluptatibus reprehenderit architecto expedita et?
@@ -164,17 +160,15 @@ const IndexPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col h-screen lg:my-2 lg:flex-row lg:max-h-1/2-screen ">
-        <div className="relative flex items-center justify-center w-full mr-1 item-center h-1/2 lg:h-full">
-          <div className="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/iaNnX6jkq80"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            ></iframe>
-          </div>
+      <div className="flex flex-col h-screen lg:my-2 lg:flex-row lg:max-h-1/2-screen">
+        <div className="relative flex items-center justify-center w-full mr-1 item-center lg:h-full lg:pb-0 video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/iaNnX6jkq80"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
         </div>
-        <div className="relative flex items-center justify-center w-full item-center h-1/2 lg:h-full">
+        <div className="relative flex items-center justify-center w-full h-3/4 item-center lg:h-full">
           <StaticImage
             className="absolute z-0 flex items-center justify-center h-full"
             src="../images/register.jpg"
@@ -186,8 +180,8 @@ const IndexPage = () => {
             href="https://clte.fnu.ac.fj/talanoakaro"
             className="absolute z-10 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-900 hover:bg-gradient-to-b hover:from-gray-400 hover:text-black"
           >
-            <div className="m-8 text-lg font-normal">
-              <h1 className="my-1 text-2xl ">Register Here</h1>
+            <div className="m-8 text-lg">
+              <h1 className="my-1 text-2xl font-bold ">Register here</h1>
               <p className="text-xl">
                 Click here to register to Please Talanoa Karo, Pasifika!
               </p>
@@ -196,9 +190,9 @@ const IndexPage = () => {
         </div>
       </div>
       <div className=" bg-light-gray">
-        <div className="container px-8 py-2 mx-auto lg:py-8">
+        <div className="container px-4 py-6 mx-auto lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
-          <p className="mx-4">
+          <p className="mx-4 text-xl">
             If you have any queries, feel free to contact us by emailing to
             <a
               className="pl-1 text-blue-500 underline break-words"
@@ -229,7 +223,7 @@ const IndexPage = () => {
                 </div>
                 <span className="mx-2">
                   <a
-                    className="text-lg lg:text-2xl"
+                    className="text-2xl"
                     href="https://www.facebook.com/CLTEFNU/"
                     title="Facebook"
                     target="_blank"
@@ -240,7 +234,7 @@ const IndexPage = () => {
                 </span>
                 <span className="mx-2">
                   <a
-                    className="text-lg lg:text-2xl"
+                    className="text-2xl"
                     href="https://twitter.com/clte_fnu"
                     title="Twitter"
                     target="_blank"
@@ -251,7 +245,7 @@ const IndexPage = () => {
                 </span>
                 <span className="mx-2">
                   <a
-                    className="text-lg lg:text-2xl"
+                    className="text-2xl"
                     href="https://www.youtube.com/channel/UCztg2OWdPFphpeQufpLQQzA"
                     title="Youtube"
                     target="_blank"
@@ -262,9 +256,9 @@ const IndexPage = () => {
                 </span>
                 <span className="mx-2">
                   <a
-                    className="text-lg lg:text-2xl"
+                    className="text-2xl"
                     href="mailto:clte@fnu.ac.fj"
-                    title="Instagram"
+                    title="Email"
                     target="_blank"
                     rel="noopener"
                   >
@@ -272,15 +266,15 @@ const IndexPage = () => {
                   </a>
                 </span>
               </nav>
-              <section className="flex justify-center text-center text-gray-200">
+              <section className="flex justify-center pt-4 text-lg text-center text-gray-200">
                 Community of Pasifika Teachers &copy;
                 {new Date().getFullYear()}
               </section>
             </div>
           </section>
 
-          <section className="flex items-center justify-center text-center text-white">
-            Supported by Fiji National University.
+          <section className="flex items-center justify-center text-lg text-center text-white">
+            Supported by The Fiji National University
           </section>
         </div>
       </footer>
