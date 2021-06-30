@@ -65,7 +65,7 @@ const IndexPage = () => {
               </div>
               <span className="mx-2">
                 <a
-                  className="text-xl lg:text-2xl"
+                  className="text-2xl"
                   href="https://www.facebook.com/CLTEFNU/"
                   title="Facebook"
                   target="_blank"
@@ -76,7 +76,7 @@ const IndexPage = () => {
               </span>
               <span className="mx-2">
                 <a
-                  className="text-xl lg:text-2xl"
+                  className="text-2xl"
                   href="https://twitter.com/clte_fnu"
                   title="Twitter"
                   target="_blank"
@@ -87,7 +87,7 @@ const IndexPage = () => {
               </span>
               <span className="mx-2">
                 <a
-                  className="text-xl lg:text-2xl"
+                  className="text-2xl"
                   href="https://www.youtube.com/channel/UCztg2OWdPFphpeQufpLQQzA"
                   title="Youtube"
                   target="_blank"
@@ -98,7 +98,7 @@ const IndexPage = () => {
               </span>
               <span className="mx-2">
                 <a
-                  className="text-xl lg:text-2xl"
+                  className="text-2xl"
                   href="mailto:clte@fnu.ac.fj"
                   title="Email"
                   target="_blank"
@@ -122,9 +122,11 @@ const IndexPage = () => {
           placeholder="dominantColor"
           objectFit="cover"
         />
-        <div className="absolute top-0 z-10 flex items-center justify-start h-full text-white">
-          <TurtleLogo className="m-2 h-30 lg:h-64 lg:m-8" />
-          <div className="mr-4">
+        <div className="absolute top-0 z-10 flex flex-col items-center justify-center h-full text-white">
+          <div className="ml-4 mr-auto">
+            <TurtleLogo className="h-56 mr-auto " />
+          </div>
+          <div className="m-4">
             <h1 className="m-1 text-4xl drop-shadow-md">
               Community of Pasifika Teachers
             </h1>
@@ -188,6 +190,22 @@ const IndexPage = () => {
               </p>
             </div>
           </a>
+          <div className="absolute top-0 left-0 z-20 flex items-end justify-end w-full h-full">
+            <span
+              className="p-2 text-white bg-gray-800 bg-opacity-60"
+              onClick={handleCreditButtonClick}
+            >
+              <i
+                className={cx("text-sm fa fa-plus m-1", {
+                  hidden: isCreditsClicked,
+                })}
+                aria-hidden="true"
+              ></i>
+              {isCreditsClicked
+                ? "Photo by Hoodh Ahmed on Unsplash"
+                : "Credits"}
+            </span>
+          </div>
         </div>
       </div>
       <div className=" bg-light-gray">
@@ -214,17 +232,10 @@ const IndexPage = () => {
 
           <section className="flex items-center justify-center text-gray-200">
             <div className="container mx-auto">
-              <nav className="flex justify-center">
-                <div className="mr-1 lg:mr-6">
-                  <LogoWhite
-                    className={cx("h-10 lg:h-16", {
-                      hidden: hasScrolled,
-                    })}
-                  />
-                </div>
+              <nav className="flex justify-center my-2">
                 <span className="mx-2">
                   <a
-                    className="text-2xl"
+                    className="text-3xl"
                     href="https://www.facebook.com/CLTEFNU/"
                     title="Facebook"
                     target="_blank"
@@ -235,7 +246,7 @@ const IndexPage = () => {
                 </span>
                 <span className="mx-2">
                   <a
-                    className="text-2xl"
+                    className="text-3xl"
                     href="https://twitter.com/clte_fnu"
                     title="Twitter"
                     target="_blank"
@@ -246,7 +257,7 @@ const IndexPage = () => {
                 </span>
                 <span className="mx-2">
                   <a
-                    className="text-2xl"
+                    className="text-3xl"
                     href="https://www.youtube.com/channel/UCztg2OWdPFphpeQufpLQQzA"
                     title="Youtube"
                     target="_blank"
@@ -257,7 +268,7 @@ const IndexPage = () => {
                 </span>
                 <span className="mx-2">
                   <a
-                    className="text-2xl"
+                    className="text-3xl"
                     href="mailto:clte@fnu.ac.fj"
                     title="Email"
                     target="_blank"
@@ -275,7 +286,7 @@ const IndexPage = () => {
           </section>
 
           <section className="flex items-center justify-center text-lg text-center text-white">
-            Supported by The Fiji National University
+            Supported by the Fiji National University
           </section>
         </div>
       </footer>
