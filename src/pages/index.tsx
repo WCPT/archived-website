@@ -219,7 +219,7 @@ const IndexPage = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
         </div>
-        <div className="relative flex items-center justify-center h-1/2 lg:w-1/2 item-center lg:h-full aspect-w-16 aspect-h-9 lg:pb-0">
+        <div className="relative flex items-center justify-center h-1/2 lg:w-1/2 item-center lg:h-full">
           <StaticImage
             className="absolute top-0 left-0 z-0 flex items-center justify-center h-full"
             src="../images/register.jpg"
