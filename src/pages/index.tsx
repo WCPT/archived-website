@@ -157,18 +157,61 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="bg-gray-100 lg:mt-2">
-        <div className="container px-4 py-10 mx-auto lg:py-8">
+        <div className="container px-4 py-10 mx-auto text-justify lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">About Us</h1>
-          <p className="mx-4 text-xl text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
-            aliquid nemo impedit, atque repudiandae animi ratione tempore odio,
-            aperiam, nisi voluptatibus reprehenderit architecto expedita et?
-            Quasi magnam necessitatibus beatae facere.
+          <p className="mx-4 my-2 text-xl text-gray-600">
+            We, the <b>Community of Pasifika Teachers (CPT)</b>, are a pulsating
+            network of teachers from the wider Pacific region, learning,
+            connecting and moving forward together, with a common goal of
+            re-thinking education in the island nations to educate and empower
+            our generations for global competency. We reflect the Pacific
+            communal way of life by working in partnership with each other to
+            share, collaborate to solve problems, and undertake research to
+            improve the quality of learning in the Pacific contexts. Guided by
+            the <b>Pacific Regional Education Framework (PacREF) 2018-2030</b>,
+            our mission is to build on to the conventional pedagogies, inculcate
+            digital tools of education, and enhance learning via flexible
+            modalities.
+          </p>
+          <p className="mx-4 my-2 text-xl text-gray-600">
+            As a brand new community of practice for teachers, we aspire to grow
+            and transform the school experiences in the Pacific and develop our
+            teaching capacity to empower us as we engage with students. CPT
+            provides teachers with open forums in which they can remain
+            connected to their practice and to their colleagues, especially
+            during this tumultuous time.
+          </p>
+          <p className="mx-4 my-2 text-xl text-gray-600">
+            We strongly believe in the{" "}
+            <b>professional growth and evolution of our teachers</b>, thus our
+            continuing professional development niches include active and
+            reflective engagement in a range of professional experiences that
+            are supplementary to our day-to-day responsibilities as teachers.
+            These professional development sessions will enhance our members’
+            skills and knowledge which will pave way for better student learning
+            outcomes.
+          </p>
+          <p className="mx-4 my-2 text-xl text-gray-600">
+            We also believe stalwartly that technology can and should eliminate
+            the barriers to effective teaching and curriculum implementation,
+            while promoting a culture of growth and collaboration across
+            classrooms; therefore, making{" "}
+            <b>professional development using educational technology tools</b>{" "}
+            one of our priorities. When we need to seek guidance from the
+            experts, we can always resort to our established and trusted expert
+            network in digital teaching.
+          </p>
+          <p className="mx-4 my-2 text-xl text-gray-600">
+            With the Community in place, we, the Pasifika teachers, work and
+            strive together to prosper and professionally grow by convening in a
+            sustained way. <b>Registration is free and open to all teachers</b>,
+            so if you are a teacher in the Pacific community, join us and let’s
+            learn, connect and move forward together.
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col h-screen lg:my-2 lg:flex-row lg:max-h-1/2-screen">
+      <div className="flex flex-col h-screen max-h-2/3-screen md:max-h-screen lg:max-h-1/2-screen lg:my-2 lg:flex-row">
         <div className="relative flex items-center justify-center w-full mr-1 item-center lg:h-full lg:pb-0 video-wrapper">
           <iframe
             src="https://www.youtube.com/embed/iaNnX6jkq80"
@@ -189,13 +232,13 @@ const IndexPage = () => {
             href="https://clte.fnu.ac.fj/talanoakaro"
             className="absolute z-10 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-900 hover:bg-gradient-to-b hover:from-gray-400 hover:text-black"
           >
-            <div className="container px-4 py-6 mx-auto text-lg lg:py-8">
+            <div className="container px-4 py-6 mx-auto mb-6 text-lg lg:py-8">
               <h1 className="mx-4 my-1 text-2xl font-bold ">Register here</h1>
               <p className="mx-4 text-xl text-gray-200">
                 Click here to register to Please Talanoa Karo, Pasifika!
               </p>
             </div>
-            <div className="absolute top-0 left-0 z-10 flex items-end justify-end w-full h-full text-lg">
+            <div className="absolute bottom-0 right-0 z-20 flex items-end justify-end text-lg">
               <span
                 className="z-20 p-2 text-white bg-gray-800 bg-opacity-60"
                 onClick={handleCreditsRegistationClick}
@@ -216,10 +259,11 @@ const IndexPage = () => {
       </div>
 
       <div className="bg-gray-100 ">
-        <div className="container px-4 py-10 mx-auto lg:py-8">
+        <div className="container px-4 py-10 mx-auto text-justify lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
           <p className="mx-4 text-xl text-gray-600">
-            If you have any queries, feel free to contact us by emailing to
+            If you have any queries, <b>feel free to contact us</b> by emailing
+            to
             <a
               className="pl-1 text-blue-500 underline break-words"
               href="mailto:pasifikateachers@gmail.com"
