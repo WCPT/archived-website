@@ -211,17 +211,17 @@ const IndexPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col h-screen max-h-2/3-screen md:max-h-screen lg:max-h-1/2-screen lg:my-2 lg:flex-row">
-        <div className="relative flex items-center justify-center w-full mr-1 item-center lg:h-full lg:pb-0 video-wrapper">
+      <div className="block lg:h-screen lg:flex lg:max-h-1/2-screen lg:my-2 lg:flex-row">
+        <div className="relative flex items-center justify-center lg:w-1/2 lg:mr-1 aspect-w-16 aspect-h-9 item-center lg:h-full lg:pb-0">
           <iframe
             src="https://www.youtube.com/embed/iaNnX6jkq80"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
         </div>
-        <div className="relative flex items-center justify-center w-full h-1/2 item-center lg:h-full">
+        <div className="relative flex items-center justify-center h-full ml-auto lg:w-1/2 item-center lg:h-full aspect-w-16 aspect-h-9 lg:pb-0">
           <StaticImage
-            className="absolute z-0 flex items-center justify-center h-full"
+            className="absolute top-0 left-0 z-0 flex items-center justify-center h-full"
             src="../images/register.jpg"
             imgClassName="w-full h-full"
             alt="Registration form screenshot"
