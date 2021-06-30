@@ -230,7 +230,7 @@ const IndexPage = () => {
           />
           <a
             href="https://clte.fnu.ac.fj/talanoakaro"
-            className="absolute z-10 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-900 hover:bg-gradient-to-b hover:from-gray-400 hover:text-black"
+            className="absolute top-0 left-0 z-10 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-900 hover:bg-gradient-to-b hover:from-gray-400 hover:text-black"
           >
             <div className="container px-4 py-6 mx-auto mb-6 text-lg lg:py-8">
               <h1 className="mx-4 my-1 text-2xl font-bold ">Register here</h1>
