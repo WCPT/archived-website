@@ -157,7 +157,7 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="bg-gray-100 lg:mt-2">
-        <div className="container px-4 py-10 mx-auto text-justify lg:py-8">
+        <div className="container px-4 py-10 mx-auto text-left lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">About Us</h1>
           <p className="mx-4 my-2 text-xl text-gray-600">
             We, the <b>Community of Pasifika Teachers (CPT)</b>, are a pulsating
@@ -259,7 +259,7 @@ const IndexPage = () => {
       </div>
 
       <div className="bg-gray-100 ">
-        <div className="container px-4 py-10 mx-auto text-justify lg:py-8">
+        <div className="container px-4 py-10 mx-auto text-left lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
           <p className="mx-4 text-xl text-gray-600">
             If you have any queries, <b>feel free to contact us</b> by emailing
