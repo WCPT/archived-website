@@ -16,6 +16,11 @@ const IndexPage = () => {
   const [isCreditsClicked, setisCreditsClicked] = React.useState(false);
   const [isCreditsRegistationClicked, setIsCreditsRegistationClicked] =
     React.useState(false);
+  const [isContenthidden, setcontentShown] = React.useState(true);
+
+  const handleContentButtonClick = React.useCallback(() => {
+    setcontentShown((current) => !current);
+  }, [isContenthidden]);
 
   const handleCreditButtonClick = React.useCallback(() => {
     setisCreditsClicked((current) => !current);
@@ -173,41 +178,59 @@ const IndexPage = () => {
             digital tools of education, and enhance learning via flexible
             modalities.
           </p>
-          <p className="mx-4 my-2 text-xl text-gray-600">
-            As a brand new community of practice for teachers, we aspire to grow
-            and transform the school experiences in the Pacific and develop our
-            teaching capacity to empower us as we engage with students. CPT
-            provides teachers with open forums in which they can remain
-            connected to their practice and to their colleagues, especially
-            during this tumultuous time.
-          </p>
-          <p className="mx-4 my-2 text-xl text-gray-600">
-            We strongly believe in the{" "}
-            <b>professional growth and evolution of our teachers</b>, thus our
-            continuing professional development niches include active and
-            reflective engagement in a range of professional experiences that
-            are supplementary to our day-to-day responsibilities as teachers.
-            These professional development sessions will enhance our members’
-            skills and knowledge which will pave way for better student learning
-            outcomes.
-          </p>
-          <p className="mx-4 my-2 text-xl text-gray-600">
-            We also believe stalwartly that technology can and should eliminate
-            the barriers to effective teaching and curriculum implementation,
-            while promoting a culture of growth and collaboration across
-            classrooms; therefore, making{" "}
-            <b>professional development using educational technology tools</b>{" "}
-            one of our priorities. When we need to seek guidance from the
-            experts, we can always resort to our established and trusted expert
-            network in digital teaching.
-          </p>
-          <p className="mx-4 my-2 text-xl text-gray-600">
-            With the Community in place, we, the Pasifika teachers, work and
-            strive together to prosper and professionally grow by convening in a
-            sustained way. <b>Registration is free and open to all teachers</b>,
-            so if you are a teacher in the Pacific community, join us and let’s
-            learn, connect and move forward together.
-          </p>
+          <div
+            className={cx(
+              "visible opacity-100 transition-opacity duration-700  lg:block",
+              {
+                "show-content": isContenthidden,
+              }
+            )}
+          >
+            <p className="mx-4 my-2 text-xl text-gray-600">
+              As a brand new community of practice for teachers, we aspire to
+              grow and transform the school experiences in the Pacific and
+              develop our teaching capacity to empower us as we engage with
+              students. CPT provides teachers with open forums in which they can
+              remain connected to their practice and to their colleagues,
+              especially during this tumultuous time.
+            </p>
+            <p className="mx-4 my-2 text-xl text-gray-600">
+              We strongly believe in the{" "}
+              <b>professional growth and evolution of our teachers</b>, thus our
+              continuing professional development niches include active and
+              reflective engagement in a range of professional experiences that
+              are supplementary to our day-to-day responsibilities as teachers.
+              These professional development sessions will enhance our members’
+              skills and knowledge which will pave way for better student
+              learning outcomes.
+            </p>
+            <p className="mx-4 my-2 text-xl text-gray-600">
+              We also believe stalwartly that technology can and should
+              eliminate the barriers to effective teaching and curriculum
+              implementation, while promoting a culture of growth and
+              collaboration across classrooms; therefore, making{" "}
+              <b>professional development using educational technology tools</b>{" "}
+              one of our priorities. When we need to seek guidance from the
+              experts, we can always resort to our established and trusted
+              expert network in digital teaching.
+            </p>
+            <p className="mx-4 my-2 text-xl text-gray-600">
+              With the Community in place, we, the Pasifika teachers, work and
+              strive together to prosper and professionally grow by convening in
+              a sustained way.{" "}
+              <b>Registration is free and open to all teachers</b>, so if you
+              are a teacher in the Pacific community, join us and let’s learn,
+              connect and move forward together.
+            </p>
+          </div>
+          <div className="block lg:hidden">
+            <span
+              className="inline-block p-2 mx-4 my-2 text-lg text-white rounded-sm bg-primary"
+              onClick={handleContentButtonClick}
+            >
+              {isContenthidden ? "Read more" : "Read less"}
+            </span>
+          </div>
         </div>
       </div>
 
