@@ -172,6 +172,7 @@ const IndexPage = () => {
           <StaticImage
             className="absolute z-0 flex items-center justify-center h-full"
             src="../images/register.jpg"
+            imgClassName="w-full h-auto"
             alt="Registration form screenshot"
             objectFit="cover"
             placeholder="dominantColor"
