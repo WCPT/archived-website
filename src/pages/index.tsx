@@ -336,7 +336,7 @@ const IndexPage = () => {
             </div>
           </section>
 
-          <section className="flex items-center justify-center text-center text-white text-md lg:text-lg">
+          <section className="flex items-center justify-center text-sm text-center text-white lg:text-lg">
             Supported by the Fiji National University
           </section>
         </div>
