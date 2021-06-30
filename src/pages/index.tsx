@@ -133,10 +133,10 @@ const IndexPage = () => {
             <TurtleLogo className="h-56 mr-auto " />
           </div>
           <div className="m-4">
-            <h1 className="m-1 text-4xl drop-shadow-md">
+            <h1 className="my-1 text-4xl drop-shadow-md">
               Community of Pasifika Teachers
             </h1>
-            <h2 className="m-1 text-xl">
+            <h2 className="my-1 text-xl">
               Learning, Connecting and Moving Forward Together
             </h2>
           </div>
