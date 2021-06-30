@@ -137,7 +137,7 @@ const IndexPage = () => {
             </h2>
           </div>
         </div>
-        <div className="absolute z-20 flex items-end justify-end w-full h-full">
+        <div className="absolute top-0 left-0 z-20 flex items-end justify-end w-full h-full">
           <span
             className="p-2 text-white bg-gray-800 bg-opacity-60"
             onClick={handleCreditButtonClick}
@@ -168,8 +168,6 @@ const IndexPage = () => {
         <div className="relative flex items-center justify-center w-full mr-1 item-center h-1/2 lg:h-full">
           <div className="video-wrapper">
             <iframe
-              width="560"
-              height="315"
               src="https://www.youtube.com/embed/iaNnX6jkq80"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
