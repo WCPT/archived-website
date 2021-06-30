@@ -123,8 +123,8 @@ const IndexPage = () => {
           objectFit="cover"
         />
         <div className="absolute top-0 z-10 flex items-center justify-start h-full text-white">
-          <TurtleLogo className="m-2 h-50 lg:h-64 lg:m-8" />
-          <div className="pr-4">
+          <TurtleLogo className="m-2 h-30 lg:h-64 lg:m-8" />
+          <div className="mr-4">
             <h1 className="m-1 text-4xl drop-shadow-md">
               Community of Pasifika Teachers
             </h1>
