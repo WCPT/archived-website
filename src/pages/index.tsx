@@ -14,10 +14,16 @@ import { MdEmail } from "react-icons/md";
 const IndexPage = () => {
   const [hasScrolled, setScroll] = React.useState(false);
   const [isCreditsClicked, setisCreditsClicked] = React.useState(false);
+  const [isCreditsRegistationClicked, setIsCreditsRegistationClicked] =
+    React.useState(false);
 
   const handleCreditButtonClick = React.useCallback(() => {
     setisCreditsClicked((current) => !current);
   }, [isCreditsClicked]);
+
+  const handleCreditsRegistationClick = React.useCallback(() => {
+    setIsCreditsRegistationClicked((current) => !current);
+  }, [isCreditsRegistationClicked]);
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -150,7 +156,7 @@ const IndexPage = () => {
           </span>
         </div>
       </div>
-      <div className="lg:mt-2 bg-light-gray">
+      <div className="bg-gray-100 lg:mt-2">
         <div className="container px-4 py-6 mx-auto lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">About Us</h1>
           <p className="mx-4 text-xl">
@@ -174,7 +180,7 @@ const IndexPage = () => {
           <StaticImage
             className="absolute z-0 flex items-center justify-center h-full"
             src="../images/register.jpg"
-            imgClassName="w-full h-auto"
+            imgClassName="w-full h-full"
             alt="Registration form screenshot"
             objectFit="cover"
             placeholder="dominantColor"
@@ -189,26 +195,26 @@ const IndexPage = () => {
                 Click here to register to Please Talanoa Karo, Pasifika!
               </p>
             </div>
+            <div className="absolute top-0 left-0 z-10 flex items-end justify-end w-full h-full text-lg">
+              <span
+                className="z-20 p-2 text-white bg-gray-800 bg-opacity-60"
+                onClick={handleCreditsRegistationClick}
+              >
+                <i
+                  className={cx("text-sm fa fa-plus m-1", {
+                    hidden: isCreditsRegistationClicked,
+                  })}
+                  aria-hidden="true"
+                ></i>
+                {isCreditsRegistationClicked
+                  ? "Photo by Thomas Lefebvre on Unsplash"
+                  : "Credits"}
+              </span>
+            </div>
           </a>
-          <div className="absolute top-0 left-0 z-20 flex items-end justify-end w-full h-full">
-            <span
-              className="p-2 text-white bg-gray-800 bg-opacity-60"
-              onClick={handleCreditButtonClick}
-            >
-              <i
-                className={cx("text-sm fa fa-plus m-1", {
-                  hidden: isCreditsClicked,
-                })}
-                aria-hidden="true"
-              ></i>
-              {isCreditsClicked
-                ? "Photo by Hoodh Ahmed on Unsplash"
-                : "Credits"}
-            </span>
-          </div>
         </div>
       </div>
-      <div className=" bg-light-gray">
+      <div className="bg-gray-100 ">
         <div className="container px-4 py-6 mx-auto lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
           <p className="mx-4 text-xl">
@@ -227,7 +233,7 @@ const IndexPage = () => {
       <footer className="flex bg-primary">
         <div className="container grid grid-cols-1 gap-4 px-12 py-12 mx-auto lg:grid-cols-3 lg:gap-12">
           <div>
-            <CPTLogo className="mx-auto h-18 lg:h-20" />
+            <CPTLogo className="mx-auto h-14 lg:h-20" />
           </div>
 
           <section className="flex items-center justify-center text-gray-200">
