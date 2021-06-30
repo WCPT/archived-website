@@ -2,7 +2,7 @@ import * as React from "react";
 import { cx } from "@emotion/css";
 import { StaticImage } from "gatsby-plugin-image";
 
-import FNULogo from "../images/assets/FNU_Logo.svg";
+import CPTLogo from "../images/assets/CPT_Logo.svg";
 import LogoWhite from "../images/assets/logo-white.svg";
 import LogoBlack from "../images/assets/logo-black.svg";
 import Logo from "../images/assets/LogoStyleOne.svg";
@@ -168,7 +168,7 @@ const IndexPage = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
         </div>
-        <div className="relative flex items-center justify-center w-full h-3/4 item-center lg:h-full">
+        <div className="relative flex items-center justify-center w-full h-full item-center lg:h-full">
           <StaticImage
             className="absolute z-0 flex items-center justify-center h-full"
             src="../images/register.jpg"
@@ -208,7 +208,7 @@ const IndexPage = () => {
       <footer className="flex bg-primary">
         <div className="container grid grid-cols-1 gap-4 px-12 py-12 mx-auto lg:grid-cols-3 lg:gap-12">
           <div>
-            <FNULogo className="mx-auto h-14" />
+            <CPTLogo className="mx-auto h-18 lg:h-20" />
           </div>
 
           <section className="flex items-center justify-center text-gray-200">
