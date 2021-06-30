@@ -157,9 +157,9 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="bg-gray-100 lg:mt-2">
-        <div className="container px-4 py-6 mx-auto lg:py-8">
+        <div className="container px-4 py-10 mx-auto lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">About Us</h1>
-          <p className="mx-4 text-xl">
+          <p className="mx-4 text-xl text-gray-600">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
             aliquid nemo impedit, atque repudiandae animi ratione tempore odio,
             aperiam, nisi voluptatibus reprehenderit architecto expedita et?
@@ -176,7 +176,7 @@ const IndexPage = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
         </div>
-        <div className="relative flex items-center justify-center w-full h-full item-center lg:h-full">
+        <div className="relative flex items-center justify-center w-full h-1/2 item-center lg:h-full">
           <StaticImage
             className="absolute z-0 flex items-center justify-center h-full"
             src="../images/register.jpg"
@@ -191,7 +191,7 @@ const IndexPage = () => {
           >
             <div className="container px-4 py-6 mx-auto text-lg lg:py-8">
               <h1 className="mx-4 my-1 text-2xl font-bold ">Register here</h1>
-              <p className="mx-4 text-xl">
+              <p className="mx-4 text-xl text-gray-200">
                 Click here to register to Please Talanoa Karo, Pasifika!
               </p>
             </div>
@@ -214,10 +214,11 @@ const IndexPage = () => {
           </a>
         </div>
       </div>
+
       <div className="bg-gray-100 ">
-        <div className="container px-4 py-6 mx-auto lg:py-8">
+        <div className="container px-4 py-10 mx-auto lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
-          <p className="mx-4 text-xl">
+          <p className="mx-4 text-xl text-gray-600">
             If you have any queries, feel free to contact us by emailing to
             <a
               className="pl-1 text-blue-500 underline break-words"
@@ -233,7 +234,7 @@ const IndexPage = () => {
       <footer className="flex bg-primary">
         <div className="container grid grid-cols-1 gap-4 px-12 py-12 mx-auto lg:grid-cols-3 lg:gap-12">
           <div>
-            <CPTLogo className="mx-auto h-14 lg:h-20" />
+            <CPTLogo className="mx-auto h-28" />
           </div>
 
           <section className="flex items-center justify-center text-gray-200">
