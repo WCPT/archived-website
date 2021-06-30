@@ -53,7 +53,7 @@ const IndexPage = () => {
       >
         <div
           className={cx(
-            "flex items-start justify-start w-full  px-4  xl:px-14",
+            "flex items-start justify-start w-full px-4  lg:px-14",
             {
               "text-black": hasScrolled,
             }
@@ -128,8 +128,8 @@ const IndexPage = () => {
           placeholder="dominantColor"
           objectFit="cover"
         />
-        <div className="absolute top-0 z-10 flex flex-col items-center justify-center h-full text-white">
-          <div className="ml-4 mr-auto">
+        <div className="absolute top-0 z-10 flex flex-col items-center justify-center h-full text-white lg:mx-14">
+          <div className="pl-4 mr-auto lg:pl-0 ">
             <TurtleLogo className="h-56 mr-auto " />
           </div>
           <div className="m-4">
