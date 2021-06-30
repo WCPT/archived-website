@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import CPTLogo from "../images/assets/CPT_Logo.svg";
 import LogoWhite from "../images/assets/logo-white.svg";
 import LogoBlack from "../images/assets/logo-black.svg";
-import Logo from "../images/assets/LogoStyleOne.svg";
+import TurtleLogo from "../images/assets/turtle-logo.svg";
 
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -123,7 +123,7 @@ const IndexPage = () => {
           objectFit="cover"
         />
         <div className="absolute top-0 z-10 flex items-center justify-start h-full text-white">
-          <Logo className="m-2 h-50 lg:h-64 lg:m-8" />
+          <TurtleLogo className="m-2 h-50 lg:h-64 lg:m-8" />
           <div className="pr-4">
             <h1 className="m-1 text-4xl drop-shadow-md">
               Community of Pasifika Teachers
@@ -181,9 +181,9 @@ const IndexPage = () => {
             href="https://clte.fnu.ac.fj/talanoakaro"
             className="absolute z-10 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-900 hover:bg-gradient-to-b hover:from-gray-400 hover:text-black"
           >
-            <div className="m-8 text-lg">
-              <h1 className="my-1 text-2xl font-bold ">Register here</h1>
-              <p className="text-xl">
+            <div className="container px-4 py-6 mx-auto text-lg lg:py-8">
+              <h1 className="mx-4 my-1 text-2xl font-bold ">Register here</h1>
+              <p className="mx-4 text-xl">
                 Click here to register to Please Talanoa Karo, Pasifika!
               </p>
             </div>
