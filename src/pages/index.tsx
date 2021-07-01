@@ -180,7 +180,7 @@ const IndexPage = () => {
           </p>
           <div
             className={cx(
-              "invisible h-0 opacity-0 transition-opacity duration-700  md:show-content ",
+              "invisible h-0 opacity-0 transition-opacity duration-700 lg:visible lg:h-auto lg:opacity-100  ",
               {
                 "show-content": isContenthidden,
               }
@@ -228,7 +228,7 @@ const IndexPage = () => {
               className="inline-block p-2 mx-4 my-2 text-lg text-white rounded-sm bg-primary"
               onClick={handleContentButtonClick}
             >
-              {isContenthidden ? "Read more" : "Read less"}
+              {isContenthidden ? "Read less" : "Read more"}
             </span>
           </div>
         </div>
