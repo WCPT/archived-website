@@ -292,7 +292,7 @@ const IndexPage = () => {
       <footer className="flex bg-primary">
         <div className="container grid grid-cols-1 gap-4 px-12 py-12 mx-auto lg:grid-cols-3 lg:gap-12">
           <div>
-            <CPTLogo className="mx-auto h-28" />
+            <CPTLogo className="mx-auto h-28 xl:h-32" />
           </div>
 
           <section className="flex items-center justify-center text-gray-200">
