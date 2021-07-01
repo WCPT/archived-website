@@ -9,6 +9,7 @@ import TurtleLogo from "../images/assets/turtle-logo.svg";
 
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { MutableRefObject } from "react";
 
 // markup
 const IndexPage = () => {
@@ -17,11 +18,12 @@ const IndexPage = () => {
   const [isCreditsRegistationClicked, setIsCreditsRegistationClicked] =
     React.useState(false);
   const [isContenthidden, setcontentShown] = React.useState(false);
+  const anchorRef: MutableRefObject<HTMLAnchorElement> = React.useRef(null);
 
   const handleContentButtonClick = React.useCallback(() => {
     setcontentShown((current) => !current);
-    if (isContenthidden) {
-      window.location.assign("/#about-us");
+    if (isContenthidden && anchorRef.current) {
+      anchorRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [isContenthidden]);
 
@@ -165,7 +167,7 @@ const IndexPage = () => {
         </div>
       </section>
       <section className="relative bg-gray-100 lg:mt-2">
-        <a id="about-us" className="absolute z-30 -top-10"></a>
+        <a ref={anchorRef} className="absolute z-30 -top-10"></a>
         <div className="container px-4 py-10 mx-auto text-left lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">About Us</h1>
 
