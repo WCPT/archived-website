@@ -77,7 +77,7 @@ const IndexPage = () => {
               <span className="mx-2">
                 <a
                   className="text-2xl"
-                  href="https://www.facebook.com/CLTEFNU/"
+                  href="https://www.facebook.com/PasfikaTeachers"
                   title="Facebook"
                   target="_blank"
                   rel="noopener"
@@ -88,7 +88,7 @@ const IndexPage = () => {
               <span className="mx-2">
                 <a
                   className="text-2xl"
-                  href="https://twitter.com/clte_fnu"
+                  href="https://mobile.twitter.com/PasfikaTeachers"
                   title="Twitter"
                   target="_blank"
                   rel="noopener"
@@ -99,7 +99,7 @@ const IndexPage = () => {
               <span className="mx-2">
                 <a
                   className="text-2xl"
-                  href="https://www.youtube.com/channel/UCztg2OWdPFphpeQufpLQQzA"
+                  href="https://www.youtube.com/channel/UCvDhc1CS_QAxmnMCECMd7iQ"
                   title="Youtube"
                   target="_blank"
                   rel="noopener"
@@ -110,7 +110,7 @@ const IndexPage = () => {
               <span className="mx-2">
                 <a
                   className="text-2xl"
-                  href="mailto:clte@fnu.ac.fj"
+                  href="mailto:pasifikateachers@gmail.com"
                   title="Email"
                   target="_blank"
                   rel="noopener"
@@ -300,8 +300,8 @@ const IndexPage = () => {
               <nav className="flex justify-center my-2">
                 <span className="mx-2">
                   <a
-                    className="text-3xl"
-                    href="https://www.facebook.com/CLTEFNU/"
+                    className="text-2xl"
+                    href="https://www.facebook.com/PasfikaTeachers"
                     title="Facebook"
                     target="_blank"
                     rel="noopener"
@@ -311,8 +311,8 @@ const IndexPage = () => {
                 </span>
                 <span className="mx-2">
                   <a
-                    className="text-3xl"
-                    href="https://twitter.com/clte_fnu"
+                    className="text-2xl"
+                    href="https://mobile.twitter.com/PasfikaTeachers"
                     title="Twitter"
                     target="_blank"
                     rel="noopener"
@@ -322,8 +322,8 @@ const IndexPage = () => {
                 </span>
                 <span className="mx-2">
                   <a
-                    className="text-3xl"
-                    href="https://www.youtube.com/channel/UCztg2OWdPFphpeQufpLQQzA"
+                    className="text-2xl"
+                    href="https://www.youtube.com/channel/UCvDhc1CS_QAxmnMCECMd7iQ"
                     title="Youtube"
                     target="_blank"
                     rel="noopener"
@@ -333,8 +333,8 @@ const IndexPage = () => {
                 </span>
                 <span className="mx-2">
                   <a
-                    className="text-3xl"
-                    href="mailto:clte@fnu.ac.fj"
+                    className="text-2xl"
+                    href="mailto:pasifikateachers@gmail.com"
                     title="Email"
                     target="_blank"
                     rel="noopener"
