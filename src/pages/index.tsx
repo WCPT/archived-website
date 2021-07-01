@@ -16,7 +16,7 @@ const IndexPage = () => {
   const [isCreditsClicked, setisCreditsClicked] = React.useState(false);
   const [isCreditsRegistationClicked, setIsCreditsRegistationClicked] =
     React.useState(false);
-  const [isContenthidden, setcontentShown] = React.useState(true);
+  const [isContenthidden, setcontentShown] = React.useState(false);
 
   const handleContentButtonClick = React.useCallback(() => {
     setcontentShown((current) => !current);
@@ -180,7 +180,7 @@ const IndexPage = () => {
           </p>
           <div
             className={cx(
-              "visible opacity-100 transition-opacity duration-700  lg:block",
+              "invisible h-0 opacity-0 transition-opacity duration-700  md:show-content ",
               {
                 "show-content": isContenthidden,
               }
