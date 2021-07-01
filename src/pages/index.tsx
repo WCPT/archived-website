@@ -20,6 +20,9 @@ const IndexPage = () => {
 
   const handleContentButtonClick = React.useCallback(() => {
     setcontentShown((current) => !current);
+    if (isContenthidden) {
+      window.location.assign("/#about-us");
+    }
   }, [isContenthidden]);
 
   const handleCreditButtonClick = React.useCallback(() => {
@@ -123,7 +126,7 @@ const IndexPage = () => {
         </div>
       </nav>
 
-      <div className="relative h-screen">
+      <section className="relative h-screen">
         <div className="absolute z-10 w-full h-full opacity-80 bg-gradient-to-r from-black "></div>
         <StaticImage
           className="absolute z-0 flex items-center justify-center w-full h-full"
@@ -160,8 +163,9 @@ const IndexPage = () => {
             {isCreditsClicked ? "Photo by Hoodh Ahmed on Unsplash" : "Credits"}
           </span>
         </div>
-      </div>
-      <div className="bg-gray-100 lg:mt-2">
+      </section>
+      <section className="relative bg-gray-100 lg:mt-2">
+        <a id="about-us" className="absolute z-30 -top-10"></a>
         <div className="container px-4 py-10 mx-auto text-left lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">About Us</h1>
 
@@ -223,9 +227,9 @@ const IndexPage = () => {
             </span>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="block lg:h-screen lg:flex lg:max-h-1/2-screen lg:my-2 lg:flex-row">
+      <section className="block lg:h-screen lg:flex lg:max-h-1/2-screen lg:my-2 lg:flex-row">
         <div className="relative flex items-center justify-center lg:w-1/2 lg:mr-1 aspect-w-16 aspect-h-9 item-center lg:h-full lg:pb-0">
           <iframe
             src="https://www.youtube.com/embed/iaNnX6jkq80"
@@ -270,9 +274,9 @@ const IndexPage = () => {
             </div>
           </a>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-gray-100 ">
+      <section className="bg-gray-100 ">
         <div className="container px-4 py-10 mx-auto text-left lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
           <p className="mx-4 text-xl text-gray-600">
@@ -288,7 +292,8 @@ const IndexPage = () => {
             CPT experience worthwhile and a memorable one.
           </p>
         </div>
-      </div>
+      </section>
+
       <footer className="flex bg-primary">
         <div className="container grid grid-cols-1 gap-4 px-12 py-12 mx-auto lg:grid-cols-3 lg:gap-12">
           <div>
