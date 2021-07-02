@@ -8,7 +8,9 @@ import LogoBlack from "../images/assets/logo-black.svg";
 import TurtleLogo from "../images/assets/turtle-logo.svg";
 
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdGroup } from "react-icons/md";
+import { RiCommunityFill } from "react-icons/ri";
+import { GiJusticeStar } from "react-icons/gi";
 import { MutableRefObject } from "react";
 
 // markup
@@ -278,7 +280,30 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section className="bg-gray-100 ">
+      <section className="pt-10 bg-gray-100 ">
+        <div className="container flex flex-col justify-center mx-auto text-center border-t-2 border-blue-400 lg:flex-row">
+          <div className="flex flex-col flex-1 px-4 py-6 text-2xl text-gray-600 border-b-2 border-blue-400 lg:py-4 lg:mr-4 ">
+            <MdGroup className="mx-auto text-5xl" />
+            <h1 className="mx-auto my-4 text-5xl font-semibold text-gray-700">
+              100
+            </h1>
+            <p>Joint Programmes focused on Integrated Social Protection</p>
+          </div>
+          <div className="flex flex-col flex-1 py-6 mx-4 text-2xl text-gray-600 border-b-2 border-blue-400 lg:mx-2">
+            <RiCommunityFill className="mx-auto text-5xl" />
+            <h1 className="mx-auto my-4 text-5xl font-semibold text-gray-700">
+              1000
+            </h1>
+            <p>Partners working together</p>
+          </div>
+          <div className="flex flex-col flex-1 px-4 py-6 text-2xl text-gray-600 border-b-2 border-blue-400 lg:ml-4">
+            <GiJusticeStar className="mx-auto text-5xl" />
+            <h1 className="mx-auto my-4 text-5xl font-semibold text-gray-700">
+              500
+            </h1>
+            <p>Innovative solutions tested</p>
+          </div>
+        </div>
         <div className="container px-4 py-10 mx-auto text-left lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
           <p className="mx-4 text-xl text-gray-600">
