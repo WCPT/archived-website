@@ -289,7 +289,7 @@ const IndexPage = () => {
             </h1>
             <p>Joint Programmes focused on Integrated Social Protection</p>
           </div>
-          <div className="flex flex-col flex-1 py-6 mx-4 text-2xl text-gray-600 border-b-2 border-blue-400 lg:mx-2">
+          <div className="flex flex-col flex-1 py-6 text-2xl text-gray-600 border-b-2 border-blue-400 lg:mx-2">
             <RiCommunityFill className="mx-auto text-5xl" />
             <h1 className="mx-auto my-4 text-5xl font-semibold text-gray-700">
               1000
