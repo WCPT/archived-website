@@ -3,6 +3,7 @@ import { cx } from "@emotion/css";
 import { StaticImage } from "gatsby-plugin-image";
 
 import CPTLogo from "../images/assets/CPT_Logo.svg";
+import WCPTLogo from "../images/assets/WCPT_Logo.svg";
 import LogoWhite from "../images/assets/logo-white.svg";
 import LogoBlack from "../images/assets/logo-black.svg";
 import TurtleLogo from "../images/assets/turtle-logo.svg";
@@ -307,16 +308,14 @@ const IndexPage = () => {
         <div className="container px-4 py-10 mx-auto text-left lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
           <p className="mx-4 text-xl text-gray-600">
-            If you have any queries, <b>feel free to contact us</b> by emailing
-            to
+            If you have any queries, feel free to contact us by emailing to
             <a
               className="pl-1 text-blue-500 underline break-words"
               href="mailto:pasifikateachers@gmail.com"
             >
               pasifikateachers@gmail.com
             </a>
-            . We would love to hear from you and do our utmost best to make your
-            CPT experience worthwhile and a memorable one.
+            .
           </p>
         </div>
       </section>
@@ -324,7 +323,7 @@ const IndexPage = () => {
       <footer className="flex bg-primary">
         <div className="container grid grid-cols-1 gap-4 px-12 py-12 mx-auto lg:grid-cols-3 lg:gap-12">
           <div>
-            <CPTLogo className="mx-auto h-28 xl:h-32" />
+            <WCPTLogo className="mx-auto h-28 xl:h-32" />
           </div>
 
           <section className="flex items-center justify-center text-gray-200">
