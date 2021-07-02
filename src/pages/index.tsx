@@ -2,17 +2,16 @@ import * as React from "react";
 import { cx } from "@emotion/css";
 import { StaticImage } from "gatsby-plugin-image";
 
-import CPTLogo from "../images/assets/CPT_Logo.svg";
 import WCPTLogo from "../images/assets/WCPT_Logo.svg";
-import LogoWhite from "../images/assets/logo-white.svg";
-import LogoBlack from "../images/assets/logo-black.svg";
-import TurtleLogo from "../images/assets/turtle-logo.svg";
+import LogoWhite from "../images/assets/logo_white.svg";
+import LogoBlack from "../images/assets/logo_black.svg";
+import TurtleLogo from "../images/assets/turtle_logo.svg";
 
-import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
-import { MdEmail, MdGroup } from "react-icons/md";
+import { MdGroup } from "react-icons/md";
 import { RiCommunityFill } from "react-icons/ri";
 import { GiJusticeStar } from "react-icons/gi";
 import { MutableRefObject } from "react";
+import { Social } from "../components";
 
 // markup
 const IndexPage = () => {
@@ -73,60 +72,15 @@ const IndexPage = () => {
           )}
         >
           <div className="flex justify-start py-1">
-            <nav className="flex items-center">
-              <div className="mr-6">
-                {hasScrolled && <LogoBlack className="h-12 lg:h-16 " />}
-                <LogoWhite
-                  className={cx("h-12 lg:h-16", {
-                    hidden: hasScrolled,
-                  })}
-                />
-              </div>
-              <span className="mx-2">
-                <a
-                  className="text-2xl"
-                  href="https://www.facebook.com/PasfikaTeachers"
-                  title="Facebook"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <FaFacebookSquare className="hover:text-blue-800" />
-                </a>
-              </span>
-              <span className="mx-2">
-                <a
-                  className="text-2xl"
-                  href="https://mobile.twitter.com/PasfikaTeachers"
-                  title="Twitter"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <FaTwitter className="hover:text-blue-400" />
-                </a>
-              </span>
-              <span className="mx-2">
-                <a
-                  className="text-2xl"
-                  href="https://www.youtube.com/channel/UCvDhc1CS_QAxmnMCECMd7iQ"
-                  title="Youtube"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <FaYoutube className="hover:text-red-600" />
-                </a>
-              </span>
-              <span className="mx-2">
-                <a
-                  className="text-2xl"
-                  href="mailto:pasifikateachers@gmail.com"
-                  title="Email"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <MdEmail className="hover:text-gray-600" />
-                </a>
-              </span>
-            </nav>
+            <div className="mr-6">
+              {hasScrolled && <LogoBlack className="h-12 lg:h-16 " />}
+              <LogoWhite
+                className={cx("h-12 lg:h-16", {
+                  hidden: hasScrolled,
+                })}
+              />
+            </div>
+            <Social className="items-center " />
           </div>
         </div>
       </nav>
@@ -147,7 +101,7 @@ const IndexPage = () => {
           </div>
           <div className="m-4">
             <h1 className="my-1 text-4xl drop-shadow-md">
-              Community of Pasifika Teachers
+              Wisdom Community of Pasifika Teachers
             </h1>
             <h2 className="my-1 text-xl">
               Learning, Connecting and Moving Forward Together
@@ -186,7 +140,7 @@ const IndexPage = () => {
           </p>
           <div
             className={cx(
-              "invisible h-0 opacity-0 transition-opacity duration-700 lg:visible lg:h-auto lg:opacity-100  ",
+              "invisible h-0 opacity-0 transition-opacity duration-700 lg:visible lg:h-auto lg:opacity-100 ",
               {
                 "show-content": isContenthidden,
               }
@@ -253,15 +207,18 @@ const IndexPage = () => {
           />
           <a
             href="https://clte.fnu.ac.fj/talanoakaro"
-            className="absolute top-0 left-0 z-10 flex items-end justify-start w-full h-full text-2xl text-white bg-gradient-to-t from-gray-900 hover:bg-gradient-to-b hover:from-gray-400 hover:text-black"
+            className="absolute top-0 left-0 z-10 w-full h-full pb-8 text-2xl text-white bg-gradient-to-t from-gray-900 hover:bg-gradient-to-b hover:from-gray-400 hover:text-black"
           >
-            <div className="container px-4 py-6 mx-auto mb-6 text-lg lg:py-8">
-              <h1 className="mx-4 my-1 text-2xl font-bold ">Register here</h1>
-              <p className="mx-4 text-xl text-gray-200">
-                Click here to register to Please Talanoa Karo, Pasifika!
-              </p>
+            <div className="container flex items-end justify-start w-full h-full px-4 py-6 mx-auto mb-6 text-lg lg:py-8">
+              <div>
+                <h1 className="mx-4 my-1 text-2xl font-bold ">Register here</h1>
+                <p className="mx-4 text-xl text-gray-200">
+                  Click here to register to Please Talanoa Karo, Pasifika!
+                </p>
+              </div>
             </div>
-            <div className="absolute bottom-0 right-0 z-20 flex items-end justify-end text-lg">
+
+            <div className="absolute bottom-0 right-0 z-50 flex items-end justify-end text-lg">
               <span
                 className="z-20 p-2 text-white bg-gray-800 bg-opacity-60"
                 onClick={handleCreditsRegistationClick}
@@ -328,52 +285,7 @@ const IndexPage = () => {
 
           <section className="flex items-center justify-center text-gray-200">
             <div className="container mx-auto">
-              <nav className="flex justify-center my-2">
-                <span className="mx-2">
-                  <a
-                    className="text-2xl"
-                    href="https://www.facebook.com/PasfikaTeachers"
-                    title="Facebook"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <FaFacebookSquare className="hover:text-blue-800" />
-                  </a>
-                </span>
-                <span className="mx-2">
-                  <a
-                    className="text-2xl"
-                    href="https://mobile.twitter.com/PasfikaTeachers"
-                    title="Twitter"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <FaTwitter className="hover:text-blue-400" />
-                  </a>
-                </span>
-                <span className="mx-2">
-                  <a
-                    className="text-2xl"
-                    href="https://www.youtube.com/channel/UCvDhc1CS_QAxmnMCECMd7iQ"
-                    title="Youtube"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <FaYoutube className="hover:text-red-600" />
-                  </a>
-                </span>
-                <span className="mx-2">
-                  <a
-                    className="text-2xl"
-                    href="mailto:pasifikateachers@gmail.com"
-                    title="Email"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <MdEmail className="hover:text-gray-600" />
-                  </a>
-                </span>
-              </nav>
+              <Social className="justify-center my-2" />
               <section className="flex justify-center pt-4 text-lg text-center text-gray-200">
                 Community of Pasifika Teachers &copy;
                 {new Date().getFullYear()}
