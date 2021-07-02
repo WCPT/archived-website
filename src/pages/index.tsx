@@ -54,7 +54,9 @@ const IndexPage = () => {
 
   return (
     <main>
-      <title>Community of Pasifika</title>
+      <title>Wisdom Community of Pasifika</title>
+
+      {/* Main Navigation Section */}
       <nav
         className={cx(
           `flex flex-col top-0 z-50 w-full fixed absolute-navbar transition-all duration-200 ease-out py-2`,
@@ -85,6 +87,7 @@ const IndexPage = () => {
         </div>
       </nav>
 
+      {/* Hero Section */}
       <section className="relative h-screen">
         <div className="absolute z-10 w-full h-full opacity-80 bg-gradient-to-r from-black "></div>
         <StaticImage
@@ -123,6 +126,8 @@ const IndexPage = () => {
           </span>
         </div>
       </section>
+
+      {/* About Us Section */}
       <section className="relative bg-gray-100 lg:mt-2">
         <a ref={anchorRef} className="absolute z-30 -top-10"></a>
         <div className="container px-4 py-10 mx-auto text-left lg:py-8">
@@ -188,6 +193,7 @@ const IndexPage = () => {
         </div>
       </section>
 
+      {/* Video and Registration Section */}
       <section className="block lg:h-screen lg:flex lg:max-h-1/2-screen lg:my-2 lg:flex-row">
         <div className="relative flex items-center justify-center lg:w-1/2 lg:mr-1 aspect-w-16 aspect-h-9 item-center lg:h-full lg:pb-0">
           <iframe
@@ -239,6 +245,7 @@ const IndexPage = () => {
       </section>
 
       <section className="bg-gray-100 ">
+        {/* Upcoming Events Section */}
         <div className="container py-10 mx-auto">
           <h1 className="px-6 mb-4 text-2xl font-bold ">Upcoming Events</h1>
           <div className="flex flex-col mx-8 lg:flex-row">
@@ -280,6 +287,8 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
+
+        {/* Summary Cards Section */}
         <div className="container mx-auto">
           <div className="flex flex-col justify-center mx-8 text-center border-t-2 border-primary lg:flex-row">
             <div className="flex flex-col flex-1 px-4 py-6 text-2xl text-gray-600 border-b-2 border-primary lg:py-4 lg:mr-4 ">
@@ -306,6 +315,7 @@ const IndexPage = () => {
           </div>
         </div>
 
+        {/* Contact Us Section */}
         <div className="container px-4 py-10 mx-auto text-left lg:py-8">
           <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
           <p className="mx-4 text-xl text-gray-600">
