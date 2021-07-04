@@ -1,18 +1,40 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  purge: [
-    "src/pages/**/*.{js,ts,jsx,tsx}",
-    "src/components/**/*.{js,ts,jsx,tsx}",
-  ],
+  mode: "jit",
+  purge: {
+    content: [
+      "src/pages/**/*.{js,ts,jsx,tsx}",
+      "src/components/**/*.{js,ts,jsx,tsx}",
+      "src/page-components/**/*.{js,ts,jsx,tsx}",
+    ],
+    safelist: [
+      "hover:text-blue-800",
+      "hover:text-blue-400",
+      "hover:text-red-600",
+      "hover:text-blue-500",
+    ],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      xs: "500px",
+      ...defaultTheme.screens,
+    },
+
     extend: {
       colors: {
         primary: "#002147",
-        "light-gray": "#dee4e7",
+        // "light-gray": "#dee4e7",
+        "soft-gray": "#f1f4f7",
       },
       fontFamily: {
-        primary: ["Crimson Text", "serif"],
-        secondary: ["Work Sans", "sans-serif"],
+        sans: ["Lato", "sans-serif"],
+        serif: ["Bitter", "serif"],
+      },
+      fontSize: {
+        "3.5xl": "2rem",
+        "4.5xl": "2.75rem",
       },
       minHeight: {
         "1/4-screen": "25vh",
@@ -32,5 +54,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/typography"),
+  ],
 };

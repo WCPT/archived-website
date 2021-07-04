@@ -1,1 +1,2 @@
-export * from "./Social";
+export * from "./Logo";
+export * from "./ImageHoc";

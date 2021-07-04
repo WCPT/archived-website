@@ -3,6 +3,7 @@ module.exports = {
     title: "Community of Pasifika",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
       resolve: "gatsby-plugin-react-svg",
