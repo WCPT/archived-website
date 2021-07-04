@@ -45,7 +45,7 @@ const IndexPage = () => {
         <HeroSection />
         <AboutSection />
         <MediaSection />
-        <SectionOne />
+        <EventsSection />
         <Footer />
       </main>
     </>
@@ -115,7 +115,7 @@ function MediaSection() {
   );
 }
 
-function SectionOne() {
+function EventsSection() {
   return (
     <section className="relative bg-gray-100">
       {/* Upcoming Events Section */}

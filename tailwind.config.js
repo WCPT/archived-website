@@ -19,7 +19,12 @@ module.exports = {
   theme: {
     screens: {
       xs: "500px",
-      ...defaultTheme.screens,
+      sm: defaultTheme.screens.sm,
+      md: defaultTheme.screens.md,
+      lmd: "875px",
+      lg: defaultTheme.screens.lg,
+      xl: defaultTheme.screens.xl,
+      "2xl": defaultTheme.screens["2xl"],
     },
 
     extend: {
@@ -48,6 +53,9 @@ module.exports = {
         "1/2-screen": "50vh",
         "2/3-screen": "66vh",
         "3/4-screen": "75vh",
+      },
+      inset: {
+        "1/10": "10%",
       },
     },
   },

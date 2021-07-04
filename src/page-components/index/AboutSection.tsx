@@ -14,14 +14,12 @@ const SmilingFijianImage = ImageHoc(() => (
 ));
 
 const StudentPortraitImage = ImageHoc(() => (
-  <div className="relative" style={{ top: "10%" }}>
-    <StaticImage
-      alt="Graduating student portrait"
-      src="../../images/student-portrait.jpeg"
-      objectFit="contain"
-      placeholder="dominantColor"
-    />
-  </div>
+  <StaticImage
+    alt="Graduating student portrait"
+    src="../../images/student-portrait.jpeg"
+    objectFit="contain"
+    placeholder="dominantColor"
+  />
 ));
 
 const SmilingStudentImage = ImageHoc(() => (
@@ -34,14 +32,12 @@ const SmilingStudentImage = ImageHoc(() => (
 ));
 
 const IslanderStudentImage = ImageHoc(() => (
-  <div className="relative" style={{ top: "10%" }}>
-    <StaticImage
-      alt="Happy islander student"
-      src="../../images/islander-student.jpeg"
-      objectFit="contain"
-      placeholder="dominantColor"
-    />
-  </div>
+  <StaticImage
+    alt="Happy islander student"
+    src="../../images/islander-student.jpeg"
+    objectFit="contain"
+    placeholder="dominantColor"
+  />
 ));
 
 export const AboutSection = () => {
@@ -66,9 +62,9 @@ export const AboutSection = () => {
             global competency
           </h1>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <div className="lg:pr-6 xl:pr-12 text-lg xl:text-xl text-gray-600 prose">
+        <div className="grid grid-cols-1 lmd:grid-cols-5 xl:grid-cols-2 gap-8">
+          <div className="lmd:col-span-3 xl:col-span-1">
+            <div className="lg:pr-6 xl:pr-12 text-lg lg:text-xl text-gray-600 prose max-w-none">
               <p className="first-letter:text-5xl first-letter:font-bold">
                 We are a growing network of teachers of all levels from the
                 wider Pacific region, with a common goal and the will to
@@ -87,7 +83,7 @@ export const AboutSection = () => {
               text={showExtendedContent ? "Show less" : "Read more"}
             />
           </div>
-          <div className="hidden md:grid md:grid-cols-2 gap-4 auto-rows-min">
+          <div className="hidden lmd:grid xl:grid-cols-2 gap-4 auto-rows-min col-span-2 xl:col-span-1">
             <SmilingFijianImage
               containerClassName="relative"
               // creditClassName="px-2 py-1"
@@ -95,19 +91,19 @@ export const AboutSection = () => {
               // creditLink="https://vijeshdatt.com/"
             />
             <StudentPortraitImage
-              containerClassName="relative"
+              containerClassName="relative hidden xl:inline top-1/10"
               // creditClassName="px-2 py-1"
               // credit="Vijeshwar Datt"
               // creditLink="https://vijeshdatt.com/"
             />
             <SmilingStudentImage
-              containerClassName="relative"
+              containerClassName="relative lg:hidden xl:inline"
               // creditClassName="px-2 py-1"
               // credit="Vijeshwar Datt"
               // creditLink="https://vijeshdatt.com/"
             />
             <IslanderStudentImage
-              containerClassName="relative"
+              containerClassName="relative hidden lg:inline xl:top-1/10"
               // creditClassName="px-2 py-1"
               // credit="Vijeshwar Datt"
               // creditLink="https://vijeshdatt.com/"
