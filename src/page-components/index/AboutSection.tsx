@@ -54,7 +54,7 @@ export const AboutSection = () => {
   }, [showExtendedContent]);
 
   return (
-    <section ref={ref} className="relative py-12 xs:py-16 sm:py-20 bg-white">
+    <section ref={ref} className="relative py-12 xs:py-16 sm:pt-20 sm:py-16 bg-white">
       <div className="xl:container mx-auto px-8 xs:px-12 sm:px-16">
         <div className="flex justify-center mb-8">
           <h1 className="xs:mb-8 max-w-3xl text-2xl xs:text-3xl md:text-4xl text-center leading-snug md:leading-snug text-gray-500">

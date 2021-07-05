@@ -20,7 +20,7 @@ export const MediaSection = () => {
             ></iframe>
           </div>
         </div>
-        <div className="order-1 lg:order-2 lg:flex lg:flex-col justify-center col-span-2 xl:col-span-1 mb-12 lg:mb-0 px-12 lmd:px-0">
+        <div className="order-1 lg:order-2 lg:flex lg:flex-col justify-center col-span-2 xl:col-span-1 mb-12 lg:mb-0 px-8 xs:px-12 sm:px-16 lmd:px-0">
           <h1 className="mb-4 max-w-lg xs:font-semibold text-2xl md:text-3xl leading-snug md:leading-snug text-gray-800">
             We welcome teachers of all levels from the wider Pacific region
           </h1>
