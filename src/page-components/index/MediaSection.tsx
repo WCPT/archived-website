@@ -1,22 +1,15 @@
-import React, { useState, useCallback } from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import { cx } from "@emotion/css";
+import React from "react";
 
 export const MediaSection = () => {
-  const [isCreditsRegistationClicked, setIsCreditsRegistationClicked] =
-    useState(false);
+  // const [isCreditsRegistationClicked, setIsCreditsRegistationClicked] =
+  //   useState(false);
 
-  const handleCreditsRegistationClick = useCallback(() => {
-    setIsCreditsRegistationClicked((current) => !current);
-  }, [isCreditsRegistationClicked]);
+  // const handleCreditsRegistationClick = useCallback(() => {
+  //   setIsCreditsRegistationClicked((current) => !current);
+  // }, [isCreditsRegistationClicked]);
 
   return (
-    <section className="relative bg-gray-100 py-12 xs:py-16">
-      {/* <div className="flex justify-center py-8 lmd:pb-8 lmd:pt-0 px-8 xs:px-12 sm:px-16">
-        <h1 className="xs:mb-8 max-w-2xl text-2xl xs:text-3xl md:text-4xl text-center leading-snug text-gray-600">
-          Optimise learning outcomes and improve well-being
-        </h1>
-      </div> */}
+    <section className="relative bg-cloud py-12 xs:py-16">
       <div className="xl:container grid lg:grid-cols-5 xl:grid-cols-2 lg:gap-8 mx-auto lmd:px-16">
         <div className="order-2 lg:order-1 flex items-center justify-center lg:pr-6 col-span-3 xl:col-span-1">
           <div className="flex flex-1 aspect-w-16 aspect-h-9">
