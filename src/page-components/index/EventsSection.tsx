@@ -9,6 +9,7 @@ export const EventsSection = () => {
       {/* Upcoming Events Section */}
       <div className="container py-10 mx-auto">
         <h1 className="px-6 mb-4 text-2xl font-bold ">Upcoming Events</h1>
+
         <div className="flex flex-col mx-8 lg:flex-row">
           <div className="flex mx-1 my-2 text-center lg:flex-row">
             <div className="flex flex-col items-start p-4 text-white bg-green-500 border-l-8 border-primary ">

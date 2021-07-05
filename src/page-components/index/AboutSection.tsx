@@ -49,12 +49,15 @@ export const AboutSection = () => {
     // @ts-ignore
     if (showExtendedContent && ref.current) {
       // @ts-ignore
-      ref.current.scrollIntoView({ behavior: "smooth" });
+      ref.current.scrollIntoView();
     }
   }, [showExtendedContent]);
 
   return (
-    <section ref={ref} className="relative py-12 xs:py-16 sm:pt-20 sm:py-16 bg-white">
+    <section
+      ref={ref}
+      className="relative py-12 xs:py-16 sm:pt-20 sm:py-16 bg-white"
+    >
       <div className="xl:container mx-auto px-8 xs:px-12 sm:px-16">
         <div className="flex justify-center mb-8">
           <h1 className="xs:mb-8 max-w-3xl text-2xl xs:text-3xl md:text-4xl text-center leading-snug md:leading-snug text-gray-500">
@@ -121,8 +124,11 @@ function ExtendedContent({ isVisible }: { isVisible: boolean }) {
   return (
     <div
       className={cx(
-        "h-0 opacity-0 pointer-events-none transition-opacity duration-300 xs:visible xs:h-auto xs:opacity-100 ",
-        { "h-auto opacity-100 pointer-events-auto": isVisible }
+        "opacity-0 xs:opacity-100 transition-opacity duration-300",
+        {
+          "hidden xs:block": !isVisible,
+          "block opacity-100": isVisible,
+        }
       )}
     >
       <p>
