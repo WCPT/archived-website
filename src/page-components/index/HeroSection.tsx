@@ -33,7 +33,7 @@ export const HeroSection = () => {
     <section className="relative h-screen w-screen">
       <DesktopHeroImage
         containerClassName="relative h-screen w-screen"
-        overlayClassName="absolute inset-0 z-10 opacity-50 bg-gradient-to-r from-black"
+        overlayClassName="absolute inset-0 z-10 opacity-60 bg-gradient-to-r from-black"
         credit="Photo by Hoodh Ahmed on Unsplash"
       />
       {/* <MobileHeroImage
@@ -65,6 +65,16 @@ export const HeroSection = () => {
             </a>
           </div>
         </div>
+
+        {/* <div className="flex flex-1 items-center justify-center ml-auto max-w-3xl shadow-lg">
+          <div className="flex flex-1 aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.youtube.com/embed/iaNnX6jkq80"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            />
+          </div>
+        </div> */}
       </div>
     </section>
   );

@@ -1,20 +1,44 @@
 import React from "react";
+import { cx } from "@emotion/css";
 // import { RiCommunityFill } from "react-icons/ri";
 // import { GiJusticeStar } from "react-icons/gi";
 // import { MdGroup } from "react-icons/md";
 
 export const EventsSection = () => {
   return (
-    <section className="relative py-12 xs:py-16 sm:py-16 bg-white">
+    <section className="relative py-12 xs:py-16 sm:py-24 bg-white">
       <div className="xl:container mx-auto px-8 xs:px-12 sm:px-16">
         <div className="lg:flex lg:flex-col justify-center mb-12 lg:mb-0">
-          <h1 className="mb-4 max-w-lg xs:font-semibold text-2xl md:text-3xl leading-snug md:leading-snug text-gray-800">
-            Upcoming Events
-          </h1>
-          <div className="flex justify-center text-gray-600">
-            <EventCard />
-            <EventCard />
-            <EventCard />
+          <div className="flex justify-center mb-8">
+            <h1 className="xs:mb-8 text-center text-2xl xs:text-3xl md:text-4xl text-gray-500">
+              Upcoming Events
+            </h1>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center text-gray-600">
+            <EventCard
+              className="bg-blue-500 text-white"
+              title="Lorem, ipsum dolor sit amet consectetur"
+              day="08"
+              month="June"
+              time="7.30PM - 10PM"
+              venue="Dolor voluptatibus"
+            />
+            <EventCard
+              className="bg-gray-100"
+              title="Lorem, ipsum dolor sit amet consectetur"
+              day="13"
+              month="July"
+              time="7.30PM - 10PM"
+              venue="Dolor voluptatibus"
+            />
+            <EventCard
+              className="bg-gray-100"
+              title="Lorem, ipsum dolor sit amet consectetur"
+              day="23"
+              month="August"
+              time="7.30PM - 10PM"
+              venue="Dolor voluptatibus"
+            />
           </div>
         </div>
       </div>
@@ -66,14 +90,30 @@ export const EventsSection = () => {
 
 export default EventsSection;
 
-function EventCard() {
+function EventCard({
+  className,
+  title,
+  day,
+  month,
+  time,
+  venue,
+}: {
+  className?: string;
+  title: string;
+  day: string;
+  month: string;
+  time: string;
+  venue: string;
+}) {
   return (
-    <div className="flex flex-col mx-2 p-6 w-60 bg-blue-500 text-white">
-      <span className="text-4.5xl leading-tight font-light tracking-wide">08</span>
-      <span className="text-sm uppercase">June</span>
-      <span className="mt-6 mb-2 text-lg font-light">Paris Start-up Innovation Summit</span>
-      <span className="text-sm font-light">7.30PM - 10PM</span>
-      <span className="text-sm font-light">@ Algolia Paris - Bridge (200)</span>
+    <div className={cx(`flex flex-col mx-4 pt-10 pb-12 px-8 w-80`, className)}>
+      <span className="text-4.5xl leading-tight font-light tracking-wide">
+        {day}
+      </span>
+      <span className="uppercase tracking-widest">{month}</span>
+      <span className="mt-10 mb-6 text-xl leading-tight ">{title}</span>
+      <span className="text-lg">{time}</span>
+      <span className="text-lg">@ {venue}</span>
     </div>
-  )
+  );
 }

@@ -17,7 +17,7 @@ export const MediaSection = () => {
               src="https://www.youtube.com/embed/iaNnX6jkq80"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            ></iframe>
+            />
           </div>
         </div>
         <div className="order-1 lg:order-2 lg:flex lg:flex-col justify-center col-span-2 xl:col-span-1 mb-12 lg:mb-0 px-8 xs:px-12 sm:px-16 lmd:px-0">
