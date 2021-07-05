@@ -31,7 +31,6 @@ module.exports = {
       colors: {
         primary: "#002147",
         // "light-gray": "#dee4e7",
-        "soft-gray": "#f1f4f7",
       },
       fontFamily: {
         sans: ["Lato", "sans-serif"],

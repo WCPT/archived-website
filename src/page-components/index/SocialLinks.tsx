@@ -46,7 +46,7 @@ export const SocialLinks = ({ className }: Props) => {
           rel="noopener"
         >
           <Icon
-            className={`mx-1 p-1.5 md:p-2.5 text-3.5xl xs:text-4xl md:text-5xl rounded-md hover:${props.hoverClass} hover:bg-white transition-all duration-300`}
+            className={`mx-1 p-1.5 md:p-2.5 text-4xl md:text-5xl rounded-md hover:${props.hoverClass} hover:bg-white transition-all duration-300`}
           />
         </a>
       ))}

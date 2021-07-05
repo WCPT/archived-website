@@ -40,9 +40,14 @@ export const HeroSection = () => {
           <h2 className="text-2xl font-light leading-tight text-gray-100">
             Learning, sharing, connecting and moving forward together
           </h2> */}
-          <h1 className="max-w-md md:max-w-lg mb-4 font-serif font-light text-gray-50 text-3xl xs:text-4xl md:text-4.5xl xs:leading-snug text-center sm:text-left">
-            Learning, sharing, connecting and moving forward together.
+          <h1 className="xs:hidden text-3xl text-center pb-4 font-light">
+            Wisdom Community
+            <br />
+            of Pasifika Teachers
           </h1>
+          <h2 className="max-w-md md:max-w-lg mb-4 font-serif font-light text-gray-50 text-xl xs:text-4xl md:text-4.5xl xs:leading-snug text-center sm:text-left">
+            Learning, sharing, connecting and moving forward together.
+          </h2>
           <div className="my-4 text-center sm:text-left">
             <a
               className="group cursor-pointer inline-flex items-center py-2 px-4 border border-gray-200 hover:border-blue-600 hover:bg-blue-600 transition-all duration-200"

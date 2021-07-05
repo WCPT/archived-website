@@ -62,9 +62,9 @@ export const AboutSection = () => {
             global competency
           </h1>
         </div>
-        <div className="grid grid-cols-1 lmd:grid-cols-5 xl:grid-cols-2 gap-8">
+        <div className="grid lmd:grid-cols-5 xl:grid-cols-2 gap-8">
           <div className="lmd:col-span-3 xl:col-span-1">
-            <div className="lg:pr-6 xl:pr-12 text-lg lg:text-xl text-gray-600 prose max-w-none">
+            <div className="prose max-w-none lg:pr-6 text-lg lg:text-xl text-gray-600">
               <p className="first-letter:text-5xl first-letter:font-bold">
                 We are a growing network of teachers of all levels from the
                 wider Pacific region, with a common goal and the will to
