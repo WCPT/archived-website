@@ -56,7 +56,7 @@ export const AboutSection = () => {
   return (
     <section
       ref={ref}
-      className="relative py-12 xs:py-16 sm:pt-20 sm:py-16 bg-white"
+      className="relative py-16 sm:py-20 bg-white"
     >
       <div className="xl:container mx-auto px-8 xs:px-12 sm:px-16">
         <div className="flex justify-center mb-8">

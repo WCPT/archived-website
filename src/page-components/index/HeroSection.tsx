@@ -16,31 +16,31 @@ const DesktopHeroImage = ImageHoc(() => (
   />
 ));
 
-const MobileHeroImage = ImageHoc(() => (
-  <StaticImage
-    className="fixed inset-0 flex items-center justify-center w-full h-full"
-    imgClassName="w-full h-auto"
-    alt="Pasific Island view from the sky"
-    src="../../images/bure.jpeg"
-    objectFit="cover"
-    objectPosition="50% 50%"
-    placeholder="dominantColor"
-  />
-));
+// const MobileHeroImage = ImageHoc(() => (
+//   <StaticImage
+//     className="fixed inset-0 flex items-center justify-center w-full h-full"
+//     imgClassName="w-full h-auto"
+//     alt="Pasific Island view from the sky"
+//     src="../../images/bure.jpeg"
+//     objectFit="cover"
+//     objectPosition="50% 50%"
+//     placeholder="dominantColor"
+//   />
+// ));
 
 export const HeroSection = () => {
   return (
     <section className="relative h-screen w-screen">
       <DesktopHeroImage
-        containerClassName="hidden xs:flex relative h-screen w-screen"
+        containerClassName="relative h-screen w-screen"
         overlayClassName="absolute inset-0 z-10 opacity-50 bg-gradient-to-r from-black"
         credit="Photo by Hoodh Ahmed on Unsplash"
       />
-      <MobileHeroImage
+      {/* <MobileHeroImage
         containerClassName="flex xs:hidden relative h-screen w-screen"
         overlayClassName="absolute inset-0 z-10 opacity-50 bg-black"
         credit="Photo by Vijeshwar Datt on Unsplash"
-      />
+      /> */}
 
       <div className="lg:container absolute inset-0 z-10 flex items-center mx-auto px-8 xs:px-12 sm:px-16 text-white">
         <div className="flex flex-col">

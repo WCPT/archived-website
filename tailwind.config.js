@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   mode: "jit",
@@ -31,7 +32,9 @@ module.exports = {
       colors: {
         primary: "#002147",
         // "light-gray": "#dee4e7",
-        "cloud": "#fffffa",
+        cloud: "#fffff0",
+        cyan: colors.cyan,
+        sky: colors.sky,
       },
       fontFamily: {
         sans: ["Lato", "sans-serif"],

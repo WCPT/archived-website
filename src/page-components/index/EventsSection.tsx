@@ -1,51 +1,26 @@
 import React from "react";
-import { RiCommunityFill } from "react-icons/ri";
-import { GiJusticeStar } from "react-icons/gi";
-import { MdGroup } from "react-icons/md";
+// import { RiCommunityFill } from "react-icons/ri";
+// import { GiJusticeStar } from "react-icons/gi";
+// import { MdGroup } from "react-icons/md";
 
 export const EventsSection = () => {
   return (
-    <section className="relative bg-white">
-      {/* Upcoming Events Section */}
-      <div className="container py-10 mx-auto">
-        <h1 className="px-6 mb-4 text-2xl font-bold ">Upcoming Events</h1>
-
-        <div className="flex flex-col mx-8 lg:flex-row">
-          <div className="flex mx-1 my-2 text-center lg:flex-row">
-            <div className="flex flex-col items-start p-4 text-white bg-green-500 border-l-8 border-primary ">
-              <h1 className="text-2xl">Some Event</h1>
-              <h2 className="text-lg text-black">10:30pm, 12th August, 2021</h2>
-              <p className="text-lg text-left">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                voluptatibus ut quas vel incidunt.
-              </p>
-            </div>
-          </div>
-          <div className="flex mx-1 my-2 text-center lg:flex-row">
-            <div className="flex flex-col items-start p-4 text-white bg-blue-400 border-l-8 border-primary ">
-              <h1 className="text-2xl">Some Event</h1>
-              <h2 className="text-lg text-black">10:30pm, 12th August, 2021</h2>
-              <p className="text-lg text-left">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                voluptatibus ut quas vel incidunt.
-              </p>
-            </div>
-          </div>
-          <div className="flex mx-1 my-2 text-center lg:flex-row">
-            <div className="flex flex-col items-start p-4 text-white bg-red-400 border-l-8 border-primary ">
-              <h1 className="text-2xl">Some Event</h1>
-              <h2 className="text-lg text-black">10:30pm, 12th August, 2021</h2>
-              <p className="text-lg text-left">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                voluptatibus ut quas vel incidunt.
-              </p>
-            </div>
+    <section className="relative py-12 xs:py-16 sm:py-16 bg-white">
+      <div className="xl:container mx-auto px-8 xs:px-12 sm:px-16">
+        <div className="lg:flex lg:flex-col justify-center mb-12 lg:mb-0">
+          <h1 className="mb-4 max-w-lg xs:font-semibold text-2xl md:text-3xl leading-snug md:leading-snug text-gray-800">
+            Upcoming Events
+          </h1>
+          <div className="flex justify-center text-gray-600">
+            <EventCard />
+            <EventCard />
+            <EventCard />
           </div>
         </div>
       </div>
 
       {/* Summary Cards Section */}
-      <div className="container mx-auto">
+      {/* <div className="container mx-auto">
         <div className="flex flex-col justify-center mx-8 text-center border-t-2 border-primary lg:flex-row">
           <div className="flex flex-col flex-1 px-4 py-6 text-2xl text-gray-600 border-b-2 border-primary lg:py-4 lg:mr-4 ">
             <MdGroup className="mx-auto text-5xl" />
@@ -69,10 +44,10 @@ export const EventsSection = () => {
             <p>Innovative solutions tested</p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Contact Us Section */}
-      <div className="container px-4 py-10 mx-auto text-left lg:py-8">
+      {/* <div className="container px-4 py-10 mx-auto text-left lg:py-8">
         <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
         <p className="mx-4 text-xl text-gray-600">
           If you have any queries, feel free to contact us by emailing to
@@ -84,9 +59,21 @@ export const EventsSection = () => {
           </a>
           .
         </p>
-      </div>
+      </div> */}
     </section>
   );
 };
 
 export default EventsSection;
+
+function EventCard() {
+  return (
+    <div className="flex flex-col mx-2 p-6 w-60 bg-blue-500 text-white">
+      <span className="text-4.5xl leading-tight font-light tracking-wide">08</span>
+      <span className="text-sm uppercase">June</span>
+      <span className="mt-6 mb-2 text-lg font-light">Paris Start-up Innovation Summit</span>
+      <span className="text-sm font-light">7.30PM - 10PM</span>
+      <span className="text-sm font-light">@ Algolia Paris - Bridge (200)</span>
+    </div>
+  )
+}
