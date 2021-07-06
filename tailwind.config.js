@@ -32,7 +32,7 @@ module.exports = {
       colors: {
         primary: "#002147",
         // "light-gray": "#dee4e7",
-        cloud: "#fffff0",
+        cloud: "#fffff5",
         cyan: colors.cyan,
         sky: colors.sky,
       },

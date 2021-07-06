@@ -83,7 +83,7 @@ export const AboutSection = () => {
             <Button
               className="block xs:hidden"
               onClick={toggleContentVisibility}
-              text={showExtendedContent ? "Show less" : "Read more"}
+              text={showExtendedContent ? "Show less" : "Show more"}
             />
           </div>
           <div className="hidden lmd:grid xl:grid-cols-2 gap-4 auto-rows-min col-span-2 xl:col-span-1">
@@ -175,7 +175,7 @@ function Button({
   return (
     <div className={className}>
       <span
-        className="inline-block px-2 py-1.5 xs:p-2 text-white rounded-sm bg-blue-900 cursor-pointer"
+        className="inline-block px-2 py-1.5 xs:p-2 rounded-sm text-blue-500 border border-blue-500 cursor-pointer"
         onClick={onClick}
       >
         {text}

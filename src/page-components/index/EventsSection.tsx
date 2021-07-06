@@ -1,8 +1,5 @@
 import React from "react";
 import { cx } from "@emotion/css";
-// import { RiCommunityFill } from "react-icons/ri";
-// import { GiJusticeStar } from "react-icons/gi";
-// import { MdGroup } from "react-icons/md";
 
 export const EventsSection = () => {
   return (
