@@ -6,7 +6,13 @@ import WCPTLogo from "../images/assets/WCPT_Logo.svg";
 // @ts-ignore
 // import TurtleLogo from "../images/assets/turtle_logo.svg";
 
-import { Navbar, HeroSection, AboutSection, MediaSection, EventsSection } from "../page-components/index";
+import {
+  Navbar,
+  HeroSection,
+  AboutSection,
+  MediaSection,
+  EventsSection,
+} from "../page-components/index";
 
 const IndexPage = () => {
   // const [hasScrolled, setScroll] = useState(false);
@@ -29,7 +35,7 @@ const IndexPage = () => {
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400&family=Cousine:wght@700&display=swap"
           rel="stylesheet"
         />
       </Helmet>

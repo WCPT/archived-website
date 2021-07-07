@@ -39,6 +39,7 @@ module.exports = {
       fontFamily: {
         sans: ["Lato", "sans-serif"],
         serif: ["Bitter", "serif"],
+        mono: ["Cousine"],
       },
       fontSize: {
         "3.5xl": "2rem",
