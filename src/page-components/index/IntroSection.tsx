@@ -40,7 +40,7 @@ const IslanderStudentImage = ImageHoc(() => (
   />
 ));
 
-export const AboutSection = () => {
+export const IntroSection = () => {
   const ref = useRef(null);
   const [showExtendedContent, setExtendedContentVisible] = useState(false);
 
@@ -118,7 +118,7 @@ export const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default IntroSection;
 
 function ExtendedContent({ isVisible }: { isVisible: boolean }) {
   return (

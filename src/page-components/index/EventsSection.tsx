@@ -3,7 +3,7 @@ import { cx } from "@emotion/css";
 
 export const EventsSection = () => {
   return (
-    <section className="relative py-12 xs:py-16 sm:py-56 bg-white">
+    <section className="relative py-12 xs:py-16 sm:py-24 bg-white">
       <div className="container mx-auto min-h-1/2-screen">
         <div className="grid grid-cols-2 mb-12 lg:mb-0">
           <div className="flex flex-col my-8 px-16 max-w-lg">

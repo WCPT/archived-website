@@ -9,8 +9,8 @@ import WCPTLogo from "../images/assets/WCPT_Logo.svg";
 import {
   Navbar,
   HeroSection,
-  AboutSection,
-  MediaSection,
+  IntroSection,
+  StatSection,
   EventsSection,
 } from "../page-components/index";
 
@@ -44,8 +44,8 @@ const IndexPage = () => {
 
         <Navbar />
         <HeroSection />
-        <AboutSection />
-        <MediaSection />
+        <IntroSection />
+        <StatSection />
         <EventsSection />
         <Footer />
       </main>
