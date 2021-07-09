@@ -2,10 +2,10 @@ import React from "react";
 
 export const StatSection = () => {
   return (
-    <section className="relative py-16 bg-white">
-      <div className="pt-20 pb-28 bg-gray-50">
+    <section className="relative lg:pt-12 bg-white">
+      <div className="pt-24 pb-44 bg-gray-50">
         <div className="container mx-auto">
-          <div className="flex flex-col justify-center items-center mb-16">
+          <div className="flex flex-col justify-center items-center mb-20">
             {/* <span className="my-2 text-xl text-gray-500">#wiscompt</span> */}
             <h1 className="xs:mb-8 max-w-2xl text-center text-2xl xs:text-3xl md:text-4xl leading-snug md:leading-snug text-gray-700 font-light">
               We are an active, growing community in the wider Pacific region

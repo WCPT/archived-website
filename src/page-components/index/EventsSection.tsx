@@ -3,24 +3,24 @@ import { cx } from "@emotion/css";
 
 export const EventsSection = () => {
   return (
-    <section className="relative py-12 xs:py-16 sm:py-24 bg-white">
+    <section className="relative py-12 xs:py-16 sm:pt-44 sm:pb-40 bg-gradient-to-r from-blue-700 to-blue-500">
       <div className="container mx-auto min-h-1/2-screen">
         <div className="grid grid-cols-2 mb-12 lg:mb-0">
           <div className="flex flex-col my-8 px-16 max-w-lg">
-            <span className="text-lg text-gray-500 font-mono tracking-wider">
+            <span className="text-lg text-gray-100 font-mono tracking-wider">
               #WCPTevents
             </span>
-            <h1 className="mt-1 xs:mb-4 text-2xl xs:text-3xl md:text-4xl text-gray-600">
+            <h1 className="mt-1 xs:mb-4 text-2xl xs:text-3xl md:text-4xl text-white">
               Upcoming Events
             </h1>
-            <span className="text-lg text-gray-500">
+            <span className="text-lg text-gray-100">
               Join us in our virtual events. We carry out workshops and meetups
               that you can virtually join from anywhere.
             </span>
           </div>
           <div className="absolute right-0 flex flex-col md:flex-row justify-center ml-auto text-gray-600">
             <EventCard
-              className="bg-blue-500 text-white border border-gray-100"
+              highlighted
               title="Lorem, ipsum dolor sit amet consectetur"
               day="08"
               month="June"
@@ -28,7 +28,6 @@ export const EventsSection = () => {
               venue="Dolor voluptatibus"
             />
             <EventCard
-              className="bg-gray-100 text-gray-500 border border-gray-100"
               title="Lorem, ipsum dolor sit amet consectetur"
               day="13"
               month="July"
@@ -36,7 +35,6 @@ export const EventsSection = () => {
               venue="Dolor voluptatibus"
             />
             <EventCard
-              className="bg-gray-100 text-gray-500 border border-gray-100"
               title="Lorem, ipsum dolor sit amet consectetur"
               day="23"
               month="August"
@@ -68,14 +66,14 @@ export const EventsSection = () => {
 export default EventsSection;
 
 function EventCard({
-  className,
+  highlighted,
   title,
   day,
   month,
   time,
   venue,
 }: {
-  className?: string;
+  highlighted?: boolean;
   title: string;
   day: string;
   month: string;
@@ -83,15 +81,44 @@ function EventCard({
   venue: string;
 }) {
   return (
-    <div className={cx(`flex flex-col ml-4 py-10 px-8 w-80`, className)}>
-      <span className="text-4.5xl leading-tight font-light tracking-wide">
+    <div
+      className={cx(`flex flex-col ml-4 h-full border-gray-200 cursor-pointer transition-all duration-200 ease-linear`, {
+        "py-10 px-8 w-80 bg-gray-50 text-gray-500 border":
+          !highlighted,
+        "py-20 px-12 w-96 text-gray-100 border": highlighted,
+      })}
+    >
+      <span
+        className={cx(`leading-tight font-light tracking-wide`, {
+          "text-4xl": !highlighted,
+          "text-5xl": highlighted,
+        })}
+      >
         {day}
       </span>
-      <span className="uppercase tracking-widest">{month}</span>
-      <span className="mt-10 mb-6 text-xl leading-tight ">{title}</span>
-      <div className="mb-2">
-        <span className="text-lg">{time}</span>
-        <span className="text-lg">@ {venue}</span>
+      <span
+        className={cx(`uppercase tracking-widest`, {
+          "text-lg": highlighted,
+        })}
+      >
+        {month}
+      </span>
+      <span
+        className={cx(`mt-12 mb-8 leading-tight`, {
+          "text-xl": !highlighted,
+          "text-2xl font-light": highlighted,
+        })}
+      >
+        {title}
+      </span>
+      <div
+        className={cx(`flex flex-col mb-2`, {
+          "text-lg": !highlighted,
+          "text-xl font-light": highlighted,
+        })}
+      >
+        <span>{time}</span>
+        <span>@ {venue}</span>
       </div>
     </div>
   );
