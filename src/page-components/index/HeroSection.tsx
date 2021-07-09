@@ -37,7 +37,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-screen w-screen">
+    <section className="hero relative h-screen w-screen"> {/* `important: ".hero"` set in tailwind.config.js */}
       <DesktopHeroImage
         containerClassName="relative h-screen w-screen"
         overlayClassName="absolute inset-0 z-10 opacity-60 bg-gradient-to-r from-black"

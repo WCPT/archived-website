@@ -3,6 +3,7 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   mode: "jit",
+  important: ".hero",
   purge: {
     content: [
       "src/pages/**/*.{js,ts,jsx,tsx}",
