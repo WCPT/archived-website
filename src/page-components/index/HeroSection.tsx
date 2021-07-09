@@ -8,7 +8,7 @@ import { useState } from "react";
 const DesktopHeroImage = ImageHoc(() => (
   <StaticImage
     className="fixed inset-0 flex items-center justify-center w-full h-full"
-    imgClassName="w-full h-auto"
+    imgClassName="w-full"
     alt="Pasific Island view from the sky"
     src="../../images/blueocean.jpeg"
     objectFit="cover"
@@ -20,7 +20,7 @@ const DesktopHeroImage = ImageHoc(() => (
 // const MobileHeroImage = ImageHoc(() => (
 //   <StaticImage
 //     className="fixed inset-0 flex items-center justify-center w-full h-full"
-//     imgClassName="w-full h-auto"
+//     imgClassName="w-full"
 //     alt="Pasific Island view from the sky"
 //     src="../../images/bure.jpeg"
 //     objectFit="cover"
