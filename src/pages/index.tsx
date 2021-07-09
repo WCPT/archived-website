@@ -39,7 +39,7 @@ const IndexPage = () => {
           rel="stylesheet"
         />
       </Helmet>
-      <main>
+      <main id="app">
         <title>Wisdom Community of Pasifika</title>
 
         <Navbar />
