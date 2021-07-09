@@ -3,7 +3,7 @@ import React from "react";
 export const StatSection = () => {
   return (
     <section className="relative py-16 bg-white">
-      <div className="pt-20 pb-28 bg-gray-100">
+      <div className="pt-20 pb-28 bg-gray-50">
         <div className="container mx-auto">
           <div className="flex flex-col justify-center items-center mb-16">
             {/* <span className="my-2 text-xl text-gray-500">#wiscompt</span> */}
