@@ -2,11 +2,11 @@ import React from "react";
 
 export const StatSection = () => {
   return (
-    <section className="relative py-20 bg-white">
-      <div className="py-24 bg-gray-100">
+    <section className="relative py-12 bg-white">
+      <div className="py-20 bg-gray-100">
         <div className="container mx-auto">
           <div className="flex justify-center mb-16">
-            <h1 className="xs:mb-8 max-w-3xl text-2xl xs:text-3xl md:text-4xl text-center leading-snug md:leading-snug text-gray-700">
+            <h1 className="xs:mb-8 max-w-2xl text-center text-2xl xs:text-3xl md:text-4xl leading-snug md:leading-snug text-gray-700">
               We are an active, growing community in the wider Pacific region
             </h1>
           </div>
