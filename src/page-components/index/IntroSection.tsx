@@ -54,10 +54,7 @@ export const IntroSection = () => {
   }, [showExtendedContent]);
 
   return (
-    <section
-      ref={ref}
-      className="relative py-16 sm:py-20 bg-white"
-    >
+    <section ref={ref} className="relative py-16 sm:py-20 bg-white">
       <div className="xl:container mx-auto px-8 xs:px-12 sm:px-16">
         <div className="flex justify-center mb-8">
           <h1 className="xs:mb-8 max-w-3xl text-2xl xs:text-3xl md:text-4xl text-center leading-snug md:leading-snug text-gray-500">
@@ -89,28 +86,32 @@ export const IntroSection = () => {
           <div className="hidden lmd:grid xl:grid-cols-2 gap-4 auto-rows-min col-span-2 xl:col-span-1">
             <SmilingFijianImage
               containerClassName="relative"
-              // creditClassName="px-2 py-1"
-              // credit="Vijeshwar Datt"
-              // creditLink="https://vijeshdatt.com/"
+              creditSize="small"
+              credit="Photo by Vijeshwar Datt on Unsplash"
+              creditLink="https://vijeshdatt.com/"
             />
-            <StudentPortraitImage
-              containerClassName="relative hidden xl:inline top-1/10"
-              // creditClassName="px-2 py-1"
-              // credit="Vijeshwar Datt"
-              // creditLink="https://vijeshdatt.com/"
-            />
+            <div className="relative hidden xl:inline top-1/10">
+              <StudentPortraitImage
+                containerClassName="relative"
+                creditSize="small"
+                credit="Photo by Vijeshwar Datt on Unsplash"
+                creditLink="https://vijeshdatt.com/"
+              />
+            </div>
             <SmilingStudentImage
               containerClassName="relative lg:hidden xl:inline"
-              // creditClassName="px-2 py-1"
-              // credit="Vijeshwar Datt"
-              // creditLink="https://vijeshdatt.com/"
+              creditSize="small"
+              credit="Photo by Vijeshwar Datt on Unsplash"
+              creditLink="https://vijeshdatt.com/"
             />
-            <IslanderStudentImage
-              containerClassName="relative hidden lg:inline xl:top-1/10"
-              // creditClassName="px-2 py-1"
-              // credit="Vijeshwar Datt"
-              // creditLink="https://vijeshdatt.com/"
-            />
+            <div className="relative hidden lg:inline xl:top-1/10">
+              <IslanderStudentImage
+                containerClassName="relative"
+                creditSize="small"
+                credit="Photo by Vijeshwar Datt on Unsplash"
+                creditLink="https://vijeshdatt.com/"
+              />
+            </div>
           </div>
         </div>
       </div>

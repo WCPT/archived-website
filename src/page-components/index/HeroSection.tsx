@@ -1,11 +1,10 @@
-import React, { useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { MdOpenInNew, MdPlayCircleOutline } from "react-icons/md";
 
 import { ImageHoc } from "../../components";
-import { useState } from "react";
 
-const DesktopHeroImage = ImageHoc(() => (
+const CoverImage = ImageHoc(() => (
   <StaticImage
     className="fixed inset-0 flex items-center justify-center w-full h-full"
     imgClassName="w-full"
@@ -17,18 +16,6 @@ const DesktopHeroImage = ImageHoc(() => (
   />
 ));
 
-// const MobileHeroImage = ImageHoc(() => (
-//   <StaticImage
-//     className="fixed inset-0 flex items-center justify-center w-full h-full"
-//     imgClassName="w-full"
-//     alt="Pasific Island view from the sky"
-//     src="../../images/bure.jpeg"
-//     objectFit="cover"
-//     objectPosition="50% 50%"
-//     placeholder="dominantColor"
-//   />
-// ));
-
 export const HeroSection = () => {
   const [isVideoVisible, setVideoVisible] = useState(false);
 
@@ -38,11 +25,12 @@ export const HeroSection = () => {
 
   return (
     <section className="relative h-screen w-screen">
-      <DesktopHeroImage
+      <CoverImage
         containerClassName="relative h-screen w-screen"
         overlayClassName="absolute inset-0 z-10 opacity-60 bg-gradient-to-r from-black"
         credit="Photo by Hoodh Ahmed on Unsplash"
       />
+      {/* <CoverImage /> */}
       {/* <MobileHeroImage
         containerClassName="flex xs:hidden relative h-screen w-screen"
         overlayClassName="absolute inset-0 z-10 opacity-50 bg-black"
