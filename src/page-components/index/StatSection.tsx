@@ -1,18 +1,20 @@
 import React from "react";
+import { cx } from "@emotion/css";
 
 export const StatSection = () => {
   return (
     <section className="relative lg:pt-12 bg-white">
       <div className="pt-24 pb-44 bg-gray-50">
-        <div className="container mx-auto">
+        <div className="2xl:container mx-auto px-4 xs:px-8 sm:px-12">
           <div className="flex flex-col justify-center items-center mb-20">
             {/* <span className="my-2 text-xl text-gray-500">#wiscompt</span> */}
             <h1 className="xs:mb-8 max-w-2xl text-center text-2xl xs:text-3xl md:text-4xl leading-snug md:leading-snug text-gray-700 font-light">
               We are an active, growing community in the wider Pacific region
             </h1>
           </div>
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-y-16 lg:px-32 xl:px-0">
             <StatSlot
+              className="xl:border-r border-gray-300"
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +35,7 @@ export const StatSection = () => {
               text="Engagements to connect, create and collaborate"
             />
             <StatSlot
+              className="xl:border-r border-gray-300"
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -53,6 +56,7 @@ export const StatSection = () => {
               text="Registered members from across the Pacific region"
             />
             <StatSlot
+              className="xl:border-r border-gray-300"
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -73,6 +77,7 @@ export const StatSection = () => {
               text="Participation in professional development events"
             />
             <StatSlot
+              className=""
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -101,14 +106,27 @@ export const StatSection = () => {
 
 export default StatSection;
 
-function StatSlot({ icon, stat, text }) {
+function StatSlot({
+  icon,
+  stat,
+  text,
+  className,
+}: {
+  icon: React.ReactNode;
+  stat: string;
+  text: string;
+  className?: string;
+}) {
   return (
-    <div className="flex flex-col justify-center items-center text-center border-r border-gray-300 last-of-type:border-none">
+    <div
+      className={cx(
+        `flex flex-col justify-center items-center px-6 xl:px-8 text-center`,
+        className
+      )}
+    >
       {icon}
-      <span className="my-4 text-2xl 2xl:text-5xl text-blue-500">
-        {stat}
-      </span>
-      <span className="max-w-xs text-2xl leading-normal font-light text-gray-900">
+      <span className="my-4 text-4xl md:text-5xl text-blue-500">{stat}</span>
+      <span className="max-w-xs text-xl md:text-2xl leading-normal font-light text-gray-900">
         {text}
       </span>
     </div>
