@@ -24,9 +24,9 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-screen w-screen">
+    <section className="relative h-screen">
       <CoverImage
-        containerClassName="relative h-screen w-screen"
+        containerClassName="relative h-screen"
         overlayClassName="absolute inset-0 z-10 opacity-60 bg-gradient-to-r from-black"
         credit="Photo by Hoodh Ahmed on Unsplash"
       />
