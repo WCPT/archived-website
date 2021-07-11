@@ -3,10 +3,10 @@ import { cx } from "@emotion/css";
 
 export const EventsSection = () => {
   return (
-    <section className="relative py-12 xs:py-16 sm:pt-44 sm:pb-40 bg-gradient-to-r from-blue-700 to-blue-500">
-      <div className="container mx-auto min-h-1/2-screen">
-        <div className="grid 2xl:grid-cols-2 auto-rows-min mb-12 lg:mb-0">
-          <div className="flex flex-col my-24 px-16 max-w-lg">
+    <section className="relative py-12 xs:py-16 sm:pb-36 bg-gradient-to-r from-blue-700 to-blue-500">
+      <div className="container mx-auto">
+        <div className="flex flex-col mb-12 lg:mb-0 px-16">
+          <div className="flex flex-col my-16 max-w-lg">
             <span className="text-lg text-gray-100 font-mono tracking-wider">
               #WCPTevents
             </span>
@@ -18,10 +18,10 @@ export const EventsSection = () => {
               that you can virtually join from anywhere.
             </span>
           </div>
-          <div className="absolute top-1/2 xl:top-1/4 right-0 flex flex-col md:flex-row ml-auto text-gray-600">
+          <div className="grid grid-cols-3 gap-4 text-gray-600">
             <EventCard
               highlighted
-              title="Lorem, ipsum dolor sit amet consectetur"
+              title="Providing remote learning support for students"
               day="08"
               month="June"
               time="7.30PM - 10PM"
@@ -82,41 +82,22 @@ function EventCard({
 }) {
   return (
     <div
-      className={cx(`flex flex-col ml-4 h-full border-gray-200 cursor-pointer transition-all duration-200 ease-linear`, {
-        "py-10 px-8 w-80 bg-white text-gray-500 border":
-          !highlighted,
-        "py-16 px-12 w-96 text-gray-100 border": highlighted,
-      })}
+      className={cx(
+        `flex flex-col h-full py-16 px-12 border border-gray-300 cursor-pointer transition-all duration-200 ease-linear`,
+        {
+          "text-gray-500 bg-white": !highlighted,
+          "text-gray-100": highlighted,
+        }
+      )}
     >
-      <span
-        className={cx(`leading-tight font-light tracking-wide`, {
-          "text-4xl": !highlighted,
-          "text-5xl": highlighted,
-        })}
-      >
+      <span className="text-5xl font-light leading-tight tracking-wide">
         {day}
       </span>
-      <span
-        className={cx(`uppercase tracking-widest`, {
-          "text-lg": highlighted,
-        })}
-      >
-        {month}
-      </span>
-      <span
-        className={cx(`mt-12 mb-8 leading-tight`, {
-          "text-xl": !highlighted,
-          "text-2xl font-light": highlighted,
-        })}
-      >
+      <span className="text-lg uppercase tracking-widest">{month}</span>
+      <span className="mt-12 mb-8 text-2xl leading-snug font-light">
         {title}
       </span>
-      <div
-        className={cx(`flex flex-col mb-2`, {
-          "text-lg": !highlighted,
-          "text-xl font-light": highlighted,
-        })}
-      >
+      <div className="flex flex-col mb-2 text-xl font-light">
         <span>{time}</span>
         <span>@ {venue}</span>
       </div>
