@@ -32,10 +32,6 @@ module.exports = {
     extend: {
       colors: {
         primary: "#002147",
-        // "light-gray": "#dee4e7",
-        cloud: "#fffff5",
-        cyan: colors.cyan,
-        sky: colors.sky,
       },
       fontFamily: {
         sans: ["Lato", "sans-serif"],
