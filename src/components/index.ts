@@ -1,2 +1,3 @@
-export * from "./Logo";
 export * from "./ImageHoc";
+export * from "./Logo";
+export * from "./LogoAlt";

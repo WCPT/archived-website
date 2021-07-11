@@ -1,5 +1,7 @@
 import React from "react";
 
+// import { LogoAlt } from "../../components";
+
 export function Footer() {
   return (
     <footer className="relative flex bg-white min-h-1/4-screen">

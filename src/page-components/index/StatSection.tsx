@@ -18,7 +18,7 @@ export const StatSection = () => {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="mb-2 h-16 w-16 xl:h-20 xl:w-20 text-gray-700"
+                  className="mb-2 h-16 w-16 md:h-20 md:w-20 text-gray-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -39,7 +39,7 @@ export const StatSection = () => {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="mb-2 h-16 w-16 xl:h-20 xl:w-20 text-gray-700"
+                  className="mb-2 h-16 w-16 md:h-20 md:w-20 text-gray-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -60,7 +60,7 @@ export const StatSection = () => {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="mb-2 h-16 w-16 xl:h-20 xl:w-20 text-gray-700"
+                  className="mb-2 h-16 w-16 md:h-20 md:w-20 text-gray-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -81,7 +81,7 @@ export const StatSection = () => {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="mb-2 h-16 w-16 xl:h-20 xl:w-20 text-gray-700"
+                  className="mb-2 h-16 w-16 md:h-20 md:w-20 text-gray-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
