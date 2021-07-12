@@ -7,15 +7,15 @@ const BgImage = ImageHoc(() => (
   <StaticImage
     className="absolute inset-0 flex items-center justify-center w-full h-full"
     imgClassName="w-full"
-    alt="Vector image depicting web of things"
-    src="../../images/globe.jpg"
+    alt="Pasific Island view from the sky"
+    src="../../images/web.jpg"
     objectFit="cover"
     objectPosition="50% 0%"
     placeholder="dominantColor"
   />
 ));
 
-export const EventsSection = () => {
+export const ContactSection = () => {
   return (
     <section className="relative py-12 xs:py-16 sm:pb-36 bg-gradient-to-r from-blue-700 to-blue-500">
       <BgImage
@@ -82,7 +82,7 @@ export const EventsSection = () => {
   );
 };
 
-export default EventsSection;
+export default ContactSection;
 
 function EventCard({
   highlighted,
@@ -100,7 +100,7 @@ function EventCard({
   venue: string;
 }) {
   return (
-    <div className="flex flex-col h-full py-8 lg:py-12 2xl:py-16 px-10 2xl:px-12 text-gray-100 border border-gray-300 cursor-pointer transition-all duration-200 ease-linear hover:bg-gray-900 hover:border-gray-700 hover:shadow-xl hover:opacity-90">
+    <div className="flex flex-col h-full py-8 lg:py-12 2xl:py-16 px-10 2xl:px-12 text-gray-100 border border-gray-300 cursor-pointer transition-all duration-200 ease-linear">
       <span className="text-4xl 2xl:text-5xl font-light leading-tight tracking-wide">
         {day}
       </span>

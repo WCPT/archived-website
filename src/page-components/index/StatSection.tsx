@@ -94,8 +94,8 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat="3"
-              text="We are 3 weeks old"
+              stat="1"
+              text="We are 1 month old"
             />
           </div>
         </div>
@@ -120,7 +120,7 @@ function StatSlot({
   return (
     <div
       className={cx(
-        `flex flex-col justify-center items-center px-6 xl:px-8 text-center`,
+        `flex flex-col items-center px-6 xl:px-8 text-center`,
         className
       )}
     >
