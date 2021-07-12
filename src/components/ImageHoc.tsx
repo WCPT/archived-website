@@ -40,7 +40,7 @@ export const ImageHoc = (Image: FC<any>) => {
             )}
             onClick={toggleCredits}
           >
-            {creditVisible ? credit : "Credits"}
+            {creditVisible ? credit : "Credit"}
           </span>
         )}
       </div>
