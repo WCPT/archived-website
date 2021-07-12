@@ -5,7 +5,7 @@ export const StatSection = () => {
   return (
     <section className="relative lg:pt-12 bg-white">
       <div className="pt-24 pb-44 bg-gray-50">
-        <div className="2xl:container mx-auto px-4 xs:px-8 sm:px-12">
+        <div className="2xl:container mx-auto px-8 xs:px-12 sm:px-16">
           <div className="flex flex-col justify-center items-center mb-20">
             {/* <span className="my-2 text-xl text-gray-500">#wiscompt</span> */}
             <h1 className="xs:mb-8 max-w-2xl text-center text-2xl xs:text-3xl md:text-4xl leading-snug md:leading-snug text-gray-700 font-light">
@@ -18,7 +18,7 @@ export const StatSection = () => {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="mb-2 h-16 w-16 md:h-20 md:w-20 text-gray-700"
+                  className="mb-2 h-20 w-20 text-gray-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -39,7 +39,7 @@ export const StatSection = () => {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="mb-2 h-16 w-16 md:h-20 md:w-20 text-gray-700"
+                  className="mb-2 h-20 w-20 text-gray-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -60,7 +60,7 @@ export const StatSection = () => {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="mb-2 h-16 w-16 md:h-20 md:w-20 text-gray-700"
+                  className="mb-2 h-20 w-20 text-gray-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -81,7 +81,7 @@ export const StatSection = () => {
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="mb-2 h-16 w-16 md:h-20 md:w-20 text-gray-700"
+                  className="mb-2 h-20 w-20 text-gray-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -125,8 +125,8 @@ function StatSlot({
       )}
     >
       {icon}
-      <span className="my-4 text-4xl md:text-5xl text-blue-500">{stat}</span>
-      <span className="max-w-xs text-xl md:text-2xl leading-normal font-light text-gray-900">
+      <span className="my-4 text-4xl md:text-5xl md:font-normal text-blue-500">{stat}</span>
+      <span className="max-w-xs text-2xl leading-normal font-light text-gray-900">
         {text}
       </span>
     </div>
