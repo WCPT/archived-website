@@ -1,12 +1,32 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import { cx } from "@emotion/css";
+
+import { ImageHoc } from "../../components";
+
+const BgImage = ImageHoc(() => (
+  <StaticImage
+    className="absolute inset-0 flex items-center justify-center w-full h-full"
+    imgClassName="w-full"
+    alt="Pasific Island view from the sky"
+    src="../../images/globe.jpg"
+    objectFit="cover"
+    objectPosition="50% 0%"
+    placeholder="dominantColor"
+  />
+));
 
 export const EventsSection = () => {
   return (
-    <section className="relative py-12 xs:py-16 sm:pb-36 bg-gradient-to-r from-blue-700 to-blue-500">
+    <section className="relative py-12 xs:py-16 sm:pb-36">
+      <BgImage
+        overlayClassName="absolute inset-0 z-10 opacity-80 bg-gradient-to-r from-black"
+        credit="Background vector created by liuzishan on freepik.com"
+        creditLink="https://www.freepik.com/vectors/background"
+      />
       <div className="xl:container mx-auto">
         <div className="flex flex-col mb-12 lg:mb-0 px-8 xs:px-12 sm:px-16">
-          <div className="flex flex-col my-16 max-w-lg">
+          <div className="z-10 flex flex-col my-16 max-w-lg">
             <span className="text-lg text-gray-100 font-mono tracking-wider">
               #WCPTevents
             </span>
@@ -18,7 +38,7 @@ export const EventsSection = () => {
               that you can virtually join from anywhere.
             </span>
           </div>
-          <div className="grid lg:grid-cols-3 gap-4 text-gray-600">
+          <div className="z-10 grid lg:grid-cols-3 gap-4 text-gray-600">
             <EventCard
               highlighted
               title="Providing remote learning support for students"
@@ -81,15 +101,7 @@ function EventCard({
   venue: string;
 }) {
   return (
-    <div
-      className={cx(
-        `flex flex-col h-full py-8 lg:py-12 2xl:py-16 px-10 2xl:px-12 border border-blue-400 cursor-pointer transition-all duration-200 ease-linear`,
-        {
-          "text-gray-500 bg-white": !highlighted,
-          "text-gray-100": highlighted,
-        }
-      )}
-    >
+    <div className="flex flex-col h-full py-8 lg:py-12 2xl:py-16 px-10 2xl:px-12 text-gray-100 border border-gray-300 cursor-pointer transition-all duration-200 ease-linear">
       <span className="text-4xl 2xl:text-5xl font-light leading-tight tracking-wide">
         {day}
       </span>
