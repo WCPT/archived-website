@@ -1,6 +1,5 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { cx } from "@emotion/css";
 
 import { ImageHoc } from "../../components";
 
@@ -9,7 +8,7 @@ const BgImage = ImageHoc(() => (
     className="absolute inset-0 flex items-center justify-center w-full h-full"
     imgClassName="w-full"
     alt="Pasific Island view from the sky"
-    src="../../images/globe.jpg"
+    src="../../images/web.jpg"
     objectFit="cover"
     objectPosition="50% 0%"
     placeholder="dominantColor"
@@ -18,12 +17,12 @@ const BgImage = ImageHoc(() => (
 
 export const EventsSection = () => {
   return (
-    <section className="relative py-12 xs:py-16 sm:pb-36">
-      <BgImage
-        overlayClassName="absolute inset-0 z-10 opacity-80 bg-gradient-to-r from-black"
+    <section className="relative py-12 xs:py-16 sm:pb-36 bg-gradient-to-r from-blue-700 to-blue-500">
+      {/* <BgImage
+        overlayClassName="absolute inset-0 z-10 opacity-80 bg-gradient-to-r from-blue-700 to-blue-500"
         credit="Background vector created by liuzishan on freepik.com"
         creditLink="https://www.freepik.com/vectors/background"
-      />
+      /> */}
       <div className="xl:container mx-auto">
         <div className="flex flex-col mb-12 lg:mb-0 px-8 xs:px-12 sm:px-16">
           <div className="z-10 flex flex-col my-16 max-w-lg">
