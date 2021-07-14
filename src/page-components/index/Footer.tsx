@@ -25,7 +25,7 @@ export function Footer() {
           creditLink="https://www.freepik.com/vectors/background"
         />
         <div className="z-10 grid grid-cols-1 gap-4 py-12 lg:grid-cols-3 lg:gap-12 text-gray-500">
-          <div className="flex flex-col items-center max-w-xs mx-auto">
+          <div className="flex flex-col items-center max-w-xs">
             <Logo theme="light" className="my-2 h-16 md:h-24" />
             <span className="text-lg text-gray-50">
               Wisdom Community of Pasifika Teachers
