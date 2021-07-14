@@ -40,21 +40,21 @@ export const EventsSection = () => {
           <div className="z-10 grid lg:grid-cols-3 gap-4 text-gray-600">
             <EventCard
               highlighted
-              title="Providing remote learning support for students"
+              title="Short Course - Enhancing Grammar Basics"
               day="08"
               month="June"
               time="7.30PM - 10PM"
               venue="Dolor voluptatibus"
             />
             <EventCard
-              title="Lorem, ipsum dolor sit amet consectetur"
+              title="Create Digital Worksheets via Google Forms"
               day="13"
               month="July"
               time="7.30PM - 10PM"
               venue="Dolor voluptatibus"
             />
             <EventCard
-              title="Lorem, ipsum dolor sit amet consectetur"
+              title="Zoom - Level up your Zoom skills!"
               day="23"
               month="August"
               time="7.30PM - 10PM"

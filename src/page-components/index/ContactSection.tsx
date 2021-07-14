@@ -27,7 +27,7 @@ export const ContactSection = () => {
         creditLink="https://www.freepik.com/vectors/background"
       /> */}
       <div className="xl:container mx-auto mb-12 lg:mb-0 py-16 px-8 xs:px-12 sm:px-16 flex flex-col">
-        <h2 className="z-10 font-sans font-black text-4xl tracking-tight text-gray-900">
+        <h2 className="z-10 font-sans font-black text-3xl xs:text-4xl tracking-tight text-gray-900">
           <span className="block">Want to get in touch?</span>
           <span className="block bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
             Reach us through social media or email us!
@@ -82,7 +82,7 @@ function SocialLinks({ className }: { className?: string }) {
           rel="noopener"
         >
           <Icon
-            className={`mr-2 p-1.5 md:p-2.5 text-4xl md:text-5xl rounded-md hover:text-white bg-gray-100 hover:${props.hoverClass} transition-all duration-300`}
+            className={`mr-2 p-2.5 text-5xl rounded-md hover:text-white bg-gray-100 hover:${props.hoverClass} transition-all duration-300`}
           />
         </a>
       ))}

@@ -19,12 +19,18 @@ const CoverImage = ImageHoc(() => (
 export const HeroSection = () => {
   const [isVideoVisible, setVideoVisible] = useState(false);
 
-  const showVideo = useCallback(() => {
-    setVideoVisible((visible) => !visible);
+  const showVideo = useCallback((e) => {
+    e.stopPropagation();
+    setVideoVisible(true);
+  }, []);
+
+  const hideVideo = useCallback((e) => {
+    e.stopPropagation();
+    setVideoVisible(false);
   }, []);
 
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen" onClick={hideVideo}>
       <CoverImage
         containerClassName="relative h-screen"
         overlayClassName="absolute inset-0 z-10 opacity-60 bg-gradient-to-r from-black"
@@ -38,7 +44,7 @@ export const HeroSection = () => {
       /> */}
 
       <div className="lg:container absolute inset-0 z-10 flex items-center mx-auto px-8 xs:px-12 sm:px-16 text-white">
-        <div className="flex flex-col">
+        <div className="flex flex-col mx-auto sm:mx-0">
           <h1 className="xs:hidden text-3xl text-center pb-4 font-light">
             Wisdom Community
             <br />
@@ -47,8 +53,8 @@ export const HeroSection = () => {
           <h2 className="max-w-md md:max-w-lg mb-4 font-serif font-light text-gray-50 text-xl xs:text-4xl md:text-4.5xl xs:leading-snug text-center sm:text-left">
             Learning, sharing, connecting and moving forward together.
           </h2>
-          <div className="flex">
-            <div className="my-4 mr-4 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row my-4">
+            <div className="mr-4 text-center sm:text-left">
               <span
                 className="group cursor-pointer inline-flex items-center py-2 px-4 border border-gray-200 hover:border-blue-600 hover:bg-blue-600 transition-all duration-200"
                 onClick={showVideo}
@@ -59,7 +65,7 @@ export const HeroSection = () => {
                 </span>
               </span>
             </div>
-            <div className="my-4 text-center sm:text-left">
+            <div className="text-center sm:text-left">
               <a
                 className="group cursor-pointer inline-flex items-center py-2 px-4 border border-gray-200 hover:border-blue-600 hover:bg-blue-600 transition-all duration-200"
                 href="https://clte.fnu.ac.fj/talanoakaro"
@@ -72,13 +78,31 @@ export const HeroSection = () => {
               </a>
             </div>
           </div>
+          <div className="flex items-center my-2 text-gray-300 text-lg">
+            <span className="mr-2">Already a member?</span>
+            <a href="https://elearn.fnu.ac.fj/course/view.php?id=6417" className="hover:underline hover:text-white transition-all">Sign in here!</a>
+            {/* <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg> */}
+          </div>
         </div>
       </div>
 
-      {/* {isVideoVisible && (
+      {isVideoVisible && (
         <div className="z-50 absolute inset-0 flex flex-1 items-center justify-center">
           <div className="absolute inset-0 bg-black opacity-70"></div>
-          <div className="flex flex-1 p-64">
+          <div className="flex flex-1 p-8 lmd:p-32 xl:p-64">
             <div className="flex flex-1 aspect-w-16 aspect-h-9 shadow-lg">
               <iframe
                 src="https://www.youtube.com/embed/iaNnX6jkq80"
@@ -87,9 +111,14 @@ export const HeroSection = () => {
               />
             </div>
           </div>
-          <div className="absolute bottom-6 text-xl text-white opacity-60">Close</div>
+          <div
+            onClick={hideVideo}
+            className="absolute bottom-6 py-1 px-2.5 text-xl font-light text-gray-400 cursor-pointer hover:text-gray-200 hover:font-normal"
+          >
+            Close
+          </div>
         </div>
-      )} */}
+      )}
     </section>
   );
 };

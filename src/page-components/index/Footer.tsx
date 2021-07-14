@@ -10,7 +10,7 @@ const BgImage = ImageHoc(() => (
     alt=""
     src="../../images/blacksplat.jpg"
     objectFit="cover"
-    objectPosition="50% 30%"
+    objectPosition="50% 50%"
     placeholder="dominantColor"
   />
 ));
@@ -24,10 +24,10 @@ export function Footer() {
           credit="Background vector created by Harryarts on freepik.com"
           creditLink="https://www.freepik.com/vectors/background"
         />
-        <div className="z-10 grid grid-cols-1 gap-4 py-12 lg:grid-cols-3 lg:gap-12 text-gray-500">
-          <div className="flex flex-col items-center max-w-xs">
+        <div className="z-10 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-12 py-12 text-gray-500">
+          <div className="flex flex-col items-center mx-auto md:mx-0 max-w-xs">
             <Logo theme="light" className="my-2 h-16 md:h-24" />
-            <span className="text-lg text-gray-50">
+            <span className="text-center text-lg text-gray-50">
               Wisdom Community of Pasifika Teachers
             </span>
             <span className="text-center font-light text-gray-300">
@@ -50,7 +50,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="z-10 flex justify-between container mx-auto py-12 border-t border-gray-500">
+        <div className="z-10 flex flex-col md:flex-row justify-between container mx-auto py-12 border-t border-gray-500">
           <div className="flex justify-center items-center">
             <span className="text-gray-300">
               Wisdom Community of Pasifika Teachers &copy;
