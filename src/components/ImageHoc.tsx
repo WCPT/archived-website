@@ -7,7 +7,6 @@ type Props = {
   overlayClassName?: string;
   credit?: string;
   creditLink?: string;
-  creditSize?: string;
 };
 
 export const ImageHoc = (Image: FC<any>) => {
@@ -16,7 +15,6 @@ export const ImageHoc = (Image: FC<any>) => {
     overlayClassName,
     credit,
     creditLink,
-    creditSize,
     ...props
   }: Props) => {
     const [creditVisible, setCreditVisible] = useState(false);
@@ -31,13 +29,7 @@ export const ImageHoc = (Image: FC<any>) => {
         <Image {...props} />
         {credit && (
           <span
-            className={cx(
-              `absolute bottom-0 right-0 z-30 text-gray-300 transition-all bg-gray-800 cursor-pointer hover:text-white bg-opacity-60 hover:bg-black rounded-tl-md text-center`,
-              {
-                "px-2.5 md:px-4 py-1.5 md:py-2": !creditSize,
-                "px-1.5 md:px-3 py-0.5 md:py-1": creditSize === "small",
-              }
-            )}
+            className="absolute bottom-0 right-0 z-30 px-1.5 md:px-3 py-0.5 md:py-1 text-gray-300 transition-all bg-gray-800 cursor-pointer hover:text-white bg-opacity-60 hover:bg-black rounded-tl-md text-center"
             onClick={toggleCredits}
           >
             {creditVisible ? credit : "Credit"}

@@ -7,7 +7,7 @@ const BgImage = ImageHoc(() => (
   <StaticImage
     className="absolute inset-0 flex items-center justify-center w-full h-full"
     imgClassName="w-full"
-    alt="Vector image depicting web of things"
+    alt="Vector image depicting a connected globe"
     src="../../images/globe.jpg"
     objectFit="cover"
     objectPosition="50% 0%"
@@ -63,21 +63,6 @@ export const EventsSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Contact Us Section */}
-      {/* <div className="container px-4 py-10 mx-auto text-left lg:py-8">
-        <h1 className="mx-4 my-1 text-2xl font-bold">Contact Us</h1>
-        <p className="mx-4 text-xl text-gray-600">
-          If you have any queries, feel free to contact us by emailing to
-          <a
-            className="pl-1 text-blue-500 underline break-words"
-            href="mailto:pasifikateachers@gmail.com"
-          >
-            pasifikateachers@gmail.com
-          </a>
-          .
-        </p>
-      </div> */}
     </section>
   );
 };

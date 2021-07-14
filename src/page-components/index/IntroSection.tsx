@@ -86,28 +86,24 @@ export const IntroSection = () => {
           <div className="hidden lmd:grid xl:grid-cols-2 gap-4 auto-rows-min col-span-2 xl:col-span-1">
             <SmilingFijianImage
               containerClassName="relative"
-              creditSize="small"
               credit="Photo by Vijeshwar Datt on Unsplash"
               creditLink="https://vijeshdatt.com/"
             />
             <div className="relative hidden xl:inline top-1/10">
               <StudentPortraitImage
                 containerClassName="relative"
-                creditSize="small"
                 credit="Photo by Vijeshwar Datt on Unsplash"
                 creditLink="https://vijeshdatt.com/"
               />
             </div>
             <SmilingStudentImage
               containerClassName="relative lg:hidden xl:inline"
-              creditSize="small"
               credit="Photo by Vijeshwar Datt on Unsplash"
               creditLink="https://vijeshdatt.com/"
             />
             <div className="relative hidden lg:inline xl:top-1/10">
               <IslanderStudentImage
                 containerClassName="relative"
-                creditSize="small"
                 credit="Photo by Vijeshwar Datt on Unsplash"
                 creditLink="https://vijeshdatt.com/"
               />
