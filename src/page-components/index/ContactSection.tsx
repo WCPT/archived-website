@@ -1,36 +1,36 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+// import { StaticImage } from "gatsby-plugin-image";
 import { cx } from "@emotion/css";
 import { MdEmail } from "react-icons/md";
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 
-import { ImageHoc } from "../../components";
+// import { ImageHoc } from "../../components";
 
-const BgImage = ImageHoc(() => (
-  <StaticImage
-    className="absolute inset-0 flex items-center justify-center w-full h-full"
-    imgClassName="w-full"
-    alt=""
-    src="../../images/blueabstract.jpg"
-    objectFit="cover"
-    objectPosition="50% 0%"
-    placeholder="dominantColor"
-  />
-));
+// const BgImage = ImageHoc(() => (
+//   <StaticImage
+//     className="absolute inset-0 flex items-center justify-center w-full h-full"
+//     imgClassName="w-full"
+//     alt=""
+//     src="../../images/blueabstract.jpg"
+//     objectFit="cover"
+//     objectPosition="50% 0%"
+//     placeholder="dominantColor"
+//   />
+// ));
 
 export const ContactSection = () => {
   return (
-    <section className="relative py-12 xs:py-12 bg-white">
-      <BgImage
-        overlayClassName="absolute inset-0 z-10 opacity-60 bg-gradient-to-r from-white to-gray-100"
+    <section className="relative py-12 xs:py-12 bg-gray-50">
+      {/* <BgImage
+        overlayClassName="absolute inset-0 z-10 opacity-60 bg-white"
         credit="Background vector created by Harryarts on freepik.com"
         creditLink="https://www.freepik.com/vectors/background"
-      />
+      /> */}
       <div className="xl:container mx-auto mb-12 lg:mb-0 py-16 px-8 xs:px-12 sm:px-16 flex flex-col">
         <h2 className="z-10 font-sans font-black text-4xl tracking-tight text-gray-900">
           <span className="block">Want to get in touch?</span>
           <span className="block bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
-            Feel free to reach us on these links!
+            Reach us through social media or email us!
           </span>
         </h2>
         <div className="z-10 mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
