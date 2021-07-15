@@ -1,11 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-// @ts-ignore
-import WCPTLogo from "../images/assets/WCPT_Logo.svg";
-// @ts-ignore
-// import TurtleLogo from "../images/assets/turtle_logo.svg";
-
 import {
   Navbar,
   HeroSection,
