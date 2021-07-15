@@ -128,7 +128,7 @@ function StatSlot({
       )}
     >
       {icon}
-      <span className="my-4 text-4xl md:text-5xl md:font-normal text-blue-500">{stat}</span>
+      <span className="my-4 text-4xl md:text-5xl md:font-normal text-blueocean">{stat}</span>
       <span className="max-w-xs text-2xl leading-normal font-light text-gray-900">
         {text}
       </span>

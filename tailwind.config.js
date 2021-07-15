@@ -36,6 +36,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#002147",
+        blueocean: "#05708d",
       },
       fontFamily: {
         sans: ["Lato", "sans-serif"],

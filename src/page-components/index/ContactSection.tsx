@@ -29,7 +29,7 @@ export const ContactSection = () => {
       <div className="xl:container mx-auto mb-12 lg:mb-0 py-16 px-8 xs:px-12 sm:px-16 flex flex-col">
         <h2 className="z-10 font-sans font-black text-3xl xs:text-4xl tracking-tight text-gray-900">
           <span className="block">Want to get in touch?</span>
-          <span className="block bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+          <span className="block bg-blueocean bg-clip-text text-transparent">
             Reach us through social media or email us!
           </span>
         </h2>
