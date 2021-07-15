@@ -65,7 +65,7 @@ export const IntroSection = () => {
         <div className="grid lmd:grid-cols-5 xl:grid-cols-2 gap-8">
           <div className="lmd:col-span-3 xl:col-span-1">
             <div className="prose max-w-none lg:pr-6 text-lg lg:text-xl text-gray-600">
-              <p className="first-letter:text-5xl first-letter:font-bold">
+              <p className="first-letter:text-5xl">
                 We are a growing network of teachers of all levels from the
                 wider Pacific region, with a common goal and the will to
                 recalibrate Pacific education to optimise students’ learning
