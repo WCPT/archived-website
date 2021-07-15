@@ -44,7 +44,6 @@ export const EventsSection = () => {
               day="12"
               month="July"
               time="12 July - 20 August"
-              venue="Dolor voluptatibus"
               // body={
               //   <ul>
               //     This is a free-of-charge, self-paced and self-directed online
@@ -69,14 +68,12 @@ export const EventsSection = () => {
               day="30"
               month="July"
               time="1PM - 3PM"
-              venue="Dolor voluptatibus"
             />
             <EventCard
               title="Zoom - Level up your Zoom skills!"
               day="13"
               month="August"
               time="1PM - 2PM"
-              venue="Dolor voluptatibus"
             />
           </div>
         </div>
@@ -93,7 +90,6 @@ function EventCard({
   day,
   month,
   time,
-  venue,
   body,
 }: {
   className?: string;
@@ -101,13 +97,12 @@ function EventCard({
   day: string;
   month: string;
   time: string;
-  venue: string;
   body?: React.ReactNode;
 }) {
   return (
     <div
       className={cx(
-        "flex flex-col py-8 lg:py-12 2xl:py-16 px-10 2xl:px-12 text-gray-100 border border-gray-300 cursor-pointer transition-all duration-200 ease-linear hover:bg-gray-900 hover:border-gray-900 hover:shadow-xl",
+        "group flex flex-col py-8 lg:py-12 2xl:py-16 px-10 2xl:px-12 text-gray-100 border border-gray-300 cursor-pointer transition-all duration-200 ease-linear hover:bg-gray-900 hover:border-gray-900 hover:shadow-xl",
         className
       )}
     >
@@ -121,7 +116,7 @@ function EventCard({
       <div className="flex flex-col mt-auto mb-2 text-lg 2xl:text-xl font-light">
         <span>{time}</span>
         {body && <div className="mt-2 text-lg prose text-gray-50">{body}</div>}
-        <span>@ {venue}</span>
+        <span className="mt-2 font-normal text-base xl:text-lg group-hover:underline">View details</span>
       </div>
     </div>
   );
