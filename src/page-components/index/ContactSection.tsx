@@ -20,7 +20,7 @@ import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 
 export const ContactSection = () => {
   return (
-    <section className="relative py-12 xs:py-12 bg-gray-50">
+    <section className="relative py-12 xs:py-12 bg-white">
       {/* <BgImage
         overlayClassName="absolute inset-0 z-10 opacity-60 bg-white"
         credit="Background vector created by Harryarts on freepik.com"

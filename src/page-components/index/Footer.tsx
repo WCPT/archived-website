@@ -33,13 +33,13 @@ export function Footer() {
 
         <div className="z-10 flex flex-col md:flex-row justify-between container mx-auto py-12 border-t border-gray-500">
           <div className="flex justify-center items-center">
-            <span className="text-gray-300">
+            <span className="text-gray-50 font-light">
               Wisdom Community of Pasifika Teachers &copy;
               {new Date().getFullYear()}
             </span>
           </div>
           <div className="flex justify-center items-center">
-            <span className="text-gray-300">
+            <span className="text-gray-50 font-light">
               Supported by Fiji National University
             </span>
           </div>
