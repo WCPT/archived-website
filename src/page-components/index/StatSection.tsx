@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { cx } from "@emotion/css";
+import { differenceInMonths } from 'date-fns'
 
 export const StatSection = () => {
+  const lifetimeInMonths = useMemo(() => differenceInMonths(new Date(), new Date("2021-06-10T00:00:00.000Z")), []);
+  
   return (
     <section className="relative lg:pt-12 bg-white">
       <div className="pt-24 pb-44 bg-gray-50">
@@ -73,7 +76,7 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat="85"
+              stat={85}
               text="Participation in professional development events"
             />
             <StatSlot
@@ -94,8 +97,8 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat="1"
-              text="We are 1 month old"
+              stat={lifetimeInMonths}
+              text={`We are ${lifetimeInMonths} ${lifetimeInMonths > 1 ? "months" : "month"} old`}
             />
           </div>
         </div>
@@ -113,7 +116,7 @@ function StatSlot({
   className,
 }: {
   icon: React.ReactNode;
-  stat: string;
+  stat: string | number;
   text: string;
   className?: string;
 }) {
