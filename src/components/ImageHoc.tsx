@@ -29,7 +29,7 @@ export const ImageHoc = (Image: FC<any>) => {
         <Image {...props} />
         {credit && (
           <span
-            className="absolute bottom-0 right-0 z-30 px-1.5 md:px-3 py-0.5 md:py-1 text-gray-300 transition-all bg-gray-800 cursor-pointer hover:text-white bg-opacity-60 hover:bg-black rounded-tl-md text-center"
+            className="absolute bottom-0 right-0 z-30 px-3 py-1 text-sm xs:text-base text-gray-300 transition-all bg-gray-800 cursor-pointer hover:text-white bg-opacity-60 hover:bg-black rounded-tl-md text-center"
             onClick={toggleCredits}
           >
             {creditVisible ? credit : "Credit"}

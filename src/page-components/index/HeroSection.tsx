@@ -33,7 +33,7 @@ export const HeroSection = () => {
     <section className="relative h-screen" onClick={hideVideo}>
       <CoverImage
         containerClassName="relative h-screen"
-        overlayClassName="absolute inset-0 z-10 opacity-60 bg-gradient-to-r from-black"
+        overlayClassName="absolute inset-0 z-10 opacity-40 bg-gradient-to-r from-black to-gray-700"
         credit="Photo by Hoodh Ahmed on Unsplash"
       />
       {/* <CoverImage /> */}
@@ -50,24 +50,24 @@ export const HeroSection = () => {
             <br />
             of Pasifika Teachers
           </h1>
-          <h2 className="max-w-md md:max-w-lg mb-4 font-serif font-light text-gray-50 text-xl xs:text-4xl md:text-4.5xl xs:leading-snug text-center sm:text-left">
+          <h2 className="max-w-md md:max-w-lg mb-4 font-sans sm:font-serif font-light text-gray-50 text-xl xs:text-4xl md:text-4.5xl xs:leading-snug text-center sm:text-left">
             Learning, sharing, connecting and moving forward together.
           </h2>
-          <div className="flex flex-col sm:flex-row my-4">
-            <div className="mr-4 text-center sm:text-left">
-              <span
-                className="group cursor-pointer inline-flex items-center py-2 px-4 border border-gray-200 hover:border-blue-600 hover:bg-blue-600 transition-all duration-200"
+          <div className="grid gap-4 sm:flex sm:flex-row my-4">
+            <div className="flex justify-center">
+              <div
+                className="group cursor-pointer inline-flex justify-center items-center py-2 px-4 w-52 xs:w-full border border-gray-200 hover:border-blue-600 hover:bg-blue-600 transition-all duration-200"
                 onClick={showVideo}
               >
                 <MdPlayCircleOutline className="-ml-1 mr-2 text-xl" />
                 <span className="text-gray-200 group-hover:text-white xs:text-lg transition-all duration-200">
                   Watch short video
                 </span>
-              </span>
+              </div>
             </div>
-            <div className="text-center sm:text-left">
+            <div className="flex justify-center">
               <a
-                className="group cursor-pointer inline-flex items-center py-2 px-4 border border-gray-200 hover:border-blue-600 hover:bg-blue-600 transition-all duration-200"
+                className="group cursor-pointer inline-flex justify-center items-center py-2 px-4 w-52 xs:w-full border border-gray-200 hover:border-blue-600 hover:bg-blue-600 transition-all duration-200"
                 href="https://clte.fnu.ac.fj/talanoakaro"
                 target="_blank"
               >
@@ -78,11 +78,11 @@ export const HeroSection = () => {
               </a>
             </div>
           </div>
-          <div className="flex items-center my-2 text-gray-300 text-lg">
+          <div className="flex flex-col sm:flex-row items-center my-2 text-gray-200 text-lg">
             <span className="mr-2">Already a member?</span>
             <a
               href="https://elearn.fnu.ac.fj/course/view.php?id=6417"
-              className="hover:underline hover:text-white transition-all"
+              className="hover:underline text-sand hover:text-white transition-all"
             >
               Sign in here!
             </a>

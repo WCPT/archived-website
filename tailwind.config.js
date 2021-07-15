@@ -36,7 +36,28 @@ module.exports = {
     extend: {
       colors: {
         primary: "#002147",
-        blueocean: "#05708d",
+        banana: "#fffff5",
+        sand: {
+          DEFAULT: "#FCFBF8",
+          500: "#FCFBF8",
+          600: "#F4F1E6",
+          700: "#EDE7D4",
+          800: "#E5DCC2",
+          900: "#DDD2B1",
+        },
+        bahamaBlue: {
+          DEFAULT: "#05708D",
+          50: "#07A5CF",
+          100: "#079FC8",
+          200: "#0793B9",
+          300: "#0687AB",
+          400: "#067C9C",
+          500: "#05708D",
+          600: "#045C74",
+          700: "#03495C",
+          800: "#023543",
+          900: "#02222A",
+        },
       },
       fontFamily: {
         sans: ["Lato", "sans-serif"],

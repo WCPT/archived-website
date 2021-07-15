@@ -26,10 +26,10 @@ export const ContactSection = () => {
         credit="Background vector created by Harryarts on freepik.com"
         creditLink="https://www.freepik.com/vectors/background"
       /> */}
-      <div className="xl:container mx-auto mb-12 lg:mb-0 py-16 px-8 xs:px-12 sm:px-16 flex flex-col">
+      <div className="xl:container mx-auto py-16 px-8 xs:px-12 sm:px-16 flex flex-col">
         <h2 className="z-10 font-sans font-black text-3xl xs:text-4xl tracking-tight text-gray-900">
           <span className="block">Want to get in touch?</span>
-          <span className="block bg-blueocean bg-clip-text text-transparent">
+          <span className="block bg-bahamaBlue bg-clip-text text-transparent">
             Reach us through social media or email us!
           </span>
         </h2>
