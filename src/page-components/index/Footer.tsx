@@ -1,29 +1,11 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 
-import { Logo, ImageHoc } from "../../components";
-
-const BgImage = ImageHoc(() => (
-  <StaticImage
-    className="absolute inset-0 flex items-center justify-center w-full h-full"
-    imgClassName="w-full"
-    alt=""
-    src="../../images/blacksplat.jpg"
-    objectFit="cover"
-    objectPosition="50% 50%"
-    placeholder="dominantColor"
-  />
-));
+import { Logo } from "../../components";
 
 export function Footer() {
   return (
     <footer className="relative bg-gradient-to-b from-gray-800 to-gray-900">
       <div className="flex flex-col container mx-auto px-8 xs:px-12 sm:px-16">
-        <BgImage
-          overlayClassName="absolute inset-0 z-10 opacity-95 bg-gray-900"
-          credit="Background vector created by Harryarts on freepik.com"
-          creditLink="https://www.freepik.com/vectors/background"
-        />
         <div className="z-10 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-12 py-12 text-gray-500">
           <div className="flex flex-col items-center mx-auto md:mx-0 max-w-xs">
             <Logo theme="light" className="my-2 h-16 md:h-24" />
