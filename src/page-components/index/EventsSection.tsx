@@ -45,24 +45,24 @@ export const EventsSection = () => {
               month="July"
               time="12 July - 20 August"
               venue="Dolor voluptatibus"
-              body={
-                <ul>
-                  This is a free-of-charge, self-paced and self-directed online
-                  short course designed to enhance your proficiency in English
-                  grammar rules. Successful completion of the course will:
-                  <li>
-                    help you to identify the components of a basic sentence, use
-                    punctuation correctly, apply strategies to avoid commonly
-                    confused words and formulate grammatically correct
-                    sentences.
-                  </li>
-                  <li>
-                    reward you with a micro-credential certification in the form
-                    of a digital badge, which can be displayed, accessed, and
-                    verified online.
-                  </li>
-                </ul>
-              }
+              // body={
+              //   <ul>
+              //     This is a free-of-charge, self-paced and self-directed online
+              //     short course designed to enhance your proficiency in English
+              //     grammar rules. Successful completion of the course will:
+              //     <li>
+              //       help you to identify the components of a basic sentence, use
+              //       punctuation correctly, apply strategies to avoid commonly
+              //       confused words and formulate grammatically correct
+              //       sentences.
+              //     </li>
+              //     <li>
+              //       reward you with a micro-credential certification in the form
+              //       of a digital badge, which can be displayed, accessed, and
+              //       verified online.
+              //     </li>
+              //   </ul>
+              // }
             />
             <EventCard
               title="Create Digital Worksheets via Google Forms"
@@ -120,9 +120,7 @@ function EventCard({
       </span>
       <div className="flex flex-col mt-auto mb-2 text-lg 2xl:text-xl font-light">
         <span>{time}</span>
-        {body && (
-          <div className="hidden mt-2 text-lg prose text-gray-50">{body}</div>
-        )}
+        {body && <div className="mt-2 text-lg prose text-gray-50">{body}</div>}
         <span>@ {venue}</span>
       </div>
     </div>

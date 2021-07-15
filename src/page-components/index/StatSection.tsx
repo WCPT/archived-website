@@ -76,7 +76,7 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat={85}
+              stat={205}
               text="Participation in professional development events"
             />
             <StatSlot
