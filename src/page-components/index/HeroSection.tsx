@@ -80,7 +80,12 @@ export const HeroSection = () => {
           </div>
           <div className="flex items-center my-2 text-gray-300 text-lg">
             <span className="mr-2">Already a member?</span>
-            <a href="https://elearn.fnu.ac.fj/course/view.php?id=6417" className="hover:underline hover:text-white transition-all">Sign in here!</a>
+            <a
+              href="https://elearn.fnu.ac.fj/course/view.php?id=6417"
+              className="hover:underline hover:text-white transition-all"
+            >
+              Sign in here!
+            </a>
             {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"

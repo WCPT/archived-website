@@ -34,7 +34,7 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat="350+"
+              stat="950+"
               text="Engagements to connect, create and collaborate"
             />
             <StatSlot
@@ -55,7 +55,7 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat="900+"
+              stat="1000+"
               text="Registered members from across the Pacific region"
             />
             <StatSlot

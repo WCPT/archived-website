@@ -17,9 +17,9 @@ const BgImage = ImageHoc(() => (
 
 export const EventsSection = () => {
   return (
-    <section className="relative py-12 xs:py-16 sm:pb-36 bg-gradient-to-r from-blue-700 to-blue-500">
+    <section className="relative py-12 xs:py-16 sm:pb-36 bg-blue-700">
       <BgImage
-        overlayClassName="absolute inset-0 z-10 opacity-80 bg-gradient-to-r from-blue-700 to-blue-500"
+        overlayClassName="absolute inset-0 z-10 opacity-80 bg-blue-700"
         credit="Background vector created by liuzishan on freepik.com"
         creditLink="https://www.freepik.com/vectors/background"
       />
