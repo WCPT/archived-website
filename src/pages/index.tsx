@@ -1,17 +1,16 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import { Navbar, Footer } from "../components";
 import {
-  Navbar,
   HeroSection,
   IntroSection,
   StatSection,
   EventsSection,
   ContactSection,
-  Footer,
 } from "../page-components/index";
 
-const IndexPage = () => {
+export const IndexPage = () => {
   // const [hasScrolled, setScroll] = useState(false);
 
   // useEffect(() => {
@@ -32,14 +31,14 @@ const IndexPage = () => {
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400;900&family=Cousine:wght@700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400;900&display=swap"
           rel="stylesheet"
         />
       </Helmet>
       <main id="app">
-        <title>Wisdom Community of Pasifika</title>
+        <title>Wisdom Community of Pasifika Teachers</title>
 
-        <Navbar />
+        <Navbar theme="light" className="absolute top-0 z-50" />
         <HeroSection />
         <IntroSection />
         <StatSection />

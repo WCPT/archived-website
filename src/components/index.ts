@@ -1,3 +1,4 @@
+export * from "./Footer";
 export * from "./ImageHoc";
 export * from "./Logo";
-export * from "./LogoAlt";
+export * from "./Navbar";

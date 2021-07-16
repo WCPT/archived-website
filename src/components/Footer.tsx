@@ -1,10 +1,15 @@
 import React from "react";
+import { cx } from "@emotion/css";
 
 // import { Logo } from "../../components";
 
-export function Footer() {
+interface Props {
+  className?: string;
+}
+
+export function Footer({ className }: Props) {
   return (
-    <footer className="relative bg-sand">
+    <footer className={cx("relative bg-sand", className)}>
       <div className="flex flex-col container mx-auto px-8 xs:px-12 sm:px-16">
         {/* <div className="z-10 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-12 py-12 text-gray-500">
           <div className="flex flex-col items-center mx-auto md:mx-0 max-w-xs">

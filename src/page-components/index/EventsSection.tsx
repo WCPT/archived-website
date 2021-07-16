@@ -44,36 +44,21 @@ export const EventsSection = () => {
               day="12"
               month="July"
               time="12 July - 20 August"
-              // body={
-              //   <ul>
-              //     This is a free-of-charge, self-paced and self-directed online
-              //     short course designed to enhance your proficiency in English
-              //     grammar rules. Successful completion of the course will:
-              //     <li>
-              //       help you to identify the components of a basic sentence, use
-              //       punctuation correctly, apply strategies to avoid commonly
-              //       confused words and formulate grammatically correct
-              //       sentences.
-              //     </li>
-              //     <li>
-              //       reward you with a micro-credential certification in the form
-              //       of a digital badge, which can be displayed, accessed, and
-              //       verified online.
-              //     </li>
-              //   </ul>
-              // }
+              href="/events/enhance-grammar"
             />
             <EventCard
               title="Create Digital Worksheets via Google Forms"
               day="30"
               month="July"
-              time="1PM - 3PM"
+              time="1 - 3PM"
+              href="/events/google-forms-worksheets"
             />
             <EventCard
               title="Zoom - Level up your Zoom skills!"
               day="13"
               month="August"
-              time="1PM - 2PM"
+              time="1 - 2PM"
+              href="/events/level-up-zoom-skills"
             />
           </div>
         </div>
@@ -90,17 +75,18 @@ function EventCard({
   day,
   month,
   time,
-  body,
+  href,
 }: {
   className?: string;
   title: string;
   day: string;
   month: string;
   time: string;
-  body?: React.ReactNode;
+  href: string;
 }) {
   return (
-    <div
+    <a
+      href={href}
       className={cx(
         "group flex flex-col py-8 lg:py-12 2xl:py-16 px-10 2xl:px-12 text-gray-100 border border-gray-300 cursor-pointer transition-all duration-200 ease-linear hover:bg-gray-900 hover:border-gray-900 hover:shadow-xl",
         className
@@ -115,9 +101,10 @@ function EventCard({
       </span>
       <div className="flex flex-col mt-auto mb-2 text-lg 2xl:text-xl font-light">
         <span>{time}</span>
-        {body && <div className="mt-2 text-lg prose text-gray-50">{body}</div>}
-        <span className="mt-2 font-normal text-base xl:text-lg group-hover:underline">View details</span>
+        <span className="mt-2 font-normal text-base xl:text-lg group-hover:underline">
+          View details
+        </span>
       </div>
-    </div>
+    </a>
   );
 }
