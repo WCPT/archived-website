@@ -96,7 +96,7 @@ export const HeroSection = () => {
           <div className="flex flex-1 p-8 lmd:p-32 xl:p-64">
             <div className="flex flex-1 aspect-w-16 aspect-h-9 shadow-lg">
               <iframe
-                src="https://www.youtube.com/embed/5avItO0PvA8"
+                src="https://www.youtube.com/embed/zNp_l9RQSJk"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               />

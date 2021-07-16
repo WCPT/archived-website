@@ -130,7 +130,7 @@ function ExtendedContent({ isVisible }: { isVisible: boolean }) {
     >
       <p>
         Our work is guided by the Sustainable Development Goal 4 (SDG4) and the
-        Pacific Regional Education Framework (PacREF). As a Wisdom Community
+        Pacific Regional Education Framework (PacREF). As the Wisdom Community
         (WisCom) for teachers, we aspire to contribute and work towards
         achieving the SDG4 and PacREF 2030 targets. Through our online
         communication and collaboration platform, ‘Please Talanoa Karo,
