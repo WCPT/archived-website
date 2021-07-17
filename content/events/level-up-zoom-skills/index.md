@@ -2,6 +2,7 @@
 title: "Zoom - Level up your Zoom skills!"
 duration: "1 - 2PM / 13 August, 2021"
 registrationUrl: "https://forms.gle/rBiUAWT2X12MfNQy6"
+order: 3
 ---
 
 A workshop on using Zoom to conduct online classes. Some of the key components of the workshop include:

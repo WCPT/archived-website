@@ -3,6 +3,7 @@ metaInfo: "Short Course"
 title: "Enhancing Grammar Basics"
 duration: "12 July - 20 August, 2021"
 registrationUrl: "https://forms.gle/hNtu6sCUyLazBzEX8"
+order: 1
 ---
 
 This is a free-of-charge, self-paced and self-directed online short
