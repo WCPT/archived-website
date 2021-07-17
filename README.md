@@ -1,29 +1,20 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Wisdom Community of Pasifika Teachers Website
 
-## 🚀 Quick start
+Website domain: https://www.pasifikateachers.org/
 
-1.  **Create a Gatsby site.**
+## 🚀 Quick Start Development
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+1.  **Install dependencies.**
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
+    ```sh
+    npm install
     ```
 
 2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Start up gatsby development server.
 
-    ```shell
-    cd my-gatsby-site/
+    ```sh
     npm run develop
     ```
 
@@ -47,8 +38,7 @@
 
     - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-## 🚀 Quick start (Gatsby Cloud)
+## 🚀 Automatic Deployment
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+- Once you're ready to deploy the changes you've made to the website, commit your changes and push to the `main` branch. This will automatically trigger a build and automatically publish your changes once the build is complete.
+- You can view the deployment status on [netlify](https://app.netlify.com/sites/pasifika-teachers/overview).
