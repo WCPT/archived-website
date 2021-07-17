@@ -17,7 +17,7 @@ export const Layout = ({ title, children }: Props) => {
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400;900&family=Cousine:wght@700&display=swap"
           rel="stylesheet"
         />
       </Helmet>
