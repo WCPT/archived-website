@@ -12,33 +12,37 @@ interface Props {
 }
 
 export const Navbar = ({ className, theme = "dark" }: Props) => {
-  const socialLinks = useSocialLinks();
+  const links = useSocialLinks();
 
   const social = useMemo(
     () => [
       {
-        href: socialLinks.facebook,
+        href: links.facebook,
         title: "Facebook",
         Icon: FaFacebookSquare,
-        hoverClass: "text-blue-800",
+        hoverTextClass: "text-blue-800",
+        hoverBgClass: "bg-blue-800",
       },
       {
-        href: socialLinks.twitter,
+        href: links.twitter,
         title: "Twitter",
         Icon: FaTwitter,
-        hoverClass: "text-blue-400",
+        hoverTextClass: "text-blue-400",
+        hoverBgClass: "bg-blue-400",
       },
       {
-        href: socialLinks.youtube,
+        href: links.youtube,
         title: "Youtube",
         Icon: FaYoutube,
-        hoverClass: "text-red-600",
+        hoverTextClass: "text-red-600",
+        hoverBgClass: "bg-red-600",
       },
       {
-        href: socialLinks.email,
+        href: links.email,
         title: "Email",
         Icon: MdEmail,
-        hoverClass: "text-blue-500",
+        hoverTextClass: "text-blue-500",
+        hoverBgClass: "bg-blue-500",
       },
     ],
     []
@@ -75,7 +79,15 @@ export const Navbar = ({ className, theme = "dark" }: Props) => {
                 rel="noopener"
               >
                 <Icon
-                  className={`mx-1 p-1.5 md:p-2.5 text-4xl md:text-5xl rounded-md hover:${props.hoverClass} hover:bg-white transition-all duration-300`}
+                  className={cx(
+                    `mx-1 p-1.5 md:p-2.5 text-4xl md:text-5xl rounded-md transition-all duration-300`,
+                    {
+                      [`hover:${props.hoverTextClass} hover:bg-white`]:
+                        theme !== "dark",
+                      [`hover:text-white bg-gray-100 hover:${props.hoverBgClass}`]:
+                        theme === "dark",
+                    }
+                  )}
                 />
               </a>
             ))}
