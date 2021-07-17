@@ -21,16 +21,6 @@ interface Props {
 }
 
 export const IndexPage = ({ data: { site } }: Props) => {
-  // const [hasScrolled, setScroll] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => setScroll(window.scrollY > 0);
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   return (
     <Layout title={site.siteMetadata.title}>
       <Navbar theme="light" className="absolute top-0 z-50" />
