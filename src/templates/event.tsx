@@ -15,7 +15,7 @@ interface Props {
       html: string;
       frontmatter: {
         title: string;
-        metaInfo?: string;
+        type?: string;
         duration: string;
         registrationUrl: string;
       };
@@ -36,9 +36,9 @@ const Event = ({ data }: Props) => {
           <Navbar className="py-6 border-b border-gray-200" />
           <div className="px-8">
             <section className="container mx-auto mt-12 mb-16 text-lg prose text-gray-900">
-              {post.frontmatter.metaInfo && (
+              {post.frontmatter.type && (
                 <h2 className="mb-0 text-gray-500 font-normal text-2xl">
-                  {post.frontmatter.metaInfo}
+                  {post.frontmatter.type}
                 </h2>
               )}
               <h1 className="text-4xl leading-tight text-bahamaBlue">
@@ -110,7 +110,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        metaInfo
+        type
         duration
         registrationUrl
       }

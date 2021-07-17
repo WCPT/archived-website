@@ -9,7 +9,7 @@ export type SocialLinks = {
 
 export const useSocialLinks = (): SocialLinks => {
   const { site } = useStaticQuery(graphql`
-    query Query {
+    query SocialLinksQuery {
       site {
         siteMetadata {
           socialLinks {

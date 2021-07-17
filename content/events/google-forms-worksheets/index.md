@@ -1,5 +1,6 @@
 ---
 title: "Create Digital Worksheets via Google Forms"
+date: "2021-07-30T01:00:00.000Z"
 duration: "1 - 3PM / 30 July, 2021"
 registrationUrl: "https://forms.gle/eDTCvGdcVB2pmj1dA"
 order: 2

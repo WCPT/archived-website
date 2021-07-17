@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { cx } from "@emotion/css";
 import { StaticImage } from "gatsby-plugin-image";
+import { format } from "date-fns";
 
 import { ImageHoc } from "../../components";
+import { useEventPosts } from "../../hooks";
 
 const BgImage = ImageHoc(() => (
   <StaticImage
@@ -17,6 +19,8 @@ const BgImage = ImageHoc(() => (
 ));
 
 export const EventsSection = () => {
+  const eventPosts = useEventPosts();
+
   return (
     <section className="relative py-12 xs:py-16 sm:pb-36 bg-blue-700">
       <BgImage
@@ -39,27 +43,15 @@ export const EventsSection = () => {
             </span>
           </div>
           <div className="z-10 grid lg:grid-cols-3 grid-rows-1 gap-4 text-gray-600 overflow-hidden">
-            <EventCard
-              title="Short Course - Enhancing Grammar Basics"
-              day="12"
-              month="July"
-              time="12 July - 20 August"
-              href="/events/enhance-grammar"
-            />
-            <EventCard
-              title="Create Digital Worksheets via Google Forms"
-              day="30"
-              month="July"
-              time="1 - 3PM"
-              href="/events/google-forms-worksheets"
-            />
-            <EventCard
-              title="Zoom - Level up your Zoom skills!"
-              day="13"
-              month="August"
-              time="1 - 2PM"
-              href="/events/level-up-zoom-skills"
-            />
+            {eventPosts.map((event) => (
+              <EventCard
+                type={event.frontmatter.type}
+                title={event.frontmatter.title}
+                date={event.frontmatter.date}
+                duration={event.frontmatter.duration}
+                href={event.fields.slug}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -71,19 +63,20 @@ export default EventsSection;
 
 function EventCard({
   className,
+  type,
   title,
-  day,
-  month,
-  time,
+  date,
+  duration,
   href,
 }: {
   className?: string;
+  type?: string;
   title: string;
-  day: string;
-  month: string;
-  time: string;
+  date: Date;
+  duration: string;
   href: string;
 }) {
+  const eventDate = useMemo(() => new Date(date), []);
   return (
     <a
       href={href}
@@ -93,14 +86,16 @@ function EventCard({
       )}
     >
       <span className="text-4xl 2xl:text-5xl font-light leading-tight tracking-wide">
-        {day}
+        {format(eventDate, "dd")}
       </span>
-      <span className="2xl:text-lg uppercase tracking-widest">{month}</span>
+      <span className="2xl:text-lg uppercase tracking-widest">
+        {format(eventDate, "MMMM")}
+      </span>
       <span className="mt-8 2xl:mt-12 mb-6 2xl:mb-8 text-xl 2xl:text-2xl leading-snug font-light">
-        {title}
+        {type && `${type} -`} {title}
       </span>
       <div className="flex flex-col mt-auto mb-2 text-lg 2xl:text-xl font-light">
-        <span>{time}</span>
+        <span>{duration}</span>
         <span className="mt-2 font-normal text-base xl:text-lg group-hover:underline">
           View details
         </span>
