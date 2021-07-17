@@ -1,9 +1,9 @@
 ---
-type: "Short Course"
-title: "Enhancing Grammar Basics"
-date: "2021-07-12T12:00:00.000Z"
-duration: "12 July - 20 August, 2021"
-registrationUrl: "https://forms.gle/hNtu6sCUyLazBzEX8"
+type: Short Course
+title: Enhancing Grammar Basics
+date: 2021-07-11T12:00:00.000Z
+duration: 12 July - 20 August, 2021
+registrationUrl: https://forms.gle/hNtu6sCUyLazBzEX8
 order: 1
 ---
 
