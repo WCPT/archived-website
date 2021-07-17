@@ -1,10 +1,10 @@
 backend:
   name: git-gateway
-  branch: dev # Branch to update (optional; defaults to master)
+  branch: main # Branch to update (optional; defaults to master)
 
 media_folder: static/img
 public_folder: /img
-site_url: https://pasifika-teachers-dev.netlify.app
+site_url: https://www.pasifikateachers.org
 
 collections:
   - name: "events"
