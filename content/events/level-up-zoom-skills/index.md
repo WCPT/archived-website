@@ -1,8 +1,8 @@
 ---
-title: "Zoom - Level up your Zoom skills!"
-date: "2021-08-13T13:00:00.000Z"
-duration: "1 - 2PM / 13 August, 2021"
-registrationUrl: "https://forms.gle/rBiUAWT2X12MfNQy6"
+title: Zoom - Level up your Zoom skills!
+date: 2021-08-13T01:00:00.000Z
+duration: 1 - 2PM / 13 August, 2021
+registrationUrl: https://forms.gle/rBiUAWT2X12MfNQy6
 order: 3
 ---
 
