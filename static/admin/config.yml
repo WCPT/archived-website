@@ -1,23 +1,27 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: dev # Branch to update (optional; defaults to master)
 
 media_folder: static/img
 public_folder: /img
+site_url: https://pasifika-teachers-dev.netlify.app
 
 collections:
   - name: "events"
     label: "Event"
     folder: "content/events"
     create: true
-    slug: "index"
+    slug: "{{slug}}"
     media_folder: ""
     public_folder: ""
     path: "{{title}}/index"
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Event Type", name: "type", widget: "string", required: false }
+      - { label: "Event Title", name: "title", widget: "string" }
+      - { label: "Event Date", name: "date", widget: "datetime" }
+      - { label: "Event Duration", name: "duration", widget: "string" }
+      - { label: "Registration URL", name: "registrationUrl", widget: "string" }
+      - { label: "Display Order", name: "order", widget: "string" }
+      - { label: "Event Details", name: "body", widget: "markdown" }
