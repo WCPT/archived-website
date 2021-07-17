@@ -4,6 +4,7 @@ import { cx } from "@emotion/css";
 import { MdEmail } from "react-icons/md";
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 
+import { useSocialLinks } from "../../hooks";
 // import { ImageHoc } from "../../components";
 
 // const BgImage = ImageHoc(() => (
@@ -44,30 +45,32 @@ export const ContactSection = () => {
 export default ContactSection;
 
 function SocialLinks({ className }: { className?: string }) {
+  const links = useSocialLinks();
+
   const socialMedia = [
     {
-      href: "https://www.facebook.com/wiscompt",
+      href: links.facebook,
       title: "Facebook",
       Icon: FaFacebookSquare,
-      hoverClass: "bg-blue-800",
+      hoverBgClass: "bg-blue-800",
     },
     {
-      href: "https://twitter.com/wiscompt",
+      href: links.twitter,
       title: "Twitter",
       Icon: FaTwitter,
-      hoverClass: "bg-blue-400",
+      hoverBgClass: "bg-blue-400",
     },
     {
-      href: "https://www.youtube.com/channel/UCvDhc1CS_QAxmnMCECMd7iQ",
+      href: links.youtube,
       title: "Youtube",
       Icon: FaYoutube,
-      hoverClass: "bg-red-600",
+      hoverBgClass: "bg-red-600",
     },
     {
-      href: "mailto:pasifikateachers@gmail.com",
+      href: links.email,
       title: "Email",
       Icon: MdEmail,
-      hoverClass: "bg-blue-500",
+      hoverBgClass: "bg-blue-500",
     },
   ];
 
@@ -82,7 +85,7 @@ function SocialLinks({ className }: { className?: string }) {
           rel="noopener"
         >
           <Icon
-            className={`mr-2 p-2.5 text-5xl rounded-md hover:text-white bg-gray-100 hover:${props.hoverClass} transition-all duration-300`}
+            className={`mr-2 p-2.5 text-5xl rounded-md hover:text-white bg-gray-100 hover:${props.hoverBgClass} transition-all duration-300`}
           />
         </a>
       ))}
