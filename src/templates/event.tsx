@@ -37,7 +37,7 @@ const Event = ({ data }: Props) => {
           <div className="px-8">
             <section className="container mx-auto mt-12 mb-16 text-lg prose text-gray-900">
               {post.frontmatter.metaInfo && (
-                <h2 className="mb-0 text-gray-400 font-normal">
+                <h2 className="mb-0 text-gray-500 font-normal text-2xl">
                   {post.frontmatter.metaInfo}
                 </h2>
               )}
@@ -46,16 +46,16 @@ const Event = ({ data }: Props) => {
               </h1>
 
               <div>
-                <div className="text-gray-900">{post.frontmatter.duration}</div>
-                <div>
+                <div className="text-xl text-gray-900">{post.frontmatter.duration}</div>
+                <button className="my-2 mr-2 px-4 py-2 bg-bahamaBlue hover:bg-bahamaBlue-300 rounded shadow-md hover:shadow-sm transition-all">
                   <a
                     href={post.frontmatter.registrationUrl}
                     target="_blank"
-                    className="text-bahamaBlue-400"
+                    className="text-white no-underline"
                   >
-                    Register here
+                    Register
                   </a>
-                </div>
+                </button>
               </div>
 
               <div
