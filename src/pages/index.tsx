@@ -1,7 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { graphql } from "gatsby";
 
-import { Navbar, Footer } from "../components";
+import { Layout, Navbar, Footer } from "../components";
 import {
   HeroSection,
   IntroSection,
@@ -10,7 +10,17 @@ import {
   ContactSection,
 } from "../page-components/index";
 
-export const IndexPage = () => {
+interface Props {
+  data: {
+    site: {
+      siteMetadata: {
+        title?: string;
+      };
+    };
+  };
+}
+
+export const IndexPage = ({ data: { site } }: Props) => {
   // const [hasScrolled, setScroll] = useState(false);
 
   // useEffect(() => {
@@ -22,32 +32,26 @@ export const IndexPage = () => {
   // }, []);
 
   return (
-    <>
-      <Helmet>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400;900&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
-      <main id="app">
-        <title>Wisdom Community of Pasifika Teachers</title>
-
-        <Navbar theme="light" className="absolute top-0 z-50" />
-        <HeroSection />
-        <IntroSection />
-        <StatSection />
-        <EventsSection />
-        <ContactSection />
-        <Footer />
-      </main>
-    </>
+    <Layout title={site.siteMetadata.title}>
+      <Navbar theme="light" className="absolute top-0 z-50" />
+      <HeroSection />
+      <IntroSection />
+      <StatSection />
+      <EventsSection />
+      <ContactSection />
+      <Footer />
+    </Layout>
   );
 };
+
+export const pageQuery = graphql`
+  query HomePageQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;
 
 export default IndexPage;

@@ -1,52 +1,55 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Link, graphql } from "gatsby";
 
-import { Navbar, Footer } from "../components";
+import { Navbar, Footer, Layout } from "../components";
 
 interface Props {
-  pageContext: {
-    subtitle?: string;
-    title: string;
-    duration: string;
-    body: React.ReactNode;
-    registrationUrl: string;
+  data: {
+    site: {
+      siteMetadata: {
+        title?: string;
+      };
+    };
+    markdownRemark: {
+      id: string;
+      html: string;
+      frontmatter: {
+        title: string;
+        metaInfo?: string;
+        duration: string;
+        registrationUrl: string;
+      };
+    };
+    previous: any;
+    next: any;
   };
 }
 
-const Event = ({ pageContext }: Props) => {
-  return (
-    <>
-      <Helmet>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400;900&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
-      <main id="app">
-        <title>Wisdom Community of Pasifika Teachers</title>
+const Event = ({ data }: Props) => {
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata?.title || ``;
+  const { previous, next } = data;
 
+  return (
+    <Layout title={siteTitle}>
         <div className="flex flex-col min-h-screen">
           <Navbar className="py-6 border-b border-gray-200" />
           <div className="px-8">
             <section className="container mx-auto mt-12 mb-16 text-lg prose text-gray-900">
-              {pageContext.subtitle && (
-                <h2 className="mb-0 text-gray-500">{pageContext.subtitle}</h2>
+              {post.frontmatter.metaInfo && (
+                <h2 className="mb-0 text-gray-400 font-normal">
+                  {post.frontmatter.metaInfo}
+                </h2>
               )}
-              <h1 className="leading-tight text-bahamaBlue">
-                {pageContext.title}
+              <h1 className="text-4xl leading-tight text-bahamaBlue">
+                {post.frontmatter.title}
               </h1>
 
               <div>
-                <div className="text-gray-500">{pageContext.duration}</div>
+                <div className="text-gray-900">{post.frontmatter.duration}</div>
                 <div>
                   <a
-                    href={pageContext.registrationUrl}
+                    href={post.frontmatter.registrationUrl}
                     target="_blank"
                     className="text-bahamaBlue-400"
                   >
@@ -55,20 +58,80 @@ const Event = ({ pageContext }: Props) => {
                 </div>
               </div>
 
-              {pageContext.body}
+              <div
+                dangerouslySetInnerHTML={{ __html: post.html }}
+                itemProp="articleBody"
+              />
 
-              <div className="mt-8">
+              <nav className="flex justify-between mt-16 py-8 border-t border-gray-200">
+                <div>
+                  {previous && (
+                    <Link to={previous.fields.slug} rel="prev">
+                      ← {previous.frontmatter.title}
+                    </Link>
+                  )}
+                </div>
+                <div>
+                  {next && (
+                    <Link to={next.fields.slug} rel="next">
+                      {next.frontmatter.title} →
+                    </Link>
+                  )}
+                </div>
+              </nav>
+
+              <div>
                 <a href="/" className="text-gray-500 hover:text-gray-700">
                   Return to home page
                 </a>
               </div>
             </section>
           </div>
+
           <Footer className="mt-auto" />
         </div>
-      </main>
-    </>
+    </Layout>
   );
 };
+
+export const pageQuery = graphql`
+  query EventPageQuery(
+    $id: String!
+    $previousPostId: String
+    $nextPostId: String
+  ) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      frontmatter {
+        title
+        metaInfo
+        duration
+        registrationUrl
+      }
+    }
+    previous: markdownRemark(id: { eq: $previousPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
+    }
+    next: markdownRemark(id: { eq: $nextPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
+    }
+  }
+`;
 
 export default Event;

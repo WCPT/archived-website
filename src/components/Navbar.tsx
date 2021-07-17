@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { cx } from "@emotion/css";
 import { MdEmail } from "react-icons/md";
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 
-import { Logo } from ".";
+import { useSocialLinks } from "../hooks";
+import Logo from "./Logo";
 
 interface Props {
   className?: string;
@@ -11,6 +12,38 @@ interface Props {
 }
 
 export const Navbar = ({ className, theme = "dark" }: Props) => {
+  const socialLinks = useSocialLinks();
+
+  const social = useMemo(
+    () => [
+      {
+        href: socialLinks.facebook,
+        title: "Facebook",
+        Icon: FaFacebookSquare,
+        hoverClass: "text-blue-800",
+      },
+      {
+        href: socialLinks.twitter,
+        title: "Twitter",
+        Icon: FaTwitter,
+        hoverClass: "text-blue-400",
+      },
+      {
+        href: socialLinks.youtube,
+        title: "Youtube",
+        Icon: FaYoutube,
+        hoverClass: "text-red-600",
+      },
+      {
+        href: socialLinks.email,
+        title: "Email",
+        Icon: MdEmail,
+        hoverClass: "text-blue-500",
+      },
+    ],
+    []
+  );
+
   return (
     <nav
       className={cx(
@@ -32,7 +65,21 @@ export const Navbar = ({ className, theme = "dark" }: Props) => {
         </a>
 
         <div className="ml-auto">
-          <SocialLinks />
+          <div className="flex items-center">
+            {social.map(({ Icon, ...props }, i) => (
+              <a
+                key={i}
+                href={props.href}
+                title={props.title}
+                target="_blank"
+                rel="noopener"
+              >
+                <Icon
+                  className={`mx-1 p-1.5 md:p-2.5 text-4xl md:text-5xl rounded-md hover:${props.hoverClass} hover:bg-white transition-all duration-300`}
+                />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </nav>
@@ -40,50 +87,3 @@ export const Navbar = ({ className, theme = "dark" }: Props) => {
 };
 
 export default Navbar;
-
-function SocialLinks({ className }: { className?: string }) {
-  const socialMedia = [
-    {
-      href: "https://www.facebook.com/wiscompt",
-      title: "Facebook",
-      Icon: FaFacebookSquare,
-      hoverClass: "text-blue-800",
-    },
-    {
-      href: "https://twitter.com/wiscompt",
-      title: "Twitter",
-      Icon: FaTwitter,
-      hoverClass: "text-blue-400",
-    },
-    {
-      href: "https://www.youtube.com/channel/UCvDhc1CS_QAxmnMCECMd7iQ",
-      title: "Youtube",
-      Icon: FaYoutube,
-      hoverClass: "text-red-600",
-    },
-    {
-      href: "mailto:pasifikateachers@gmail.com",
-      title: "Email",
-      Icon: MdEmail,
-      hoverClass: "text-blue-500",
-    },
-  ];
-
-  return (
-    <div className={cx(`flex items-center`, className)}>
-      {socialMedia.map(({ Icon, ...props }, i) => (
-        <a
-          key={i}
-          href={props.href}
-          title={props.title}
-          target="_blank"
-          rel="noopener"
-        >
-          <Icon
-            className={`mx-1 p-1.5 md:p-2.5 text-4xl md:text-5xl rounded-md hover:${props.hoverClass} hover:bg-white transition-all duration-300`}
-          />
-        </a>
-      ))}
-    </div>
-  );
-}

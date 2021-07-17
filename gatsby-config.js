@@ -1,11 +1,45 @@
 module.exports = {
   siteMetadata: {
-    title: "Community of Pasifika",
+    title: "Wisdom Community of Pasifika Teachers",
+    author: {
+      name: `Hyun Kim`,
+      summary: `Educational Software Developer at Fiji National University.`,
+    },
+    description: `Community for the teachers in the wider Pacific region`,
+    siteUrl: `https://www.pasifikateachers.org`,
+    socialLinks: {
+      twitter: `https://twitter.com/wiscompt`,
+      facebook: `https://www.facebook.com/wiscompt`,
+      youtube: `https://www.youtube.com/channel/UCvDhc1CS_QAxmnMCECMd7iQ`,
+      email: `mailto:pasifikateachers@gmail.com`,
+    },
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: "./src/pages/",
+      },
+      __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `events`,
+        path: `./content`,
+      },
+    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -59,20 +93,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    "gatsby-plugin-postcss",
-    "gatsby-transformer-remark",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-    },
+    `gatsby-plugin-postcss`,
   ],
 };
