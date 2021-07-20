@@ -3,7 +3,7 @@ title: Zoom - Level up your Zoom skills!
 date: 2021-08-13T01:00:00.000Z
 duration: 1 - 2PM / 13 August, 2021
 registrationUrl: https://forms.gle/rBiUAWT2X12MfNQy6
-registrationDeadline: "Registration closes: 12 July, 2021"
+registrationDeadline: "Registration closes: 12 August, 2021"
 order: 3
 ---
 
