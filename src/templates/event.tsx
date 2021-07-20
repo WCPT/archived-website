@@ -15,9 +15,10 @@ interface Props {
       html: string;
       frontmatter: {
         title: string;
-        type?: string;
+        type: string | null;
         duration: string;
         registrationUrl: string;
+        registrationDeadline: string | null;
       };
     };
     previous: any;
@@ -47,6 +48,7 @@ const Event = ({ data }: Props) => {
 
               <div>
                 <div className="text-xl text-gray-900">{post.frontmatter.duration}</div>
+                <div className="text-xl text-gray-500">{post.frontmatter.registrationDeadline}</div>
                 <button className="my-2 mr-2 px-4 py-2 bg-bahamaBlue hover:bg-bahamaBlue-300 rounded shadow-md hover:shadow-sm transition-all">
                   <a
                     href={post.frontmatter.registrationUrl}
@@ -113,6 +115,7 @@ export const pageQuery = graphql`
         type
         duration
         registrationUrl
+        registrationDeadline
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
