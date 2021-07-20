@@ -90,10 +90,11 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Frontmatter {
       type: String
-      title: String!
-      duration: String!
-      registrationUrl: String!
-      order: Int!
+      title: String
+      duration: String
+      registrationUrl: String
+      order: Int
+      registrationDeadline: String
     }
 
     type Fields {
