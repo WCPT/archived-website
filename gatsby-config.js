@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `events`,
+        name: `content`,
         path: `./content`,
       },
     },
