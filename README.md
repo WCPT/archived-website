@@ -16,6 +16,8 @@ Website domain: https://www.pasifikateachers.org/
 
     ```sh
     npm run develop
+    # or
+    yarn dev
     ```
 
 3.  **Open the code and start customizing!**
@@ -42,3 +44,6 @@ Website domain: https://www.pasifikateachers.org/
 
 - Once you're ready to deploy the changes you've made to the website, commit your changes and push to the `main` branch. This will automatically trigger a build and automatically publish your changes once the build is complete.
 - You can view the deployment status on [netlify](https://app.netlify.com/sites/pasifika-teachers/overview).
+
+## Updating Graphql Schema
+You modify the graphql schema in [`gatsby-node.js`](./gatsby-node.js) under the exported function `createSchemaCustomization`. Things such as frontmatter to your markdown content can be modified here.
