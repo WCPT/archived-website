@@ -44,13 +44,7 @@ export const EventsSection = () => {
           </div>
           <div className="z-10 grid lg:grid-cols-3 grid-rows-1 gap-4 text-gray-600 overflow-hidden">
             {eventPosts.map((event) => (
-              <EventCard
-                type={event.frontmatter.type}
-                title={event.frontmatter.title}
-                date={event.frontmatter.date}
-                duration={event.frontmatter.duration}
-                href={event.fields.slug}
-              />
+              <EventCard {...event.frontmatter} href={event.fields.slug} />
             ))}
           </div>
         </div>
@@ -68,13 +62,15 @@ function EventCard({
   date,
   duration,
   href,
+  registrationDeadline,
 }: {
   className?: string;
-  type?: string;
+  type: string | null;
   title: string;
   date: Date;
   duration: string;
   href: string;
+  registrationDeadline: string | null;
 }) {
   const eventDate = useMemo(() => new Date(date), []);
   return (
@@ -94,9 +90,10 @@ function EventCard({
       <span className="mt-8 2xl:mt-12 mb-6 2xl:mb-8 text-xl 2xl:text-2xl leading-snug font-light">
         {type && `${type} -`} {title}
       </span>
-      <div className="flex flex-col mt-auto mb-2 text-lg 2xl:text-xl font-light">
+      <div className="flex flex-col mt-auto mb-2 text-lg 2xl:text-xl font-light leading-snug">
         <span>{duration}</span>
-        <span className="mt-2 font-normal text-base xl:text-lg group-hover:underline">
+        {registrationDeadline && <span>{registrationDeadline}</span>}
+        <span className="font-normal text-base xl:text-lg group-hover:underline">
           View details
         </span>
       </div>

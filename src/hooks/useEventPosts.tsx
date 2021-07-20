@@ -7,6 +7,7 @@ export type EventPost = {
     date: Date;
     duration: string;
     order: number;
+    registrationDeadline: string;
   };
   fields: {
     slug: string;
@@ -27,6 +28,7 @@ export const useEventPosts = (): EventPost[] => {
             date
             duration
             order
+            registrationDeadline
           }
           fields {
             slug

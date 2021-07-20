@@ -23,5 +23,11 @@ collections:
       - { label: "Event Date", name: "date", widget: "datetime" }
       - { label: "Event Duration", name: "duration", widget: "string" }
       - { label: "Registration URL", name: "registrationUrl", widget: "string" }
+      - {
+          label: "Registration Deadline",
+          name: "registrationDeadline",
+          widget: "string",
+          required: false,
+        }
       - { label: "Display Order", name: "order", widget: "string" }
       - { label: "Event Details", name: "body", widget: "markdown" }
