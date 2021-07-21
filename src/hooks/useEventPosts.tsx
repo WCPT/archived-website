@@ -18,7 +18,7 @@ export const useEventPosts = (): EventPost[] => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query EventPostsQuery {
       allMarkdownRemark(
-        sort: { fields: [frontmatter___order], order: ASC }
+        sort: { fields: [frontmatter___order], order: DESC }
         limit: 3
       ) {
         nodes {
@@ -38,7 +38,9 @@ export const useEventPosts = (): EventPost[] => {
     }
   `);
 
-  return allMarkdownRemark.nodes;
+  return allMarkdownRemark.nodes.sort(
+    (a: EventPost, b: EventPost) => a.frontmatter.order - b.frontmatter.order
+  );
 };
 
 export default useEventPosts;
