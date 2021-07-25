@@ -13,6 +13,12 @@ module.exports = {
       youtube: `https://www.youtube.com/channel/UCvDhc1CS_QAxmnMCECMd7iQ`,
       email: `mailto:pasifikateachers@gmail.com`,
     },
+    stats: {
+      engagements: "1500+",
+      registered: "1200+",
+      participants: "205",
+      launched: "2021-06-10T00:00:00.000Z",
+    },
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,

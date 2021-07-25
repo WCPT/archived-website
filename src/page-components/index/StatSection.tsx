@@ -1,10 +1,15 @@
 import React, { useMemo } from "react";
 import { cx } from "@emotion/css";
-import { differenceInMonths } from 'date-fns'
+import { differenceInMonths } from "date-fns";
+import { useSiteMetadata } from "../../hooks";
 
 export const StatSection = () => {
-  const lifetimeInMonths = useMemo(() => differenceInMonths(new Date(), new Date("2021-06-10T00:00:00.000Z")), []);
-  
+  const siteMetadata = useSiteMetadata();
+  const lifetimeInMonths = useMemo(
+    () => differenceInMonths(new Date(), new Date(siteMetadata.stats.launched)),
+    [siteMetadata]
+  );
+
   return (
     <section className="relative lg:pt-12 bg-white">
       <div className="pt-24 pb-44 bg-sand">
@@ -34,7 +39,7 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat="950+"
+              stat={siteMetadata.stats.engagements}
               text="Engagements to connect, create and collaborate"
             />
             <StatSlot
@@ -55,7 +60,7 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat="1000+"
+              stat={siteMetadata.stats.registered}
               text="Registered members from across the Pacific region"
             />
             <StatSlot
@@ -76,7 +81,7 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat={205}
+              stat={siteMetadata.stats.participants}
               text="Participants in professional development events"
             />
             <StatSlot
@@ -98,7 +103,9 @@ export const StatSection = () => {
                 </svg>
               }
               stat={lifetimeInMonths}
-              text={`We are ${lifetimeInMonths} ${lifetimeInMonths > 1 ? "months" : "month"} old`}
+              text={`We are ${lifetimeInMonths} ${
+                lifetimeInMonths > 1 ? "months" : "month"
+              } old`}
             />
           </div>
         </div>
@@ -128,7 +135,9 @@ function StatSlot({
       )}
     >
       {icon}
-      <span className="my-4 text-4xl md:text-5xl md:font-normal text-bahamaBlue">{stat}</span>
+      <span className="my-4 text-4xl md:text-5xl md:font-normal text-bahamaBlue">
+        {stat}
+      </span>
       <span className="max-w-xs text-2xl leading-normal font-light text-gray-900">
         {text}
       </span>
