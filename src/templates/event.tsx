@@ -33,65 +33,69 @@ const Event = ({ data }: Props) => {
 
   return (
     <Layout title={siteTitle}>
-        <div className="flex flex-col min-h-screen">
-          <Navbar className="py-6 border-b border-gray-200" />
-          <div className="px-8">
-            <section className="container mx-auto mt-12 mb-16 text-lg prose text-gray-900">
-              {post.frontmatter.type && (
-                <h2 className="mb-0 text-gray-500 font-normal text-2xl">
-                  {post.frontmatter.type}
-                </h2>
-              )}
-              <h1 className="text-4xl leading-tight text-bahamaBlue">
-                {post.frontmatter.title}
-              </h1>
+      <div className="flex flex-col min-h-screen">
+        <Navbar className="py-6 border-b border-gray-200" />
+        <div className="px-8">
+          <section className="container mx-auto mt-12 mb-16 text-lg prose text-gray-900">
+            {post.frontmatter.type && (
+              <h2 className="mb-0 text-gray-500 font-normal text-2xl">
+                {post.frontmatter.type}
+              </h2>
+            )}
+            <h1 className="text-4xl leading-tight text-bahamaBlue">
+              {post.frontmatter.title}
+            </h1>
 
-              <div>
-                <div className="text-xl text-gray-900">{post.frontmatter.duration}</div>
-                <div className="text-xl text-gray-500">{post.frontmatter.registrationDeadline}</div>
+            <div>
+              <div className="text-xl text-gray-900">
+                {post.frontmatter.duration}
+              </div>
+              <div className="text-xl text-gray-500">
+                {post.frontmatter.registrationDeadline}
+              </div>
+              <a
+                href={post.frontmatter.registrationUrl}
+                target="_blank"
+                className="text-white no-underline"
+              >
                 <button className="my-2 mr-2 px-4 py-2 bg-bahamaBlue hover:bg-bahamaBlue-300 rounded shadow-md hover:shadow-sm transition-all">
-                  <a
-                    href={post.frontmatter.registrationUrl}
-                    target="_blank"
-                    className="text-white no-underline"
-                  >
-                    Register
-                  </a>
+                  Register
                 </button>
-              </div>
+              </a>
+            </div>
 
-              <div
-                dangerouslySetInnerHTML={{ __html: post.html }}
-                itemProp="articleBody"
-              />
+            <div
+              dangerouslySetInnerHTML={{ __html: post.html }}
+              itemProp="articleBody"
+            />
 
-              <nav className="flex justify-between mt-16 py-8 border-t border-gray-200">
-                <div>
-                  {previous && (
-                    <Link to={previous.fields.slug} rel="prev">
-                      ← {previous.frontmatter.title}
-                    </Link>
-                  )}
-                </div>
-                <div>
-                  {next && (
-                    <Link to={next.fields.slug} rel="next">
-                      {next.frontmatter.title} →
-                    </Link>
-                  )}
-                </div>
-              </nav>
-
+            <nav className="flex justify-between mt-16 py-8 border-t border-gray-200">
               <div>
-                <a href="/" className="text-gray-500 hover:text-gray-700">
-                  Return to home page
-                </a>
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
               </div>
-            </section>
-          </div>
+              <div>
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </div>
+            </nav>
 
-          <Footer className="mt-auto" />
+            <div>
+              <a href="/" className="text-gray-500 hover:text-gray-700">
+                Return to home page
+              </a>
+            </div>
+          </section>
         </div>
+
+        <Footer className="mt-auto" />
+      </div>
     </Layout>
   );
 };
