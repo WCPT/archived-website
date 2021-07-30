@@ -1,11 +1,11 @@
 ---
 type: Workshop
 title: Create Digital Worksheets via Google Forms
-date: 2021-07-30T01:00:00.000Z
-duration: 1 - 3PM / 30 July, 2021
+date: 2021-08-31T01:00:00.000Z
+duration: 1 - 3PM / 31 August, 2021
 registrationUrl: https://forms.gle/eDTCvGdcVB2pmj1dA
-registrationDeadline: "Registration closes: 29 July, 2021"
-order: 2
+registrationDeadline: "Registration closes: 30 August, 2021"
+order: "3"
 ---
 This workshop will make your work easier by showing you how to create online/digital worksheet for your students using Google Form, a free online tool, with a variety of question types, such as short answer, long answer, multiple choice, checkboxes, dropdown, to select from. The workshop will enable you to:
 
