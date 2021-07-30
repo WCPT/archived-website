@@ -4,7 +4,7 @@ date: 2021-08-13T01:00:00.000Z
 duration: 1 - 2PM / 13 August, 2021
 registrationUrl: https://forms.gle/rBiUAWT2X12MfNQy6
 registrationDeadline: "Registration closes: 12 August, 2021"
-order: 3
+order: "2"
 ---
 
 A workshop on using Zoom to conduct online classes. Some of the key components of the workshop include:
