@@ -1,6 +1,6 @@
 ---
 type: Workshop
-title: Create Digital Worksheets via Google Forms
+title: Creating Digital Worksheets via Google Forms
 date: 2021-08-31T01:00:00.000Z
 duration: 1 - 3PM / 31 August, 2021
 registrationUrl: https://forms.gle/eDTCvGdcVB2pmj1dA
