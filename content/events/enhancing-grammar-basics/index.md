@@ -2,10 +2,10 @@
 type: Short Course
 title: Enhancing Grammar Basics
 date: 2021-07-11T12:00:00.000Z
-duration: 12 July - 20 August, 2021
+duration: 12 July - 31 October, 2021
 registrationUrl: https://forms.gle/hNtu6sCUyLazBzEX8
+registrationDeadline: "Registration closes: 20 October, 2021"
 order: 1
-registrationDeadline: "Registration closes: 30 July, 2021"
 ---
 
 This is a free-of-charge, self-paced and self-directed online short
