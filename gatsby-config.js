@@ -14,9 +14,9 @@ module.exports = {
       email: `mailto:pasifikateachers@gmail.com`,
     },
     stats: {
-      engagements: "1500+",
-      registered: "1400+",
-      participants: "205",
+      engagements: "3500+",
+      registered: "1600+",
+      participants: "641",
       launched: "2021-06-10T00:00:00.000Z",
     },
   },
