@@ -15,9 +15,9 @@ module.exports = {
     },
     stats: {
       engagements: "3500+",
-      registered: "1600+",
-      participants: "641",
-      launched: "2021-06-10T00:00:00.000Z",
+      registered: "1900+",
+      participants: "1007",
+      launched: "2021-06-17T00:00:00.000Z",
     },
   },
   plugins: [
