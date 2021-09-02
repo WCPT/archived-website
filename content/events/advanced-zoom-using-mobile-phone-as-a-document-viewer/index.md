@@ -3,7 +3,7 @@ type: Workshop
 title: "Advanced Zoom: Using Mobile Phone as a Document Viewer"
 date: 2021-09-13T01:00:00.000Z
 duration: 13 September - 19 October
-registrationUrl: https://fijinationaluniversity.zoom.us/webinar/register/WN_HKF9Zxg9QeSGjQwIoGL-RQ
+registrationUrl: https://online.fnu.ac.fj/mod/page/view.php?id=95
 registrationDeadline: ""
 order: "5"
 ---
