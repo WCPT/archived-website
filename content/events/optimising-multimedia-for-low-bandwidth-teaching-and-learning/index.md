@@ -3,7 +3,7 @@ type: Workshop
 title: Optimising Multimedia for Low-Bandwidth Teaching and Learning
 date: 2021-09-10T01:00:04.761Z
 duration: 1-2.30PM / 10 September, 2021
-registrationUrl: https://www.surveymonkey.com/r/OptimisingMultimedia
+registrationUrl: https://fijinationaluniversity.zoom.us/webinar/register/WN_yzWvJwhDTnq-nanm1tgfJw
 registrationDeadline: "Registration closes: 9 September, 2021"
 order: "5"
 ---
