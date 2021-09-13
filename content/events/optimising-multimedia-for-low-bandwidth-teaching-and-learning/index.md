@@ -5,7 +5,7 @@ date: 2021-09-10T01:00:04.761Z
 duration: 1-2.30PM / 10 September, 2021
 registrationUrl: https://fijinationaluniversity.zoom.us/webinar/register/WN_yzWvJwhDTnq-nanm1tgfJw
 registrationDeadline: "Registration closes: 9 September, 2021"
-order: "4"
+order: "2"
 ---
 As the impact of the coronavirus pandemic continues to escalate, teachers are increasingly required to teach online. From a technological point of view, efficient delivery of online lessons requires a stable Internet connection and good Internet speed (bandwidth). In many cases, students do not have access to reliable Internet connections and high bandwidth. Consequently, students face difficulties accessing online learning resources and engaging in online activities, resulting in a learning loss. The workshop aims to equip teachers with the necessary skills to create and optimise files and documents for low-bandwidth learners.
 
