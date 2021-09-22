@@ -2,7 +2,7 @@
 type: Workshop
 title: "Advanced Zoom: Using Mobile Phone as a Document Viewer"
 date: 2021-09-22T22:00:00.000Z
-duration: 13 September - 19 October
+duration: 27 September - 5 October
 registrationUrl: https://online.fnu.ac.fj/mod/page/view.php?id=95
 registrationDeadline: ""
 order: "4"
