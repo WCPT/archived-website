@@ -1,7 +1,7 @@
 ---
 type: Workshop
 title: Creating Digital Worksheets via Google Forms
-date: 2021-09-13T01:00:00.000Z
+date: 2021-09-23T01:00:00.000Z
 duration: 13 September - 19 October
 registrationUrl: https://online.fnu.ac.fj/mod/page/view.php?id=95
 registrationDeadline: ""
