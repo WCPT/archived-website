@@ -5,7 +5,7 @@ date: 2021-11-30T20:34:29.413Z
 duration: TBC
 registrationUrl: TBC
 registrationDeadline: "Registration closes: TBC"
-order: "4"
+order: "7"
 ---
 This is a free-of-charge, self-paced course comprising six units, designed to empower you to understand how meanings relate systematically to different aspects of grammar and shows how this deeper understanding can be applied to make everyday communication more effective, especially to the students. Successful completion of the course will enable you to:
 
