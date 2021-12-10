@@ -2,7 +2,7 @@
 type: Short Course
 title: Communication Skills for Open, Distance and Flexible Learning
 date: 2022-01-02T12:00:03.129Z
-duration: 3 - 31 January, 2022
+duration: 3 - 30 January, 2022
 registrationUrl: https://oer.nz/cs4odfl22
 order: "7"
 ---
