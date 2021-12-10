@@ -14,9 +14,9 @@ module.exports = {
       email: `mailto:pasifikateachers@gmail.com`,
     },
     stats: {
-      engagements: "3500+",
-      registered: "2600+",
-      participants: "2351",
+      engagements: "5000+",
+      registered: "2800+",
+      participants: "4065",
       launched: "2021-06-17T00:00:00.000Z",
     },
   },
@@ -41,6 +41,9 @@ module.exports = {
       __key: "pages",
     },
     {
+      // Plugin to source images into the Gatsby application from the local filesystem.
+      // This means that the images can be transformed by "transformer" plugins and quried
+      // through Gatsby graphql.
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
@@ -48,6 +51,29 @@ module.exports = {
       },
     },
     {
+      // Plugin to transform images that are sourced into the Gatsby application.
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
+    `gatsby-transformer-sharp`,
+    {
+      // Plugin to source content into the Gatsby application from the local filesystem.
+      // This means that the contents can be transformed by "transformer" plugins (such as the
+      // 'gatsby-transformer-remark' plugin) and quried through Gatsby graphql.
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
@@ -63,6 +89,7 @@ module.exports = {
       },
     },
     {
+      // Plugin to parse markdown files that is sourced into the Gatsby application.
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -88,25 +115,6 @@ module.exports = {
     //     trackingId: `ADD YOUR TRACKING ID HERE`,
     //   },
     // },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          formats: [`auto`, `webp`],
-          placeholder: `dominantColor`,
-          quality: 50,
-          breakpoints: [750, 1080, 1366, 1920],
-          backgroundColor: `transparent`,
-          tracedSVGOptions: {},
-          blurredOptions: {},
-          jpgOptions: {},
-          pngOptions: {},
-          webpOptions: {},
-          avifOptions: {},
-        },
-      },
-    },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-postcss`,
   ],
 };
