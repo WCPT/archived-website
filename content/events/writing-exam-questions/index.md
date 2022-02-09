@@ -4,7 +4,7 @@ title: Writing Exam Questions
 date: 2021-12-02T01:00:08.587Z
 duration: 1-2.30PM / 2 Dec, 9 Dec 2021
 registrationUrl: https://fijinationaluniversity.zoom.us/webinar/register/WN_XbEiKxOWQMGOQtKI07iomw
-order: "6"
+order: "5"
 ---
 ##### Learn to design exam questions that accurately reflect your objectives and gauge student learning!
 
