@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { MdOpenInNew, MdPlayCircleOutline } from "react-icons/md";
+import { cx } from "@emotion/css";
 
 import { ImageHoc } from "../../components";
 
@@ -16,24 +17,29 @@ const CoverImage = ImageHoc(() => (
   />
 ));
 
+const introVideoURL = "https://www.youtube.com/embed/zNp_l9RQSJk";
+
 export const HeroSection = () => {
   const [isVideoVisible, setVideoVisible] = useState(false);
+  const [videoURL, setVideoURL] = useState(introVideoURL);
 
   const showVideo = useCallback((e) => {
     e.stopPropagation();
     setVideoVisible(true);
+    setVideoURL(introVideoURL);
   }, []);
 
   const hideVideo = useCallback((e) => {
     e.stopPropagation();
     setVideoVisible(false);
+    setVideoURL("");
   }, []);
 
   return (
     <section className="relative h-screen" onClick={hideVideo}>
       <CoverImage
         containerClassName="relative h-screen"
-        overlayClassName="absolute inset-0 z-10 opacity-40 bg-gradient-to-r from-black to-gray-700"
+        overlayClassName="absolute inset-0 z-10 opacity-30 bg-gradient-to-r from-black to-gray-700"
         credit="Photo by Hoodh Ahmed on Unsplash"
       />
       {/* <CoverImage /> */}
@@ -79,10 +85,10 @@ export const HeroSection = () => {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center my-2 text-gray-200 text-lg">
-            <span className="mr-2">Already a member?</span>
+            <span className="mr-2 font-thin">Already a member?</span>
             <a
               href="https://elearn.fnu.ac.fj/course/view.php?id=6417"
-              className="hover:underline text-sand hover:text-white transition-all"
+              className="hover:underline text-yellow-300 font-thin transition-all"
             >
               Sign in here!
             </a>
@@ -90,26 +96,28 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {isVideoVisible && (
-        <div className="z-50 absolute inset-0 flex flex-1 items-center justify-center">
-          <div className="absolute inset-0 bg-black opacity-70"></div>
-          <div className="flex flex-1 p-8 lmd:p-32 xl:p-64">
-            <div className="flex flex-1 aspect-w-16 aspect-h-9 shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/zNp_l9RQSJk"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              />
-            </div>
-          </div>
-          <div
-            onClick={hideVideo}
-            className="absolute bottom-6 py-1 px-2.5 text-xl font-light text-gray-400 cursor-pointer hover:text-gray-200 hover:font-normal"
-          >
-            Close
-          </div>
+      <div
+        className={cx(
+          "z-50 absolute inset-0 flex flex-1 items-center justify-center",
+          { invisible: !isVideoVisible, visible: isVideoVisible }
+        )}
+      >
+        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="flex flex-1 p-8 lmd:p-32 xl:p-64">
+          <iframe
+            className="w-full aspect-video shadow-lg z-50"
+            src={videoURL}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          />
         </div>
-      )}
+        <div
+          onClick={hideVideo}
+          className="absolute bottom-6 py-1 px-2.5 text-xl font-light text-gray-400 cursor-pointer hover:text-gray-200 hover:font-normal"
+        >
+          Close
+        </div>
+      </div>
     </section>
   );
 };

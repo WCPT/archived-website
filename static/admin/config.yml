@@ -7,6 +7,25 @@ public_folder: /img
 site_url: https://www.pasifikateachers.org
 
 collections:
+  - name: "config"
+    id: "config"
+    label: "Config"
+    folder: "content/config"
+    create: false
+    slug: "{{slug}}"
+    path: "index"
+    editor:
+      preview: false
+    fields:
+      - { label: "Engagements", name: "engagements", widget: "string" }
+      - { label: "Registered", name: "registered", widget: "string" }
+      - { label: "Participants", name: "participants", widget: "string" }
+      - { label: "Launched", name: "launched", widget: "datetime" }
+      - { label: "Twitter", name: "twitter", widget: "string" }
+      - { label: "Facebook", name: "facebook", widget: "string" }
+      - { label: "Youtube", name: "youtube", widget: "string" }
+      - { label: "Email", name: "email", widget: "string" }
+
   - name: "events"
     label: "Event"
     folder: "content/events"
@@ -14,10 +33,11 @@ collections:
     slug: "{{slug}}"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}/index"
+    path: "{{title}}"
     editor:
       preview: false
     fields:
+      - { label: "Published", name: "published", widget: "boolean", default: false }
       - { label: "Event Type", name: "type", widget: "string", required: false }
       - { label: "Event Title", name: "title", widget: "string" }
       - { label: "Event Date", name: "date", widget: "datetime" }
@@ -29,5 +49,4 @@ collections:
           widget: "string",
           required: false,
         }
-      - { label: "Display Order", name: "order", widget: "string" }
       - { label: "Event Details", name: "body", widget: "markdown" }

@@ -1,28 +1,9 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
   important: "#app",
-  purge: {
-    content: [
-      "src/pages/**/*.{js,ts,jsx,tsx}",
-      "src/components/**/*.{js,ts,jsx,tsx}",
-      "src/page-components/**/*.{js,ts,jsx,tsx}",
-      "src/templates/**/*.{js,ts,jsx,tsx}",
-    ],
-    safelist: [
-      "hover:text-blue-800",
-      "hover:text-blue-400",
-      "hover:text-red-600",
-      "hover:text-blue-500",
-      "hover:bg-blue-800",
-      "hover:bg-blue-400",
-      "hover:bg-red-600",
-      "hover:bg-blue-500",
-    ],
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ["src/**/*.{js,ts,jsx,tsx}"],
+  // darkMode: false,
   theme: {
     screens: {
       xs: "500px",
@@ -87,11 +68,5 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };

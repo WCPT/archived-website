@@ -8,22 +8,25 @@ export type SocialLinks = {
 };
 
 export const useSocialLinks = (): SocialLinks => {
-  const { site } = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query SocialLinksQuery {
-      site {
-        siteMetadata {
-          socialLinks {
-            youtube
-            facebook
+      allMarkdownRemark(filter: { fields: { slug: { regex: "/config/" } } }) {
+        nodes {
+          frontmatter {
             twitter
+            facebook
+            youtube
             email
+          }
+          fields {
+            slug
           }
         }
       }
     }
   `);
 
-  return site.siteMetadata.socialLinks;
+  return data.allMarkdownRemark.nodes[0].frontmatter;
 };
 
 export default useSocialLinks;

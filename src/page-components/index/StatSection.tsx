@@ -1,13 +1,13 @@
 import React, { useMemo } from "react";
 import { cx } from "@emotion/css";
 import { differenceInMonths } from "date-fns";
-import { useSiteMetadata } from "../../hooks";
+import { useStats } from "../../hooks";
 
 export const StatSection = () => {
-  const siteMetadata = useSiteMetadata();
+  const stats = useStats();
   const lifetimeInMonths = useMemo(
-    () => differenceInMonths(new Date(), new Date(siteMetadata.stats.launched)),
-    [siteMetadata]
+    () => differenceInMonths(new Date(), new Date(stats.launched)),
+    [stats]
   );
 
   return (
@@ -39,7 +39,7 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat={siteMetadata.stats.engagements}
+              stat={stats.engagements}
               text="Engagements to connect, create and collaborate"
             />
             <StatSlot
@@ -60,7 +60,7 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat={siteMetadata.stats.registered}
+              stat={stats.registered}
               text="Registered members from across the Pacific region"
             />
             <StatSlot
@@ -81,7 +81,7 @@ export const StatSection = () => {
                   />
                 </svg>
               }
-              stat={siteMetadata.stats.participants}
+              stat={stats.participants}
               text="Participants in professional development events"
             />
             <StatSlot

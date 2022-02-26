@@ -1,5 +1,4 @@
 import React, { FC, useCallback, useState } from "react";
-import { cx } from "@emotion/css";
 
 type Props = {
   className?: string;

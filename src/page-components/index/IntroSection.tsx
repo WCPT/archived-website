@@ -1,4 +1,4 @@
-import React, { useRef, useState, useCallback } from "react";
+import React, { useRef, useState, useCallback, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { cx } from "@emotion/css";
 
@@ -41,17 +41,7 @@ const IslanderStudentImage = ImageHoc(() => (
 ));
 
 export const IntroSection = () => {
-  const ref = useRef(null);
-  const [showExtendedContent, setExtendedContentVisible] = useState(false);
-
-  const toggleContentVisibility = useCallback(() => {
-    setExtendedContentVisible((isVisible) => !isVisible);
-    // @ts-ignore
-    if (showExtendedContent && ref.current) {
-      // @ts-ignore
-      ref.current.scrollIntoView();
-    }
-  }, [showExtendedContent]);
+  const { ref, visible, toggle } = useExtendedContent();
 
   return (
     <section ref={ref} className="relative py-16 sm:py-20 bg-white">
@@ -75,12 +65,12 @@ export const IntroSection = () => {
                 conduct research to raise the quality of learning throughout the
                 Pacific.
               </p>
-              <ExtendedContent isVisible={showExtendedContent} />
+              <ExtendedContent isVisible={visible} />
             </div>
             <Button
               className="block xs:hidden"
-              onClick={toggleContentVisibility}
-              text={showExtendedContent ? "Show less" : "Show more"}
+              onClick={toggle}
+              text={visible ? "Show less" : "Show more"}
             />
           </div>
           <div className="hidden lmd:grid xl:grid-cols-2 gap-4 auto-rows-min col-span-2 xl:col-span-1">
@@ -115,9 +105,27 @@ export const IntroSection = () => {
   );
 };
 
-export default IntroSection;
+const useExtendedContent = () => {
+  const ref = useRef(null);
+  const [isExtendedContentVisible, setExtendedContentVisible] = useState(false);
 
-function ExtendedContent({ isVisible }: { isVisible: boolean }) {
+  const toggleContentVisibility = useCallback(() => {
+    setExtendedContentVisible((isVisible) => !isVisible);
+    // @ts-ignore
+    if (isExtendedContentVisible && ref.current) {
+      // @ts-ignore
+      ref.current.scrollIntoView();
+    }
+  }, [isExtendedContentVisible]);
+
+  return {
+    ref,
+    visible: isExtendedContentVisible,
+    toggle: toggleContentVisibility,
+  };
+};
+
+const ExtendedContent = React.memo(({ isVisible }: { isVisible: boolean }) => {
   return (
     <div
       className={cx(
@@ -158,25 +166,29 @@ function ExtendedContent({ isVisible }: { isVisible: boolean }) {
       </p>
     </div>
   );
-}
+});
 
-function Button({
-  className,
-  onClick,
-  text,
-}: {
-  className?: string;
-  onClick: () => void;
-  text: string;
-}) {
-  return (
-    <div className={className}>
-      <span
-        className="inline-block px-2 py-1.5 xs:p-2 rounded-sm text-blue-500 border border-blue-500 cursor-pointer"
-        onClick={onClick}
-      >
-        {text}
-      </span>
-    </div>
-  );
-}
+const Button = React.memo(
+  ({
+    className,
+    onClick,
+    text,
+  }: {
+    className?: string;
+    onClick: () => void;
+    text: string;
+  }) => {
+    return (
+      <div className={className}>
+        <span
+          className="inline-block px-2 py-1.5 xs:p-2 rounded-sm text-blue-500 border border-blue-500 cursor-pointer"
+          onClick={onClick}
+        >
+          {text}
+        </span>
+      </div>
+    );
+  }
+);
+
+export default IntroSection;

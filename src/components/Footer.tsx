@@ -38,13 +38,13 @@ export function Footer({ className }: Props) {
 
         <div className="z-10 flex flex-col md:flex-row justify-between container mx-auto py-12">
           <div className="flex justify-center items-center my-2">
-            <span className="text-center text-gray-700">
+            <span className="text-center text-gray-900">
               Wisdom Community of Pasifika Teachers &copy;
               {new Date().getFullYear()}
             </span>
           </div>
           <div className="flex justify-center items-center my-2">
-            <span className="text-center text-gray-700">
+            <span className="text-center text-gray-900">
               Supported by Fiji National University
             </span>
           </div>

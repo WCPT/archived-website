@@ -34,18 +34,6 @@ export const useSiteMetadata = (): SiteMetadata => {
           }
           description
           siteUrl
-          socialLinks {
-            youtube
-            facebook
-            twitter
-            email
-          }
-          stats {
-            engagements
-            registered
-            participants
-            launched
-          }
         }
       }
     }

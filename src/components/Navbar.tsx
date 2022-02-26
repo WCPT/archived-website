@@ -14,40 +14,6 @@ interface Props {
 export const Navbar = ({ className, theme = "dark" }: Props) => {
   const links = useSocialLinks();
 
-  const social = useMemo(
-    () => [
-      {
-        href: links.facebook,
-        title: "Facebook",
-        Icon: FaFacebookSquare,
-        hoverTextClass: "text-blue-800",
-        hoverBgClass: "bg-blue-800",
-      },
-      {
-        href: links.twitter,
-        title: "Twitter",
-        Icon: FaTwitter,
-        hoverTextClass: "text-blue-400",
-        hoverBgClass: "bg-blue-400",
-      },
-      {
-        href: links.youtube,
-        title: "Youtube",
-        Icon: FaYoutube,
-        hoverTextClass: "text-red-600",
-        hoverBgClass: "bg-red-600",
-      },
-      {
-        href: links.email,
-        title: "Email",
-        Icon: MdEmail,
-        hoverTextClass: "text-blue-500",
-        hoverBgClass: "bg-blue-500",
-      },
-    ],
-    []
-  );
-
   return (
     <nav
       className={cx(
@@ -70,31 +36,63 @@ export const Navbar = ({ className, theme = "dark" }: Props) => {
 
         <div className="ml-auto">
           <div className="flex items-center">
-            {social.map(({ Icon, ...props }, i) => (
-              <a
-                key={i}
-                href={props.href}
-                title={props.title}
-                target="_blank"
-                rel="noopener"
-              >
-                <Icon
-                  className={cx(
-                    `mx-1 p-1.5 md:p-2.5 text-4xl md:text-5xl rounded-md transition-all duration-300`,
-                    {
-                      [`hover:${props.hoverTextClass} hover:bg-white`]:
-                        theme !== "dark",
-                      [`hover:text-white bg-gray-100 hover:${props.hoverBgClass}`]:
-                        theme === "dark",
-                    }
-                  )}
-                />
-              </a>
-            ))}
+            <SocialIcon
+              icon={FaFacebookSquare}
+              href={links.facebook}
+              title="Facebook"
+              className={
+                theme !== "dark"
+                  ? `hover:text-blue-800 hover:bg-white`
+                  : `hover:text-white bg-gray-100 hover:bg-blue-800`
+              }
+            />
+            <SocialIcon
+              icon={FaTwitter}
+              href={links.twitter}
+              title="Twitter"
+              className={
+                theme !== "dark"
+                  ? `hover:text-blue-400 hover:bg-white`
+                  : `hover:text-white bg-gray-100 hover:bg-blue-400`
+              }
+            />
+            <SocialIcon
+              icon={FaYoutube}
+              href={links.youtube}
+              title="Youtube"
+              className={
+                theme !== "dark"
+                  ? `hover:text-red-600 hover:bg-white`
+                  : `hover:text-white bg-gray-100 hover:bg-red-600`
+              }
+            />
+            <SocialIcon
+              icon={MdEmail}
+              href={links.email}
+              title="Email"
+              className={
+                theme !== "dark"
+                  ? `hover:text-blue-500 hover:bg-white`
+                  : `hover:text-white bg-gray-100 hover:bg-blue-500`
+              }
+            />
           </div>
         </div>
       </div>
     </nav>
+  );
+};
+
+const SocialIcon = ({ icon: Icon, href, title, className }) => {
+  return (
+    <a href={href} title={title} target="_blank" rel="noopener">
+      <Icon
+        className={cx(
+          `mx-1 p-1.5 md:p-2.5 text-4xl md:text-5xl rounded-md transition-all duration-300`,
+          className
+        )}
+      />
+    </a>
   );
 };
 

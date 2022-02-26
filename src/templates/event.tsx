@@ -53,23 +53,27 @@ const Event = ({ data }: Props) => {
               <div className="text-xl text-gray-500">
                 {post.frontmatter.registrationDeadline}
               </div>
-              <a
-                href={post.frontmatter.registrationUrl}
-                target="_blank"
-                className="text-white no-underline"
-              >
-                <button className="my-2 mr-2 px-4 py-2 bg-bahamaBlue hover:bg-bahamaBlue-300 rounded shadow-md hover:shadow-sm transition-all">
-                  Register
-                </button>
-              </a>
+
+              <div className="pt-2">
+                <a
+                  href={post.frontmatter.registrationUrl}
+                  target="_blank"
+                  className="text-white no-underline"
+                >
+                  <button className="my-2 mr-2 px-4 py-2 bg-bahamaBlue hover:bg-bahamaBlue-300 rounded shadow-md hover:shadow-sm transition-all">
+                    Register
+                  </button>
+                </a>
+              </div>
             </div>
 
             <div
+              className="pt-4"
               dangerouslySetInnerHTML={{ __html: post.html }}
               itemProp="articleBody"
             />
 
-            <nav className="flex justify-between mt-16 py-8 border-t border-gray-200">
+            <nav className="grid grid-cols-2 gap-8 mt-16 py-8 border-t border-gray-200">
               <div>
                 {previous && (
                   <Link to={previous.fields.slug} rel="prev">
@@ -77,7 +81,7 @@ const Event = ({ data }: Props) => {
                   </Link>
                 )}
               </div>
-              <div>
+              <div className="ml-auto">
                 {next && (
                   <Link to={next.fields.slug} rel="next">
                     {next.frontmatter.title} →

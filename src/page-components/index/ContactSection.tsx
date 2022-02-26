@@ -76,19 +76,43 @@ function SocialLinks({ className }: { className?: string }) {
 
   return (
     <div className={cx(`flex items-center`, className)}>
-      {socialMedia.map(({ Icon, ...props }, i) => (
-        <a
-          key={i}
-          href={props.href}
-          title={props.title}
-          target="_blank"
-          rel="noopener"
-        >
-          <Icon
-            className={`mr-2 p-2.5 text-5xl rounded-md hover:text-white bg-gray-100 hover:${props.hoverBgClass} transition-all duration-300`}
-          />
-        </a>
-      ))}
+      <SocialIcon
+        href={links.facebook}
+        title="Facebook"
+        icon={FaFacebookSquare}
+        className="hover:bg-blue-800"
+      />
+      <SocialIcon
+        href={links.twitter}
+        title="Twitter"
+        icon={FaTwitter}
+        className="hover:bg-blue-400"
+      />
+      <SocialIcon
+        href={links.youtube}
+        title="Youtube"
+        icon={FaYoutube}
+        className="hover:bg-red-600"
+      />
+      <SocialIcon
+        href={links.email}
+        title="Email"
+        icon={MdEmail}
+        className="hover:bg-blue-500"
+      />
     </div>
   );
 }
+
+const SocialIcon = ({ className, href, title, icon: Icon }) => {
+  return (
+    <a href={href} title={title} target="_blank" rel="noopener">
+      <Icon
+        className={cx(
+          `mr-2 p-2.5 text-5xl rounded-md hover:text-white bg-gray-100 transition-all duration-300`,
+          className
+        )}
+      />
+    </a>
+  );
+};
