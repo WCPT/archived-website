@@ -27,7 +27,7 @@ collections:
           - { label: "Facebook", name: "facebook", widget: "string" }
           - { label: "Youtube", name: "youtube", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
-      - label: 'extras'
+      - label: 'Extras'
         name: 'extras'
         file: "content/site/extras.md"
         fields:
