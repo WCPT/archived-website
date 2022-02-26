@@ -10,16 +10,13 @@ export type SocialLinks = {
 export const useSocialLinks = (): SocialLinks => {
   const data = useStaticQuery(graphql`
     query SocialLinksQuery {
-      allMarkdownRemark(filter: { fields: { slug: { regex: "/config/" } } }) {
+      allMarkdownRemark(filter: { fields: { slug: { eq: "/site/social/" } } }) {
         nodes {
           frontmatter {
             twitter
             facebook
             youtube
             email
-          }
-          fields {
-            slug
           }
         }
       }

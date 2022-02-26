@@ -4,6 +4,7 @@ import { MdOpenInNew, MdPlayCircleOutline } from "react-icons/md";
 import { cx } from "@emotion/css";
 
 import { ImageHoc } from "../../components";
+import { useExtras } from "../../hooks";
 
 const CoverImage = ImageHoc(() => (
   <StaticImage
@@ -17,16 +18,16 @@ const CoverImage = ImageHoc(() => (
   />
 ));
 
-const introVideoURL = "https://www.youtube.com/embed/zNp_l9RQSJk";
-
 export const HeroSection = () => {
+  const extras = useExtras();
+  
   const [isVideoVisible, setVideoVisible] = useState(false);
-  const [videoURL, setVideoURL] = useState(introVideoURL);
+  const [videoURL, setVideoURL] = useState(extras.videoURL);
 
   const showVideo = useCallback((e) => {
     e.stopPropagation();
     setVideoVisible(true);
-    setVideoURL(introVideoURL);
+    setVideoURL(extras.videoURL);
   }, []);
 
   const hideVideo = useCallback((e) => {
@@ -74,7 +75,7 @@ export const HeroSection = () => {
             <div className="flex justify-center">
               <a
                 className="group cursor-pointer inline-flex justify-center items-center py-2 px-4 w-52 xs:w-full border border-gray-200 hover:border-blue-600 hover:bg-blue-600 transition-all duration-200"
-                href="https://clte.fnu.ac.fj/talanoakaro"
+                href={extras.signUpLink}
                 target="_blank"
               >
                 <span className="mr-2 text-gray-200 group-hover:text-white xs:text-lg transition-all duration-200">
@@ -87,7 +88,7 @@ export const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center my-2 text-gray-200 text-lg">
             <span className="mr-2 font-thin">Already a member?</span>
             <a
-              href="https://elearn.fnu.ac.fj/course/view.php?id=6417"
+              href={extras.signInLink}
               className="hover:underline text-yellow-300 font-thin transition-all"
             >
               Sign in here!

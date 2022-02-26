@@ -10,16 +10,13 @@ export type Stats = {
 export const useStats = (): Stats => {
   const data = useStaticQuery(graphql`
     query StatsQuery {
-      allMarkdownRemark(filter: { fields: { slug: { regex: "^/config/" } } }) {
+      allMarkdownRemark(filter: { fields: { slug: { eq: "/site/stats/" } } }) {
         nodes {
           frontmatter {
             engagements
             registered
             participants
             launched
-          }
-          fields {
-            slug
           }
         }
       }

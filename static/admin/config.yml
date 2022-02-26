@@ -7,27 +7,36 @@ public_folder: /img
 site_url: https://www.pasifikateachers.org
 
 collections:
-  - name: "config"
-    id: "config"
-    label: "Config"
-    folder: "content/config"
-    create: false
-    slug: "{{slug}}"
-    path: "index"
-    editor:
-      preview: false
-    fields:
-      - { label: "Engagements", name: "engagements", widget: "string" }
-      - { label: "Registered", name: "registered", widget: "string" }
-      - { label: "Participants", name: "participants", widget: "string" }
-      - { label: "Launched", name: "launched", widget: "datetime" }
-      - { label: "Twitter", name: "twitter", widget: "string" }
-      - { label: "Facebook", name: "facebook", widget: "string" }
-      - { label: "Youtube", name: "youtube", widget: "string" }
-      - { label: "Email", name: "email", widget: "string" }
+  - name: "site"
+    id: "site"
+    label: "Site"
+    files:
+      - label: 'Stats'
+        name: 'stats'
+        file: "content/site/stats.md"
+        fields:
+          - { label: "Engagements", name: "engagements", widget: "string" }
+          - { label: "Registered", name: "registered", widget: "string" }
+          - { label: "Participants", name: "participants", widget: "string" }
+          - { label: "Launched", name: "launched", widget: "datetime" }
+      - label: 'Social'
+        name: 'social'
+        file: "content/site/social.md"
+        fields:
+          - { label: "Twitter", name: "twitter", widget: "string" }
+          - { label: "Facebook", name: "facebook", widget: "string" }
+          - { label: "Youtube", name: "youtube", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+      - label: 'extras'
+        name: 'extras'
+        file: "content/site/extras.md"
+        fields:
+          - { label: "Video URL", name: "videoURL", widget: "string" }
+          - { label: "Sign in link", name: "signInLink", widget: "string" }
+          - { label: "Sign up link", name: "signUpLink", widget: "string" }
 
-  - name: "events"
-    label: "Event"
+  - label: "Event"
+    name: "events"
     folder: "content/events"
     create: true
     slug: "{{slug}}"
