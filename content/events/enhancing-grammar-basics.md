@@ -2,10 +2,10 @@
 published: true
 type: Short Course
 title: Enhancing Grammar Basics
-date: 2022-02-27T12:00:00.000Z
-duration: 12 July, 2021 - 28 February, 2022
+date: 2022-04-29T12:00:00.000Z
+duration: 12 July, 2021 - 30 April, 2022
 registrationUrl: https://forms.gle/hNtu6sCUyLazBzEX8
-registrationDeadline: "Registration closes: 27 February, 2022"
+registrationDeadline: "Registration closes: 2 April, 2022"
 ---
 
 This is a free-of-charge, self-paced and self-directed online short
