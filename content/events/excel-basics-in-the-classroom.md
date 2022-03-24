@@ -2,7 +2,7 @@
 published: true
 type: Workshop
 title: Excel Basics in the Classroom
-date: 2022-03-24T03:30:23.978Z
+date: 2022-04-21T03:30:23.978Z
 duration: 3.30 - 5.00PM / 8 Mar - 21 Apr 2022
 registrationUrl: https://fijinationaluniversity.zoom.us/webinar/register/WN__9D5c8FaT7mPsi7VhnBy9w
 ---
