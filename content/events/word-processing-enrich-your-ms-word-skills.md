@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 type: Workshop
 title: Word Processing - Enrich your MS Word skills!
 date: 2022-08-17T03:30:04.049Z
