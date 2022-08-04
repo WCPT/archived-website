@@ -17,8 +17,10 @@ Join us and learn how to:
 * Insert and format tables and images.
 * Generate an automatic table of contents.
 
-\| Date                      | Day                      | Time                       |
+**Workshop schedule:** 
 
-\|:---                         | :---                       | :---                          |
-
-\| 17 August             | Wednesday         | 3.30–5.30pm           |
+| Date         | Day       | Time (FJT)  |
+| ------------ | --------- | ----------- |
+| 17 August    | Wednesday | 3.30–5.30pm |
+| 15 September | Thursday  | 3.30–5.30pm |
+| 20 October   | Thursday  | 3.30–5.30pm |
