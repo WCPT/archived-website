@@ -16,3 +16,9 @@ Join us and learn how to:
 * Format page numbers.
 * Insert and format tables and images.
 * Generate an automatic table of contents.
+
+\| Date                      | Day                      | Time                       |
+
+\|:---                         | :---                       | :---                          |
+
+\| 17 August             | Wednesday         | 3.30–5.30pm           |
