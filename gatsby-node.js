@@ -12,8 +12,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
       {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___order], order: ASC }
-          filter: { fields: { slug: { regex: "^/events/" } } }
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: {
+            frontmatter: { published: { eq: true } }
+            fields: { slug: { regex: "^/events/" } }
+          }
         ) {
           nodes {
             id
