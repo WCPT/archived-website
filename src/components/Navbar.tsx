@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { cx } from "@emotion/css";
 import { MdEmail } from "react-icons/md";
 import { FaTwitter, FaFacebookSquare, FaYoutube } from "react-icons/fa";

@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { cx } from "@emotion/css";
 import { differenceInMonths } from "date-fns";
+
 import { useStats } from "../../hooks";
 
 export const StatSection = () => {
