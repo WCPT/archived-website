@@ -2,7 +2,7 @@
 published: true
 type: Workshop
 title: Word Processing - Enrich your MS Word skills!
-date: 2022-08-17T03:30:04.049Z
+date: 2022-10-20T03:30:04.049Z
 duration: 3.30 - 5.30PM / 17 Aug - 20 Oct 2022
 registrationUrl: https://fijinationaluniversity.zoom.us/webinar/register/WN_x2Ql9BR7RD2Ej6OZMy8QTA
 ---
