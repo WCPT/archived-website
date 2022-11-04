@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 type: Workshop
 title: Generate Master Marksheet and Report Sheets using MS Excel
 date: 2022-11-10T03:30:35.843Z
