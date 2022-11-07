@@ -13,11 +13,11 @@ During this 2–hour workshop, participants will learn to:
   minimum and maximum.
 * Use the COUNT and COUNTIF functions to determine the number sat and number passed.
 * Apply the RANK function to determine positions, and IF function to grade marks.
-* Generate report sheets from a master marksheet..
+* Generate report sheets from a master marksheet.
 
 Workshop schedule: 
 
-| Date         | Day       | Time (FJT)  |
-| ------------ | --------- | ----------- |
-| 10 November  | Thursday  | 3.30–5.30pm |
-| 17 November  | Thursday  | 3.30–5.30pm |
+| Date        | Day      | Time (FJT)  |
+| ----------- | -------- | ----------- |
+| 10 November | Thursday | 3.30–5.30pm |
+| 17 November | Thursday | 3.30–5.30pm |
