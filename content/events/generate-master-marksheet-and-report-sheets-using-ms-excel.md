@@ -2,7 +2,7 @@
 published: true
 type: Workshop
 title: Generate Master Marksheet and Report Sheets using MS Excel
-date: 2022-11-10T03:30:35.843Z
+date: 2022-11-17T03:30:35.843Z
 duration: 3.30–5.30pm
 registrationUrl: https://fijinationaluniversity.zoom.us/webinar/register/WN_FAmle4gFSj6uMBECDf_HpQ
 registrationDeadline: ""
