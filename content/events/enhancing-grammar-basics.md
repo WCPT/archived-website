@@ -5,7 +5,7 @@ title: Enhancing Grammar Basics
 date: 2023-06-29T23:08:50.719Z
 duration: 12 July, 2021 - 30 June, 2023
 registrationUrl: https://forms.gle/hNtu6sCUyLazBzEX8
-registrationDeadline: "Registration closes: 30 December, 2022"
+registrationDeadline: ""
 ---
 
 This is a free-of-charge, self-paced and self-directed online short
