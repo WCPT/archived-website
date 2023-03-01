@@ -8,8 +8,7 @@ registrationUrl: https://fijinationaluniversity.zoom.us/webinar/register/WN_ysak
 ---
 #### Ready to step up your teaching game to the next level?
 
-Transform your teaching with our exclusive workshop! Create effective videos with
-PowerPoint to captivate your students from start to finish.
+Transform your teaching with our exclusive workshop! Create effective videos with PowerPoint to captivate your students from start to finish.
 
 During this 2–hour workshop, participants will learn step-by-step instructions and tips to:
 
