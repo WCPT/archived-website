@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 type: Workshop
 title: Create Instructional Videos with PowerPoint!
 date: 2023-03-14T03:30:31.593Z
