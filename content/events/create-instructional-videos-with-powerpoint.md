@@ -1,6 +1,6 @@
 ---
 published: true
-type: Workshop
+type: Virtual Workshop
 title: Create Instructional Videos with PowerPoint!
 date: 2023-03-14T03:30:31.593Z
 duration: 2 Hours
